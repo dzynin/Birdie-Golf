@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D1BB7D02892DFFC0079419A /* OdorMeanChey.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BB7CE2892DC670079419A /* OdorMeanChey.ttf */; };
+		9D1BB7D22892FA650079419A /* merriweather in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BB7D12892FA650079419A /* merriweather */; };
 		EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA928492891AABA0038BC34 /* AppDelegate.swift */; };
 		EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */; };
 		EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA928522891AABB0038BC34 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D1BB7CE2892DC670079419A /* OdorMeanChey.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = OdorMeanChey.ttf; sourceTree = "<group>"; };
+		9D1BB7D12892FA650079419A /* merriweather */ = {isa = PBXFileReference; lastKnownFileType = folder; path = merriweather; sourceTree = "<group>"; };
 		EDA928462891AABA0038BC34 /* Birdie Golf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birdie Golf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA928492891AABA0038BC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D1BB7CF2892DD590079419A /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EDA928542891AABB0038BC34 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
 		EDA9283D2891AABA0038BC34 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +76,7 @@
 		EDA928482891AABA0038BC34 /* Birdie Golf */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				EDAB2E0D2892D51B00E58DA3 /* Storyboards */,
 				EDAB2E072892D27500E58DA3 /* Resources */,
 			);
@@ -73,11 +86,19 @@
 		EDAB2E072892D27500E58DA3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+=======
+				9D1BB7CF2892DD590079419A /* LaunchScreen */,
+>>>>>>> develop
 				EDA928492891AABA0038BC34 /* AppDelegate.swift */,
 				EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */,
 				EDA928522891AABB0038BC34 /* Assets.xcassets */,
 				EDA928572891AABB0038BC34 /* Info.plist */,
+<<<<<<< HEAD
 				EDA928542891AABB0038BC34 /* LaunchScreen.storyboard */,
+=======
+				9D1BB7CE2892DC670079419A /* OdorMeanChey.ttf */,
+				9D1BB7D12892FA650079419A /* merriweather */,
+>>>>>>> develop
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -159,8 +180,14 @@
 				EDB236F62892E16000D0E96B /* Main.storyboard in Resources */,
 				EDA928562891AABB0038BC34 /* LaunchScreen.storyboard in Resources */,
 				EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */,
+<<<<<<< HEAD
 				EDB236E82892D85100D0E96B /* TabBarController.storyboard in Resources */,
 				EDB236EE2892D96100D0E96B /* Play.storyboard in Resources */,
+=======
+				9D1BB7D02892DFFC0079419A /* OdorMeanChey.ttf in Resources */,
+				EDA928512891AABA0038BC34 /* Main.storyboard in Resources */,
+				9D1BB7D22892FA650079419A /* merriweather in Resources */,
+>>>>>>> develop
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +345,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,6 +373,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
