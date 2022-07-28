@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D1BB7D02892DFFC0079419A /* OdorMeanChey.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BB7CE2892DC670079419A /* OdorMeanChey.ttf */; };
+		9D1BB7D22892FA650079419A /* merriweather in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BB7D12892FA650079419A /* merriweather */; };
 		EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA928492891AABA0038BC34 /* AppDelegate.swift */; };
 		EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */; };
 		EDA9284E2891AABA0038BC34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9284D2891AABA0038BC34 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		9D1BB7CE2892DC670079419A /* OdorMeanChey.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = OdorMeanChey.ttf; sourceTree = "<group>"; };
+		9D1BB7D12892FA650079419A /* merriweather */ = {isa = PBXFileReference; lastKnownFileType = folder; path = merriweather; sourceTree = "<group>"; };
 		EDA928462891AABA0038BC34 /* Birdie Golf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birdie Golf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA928492891AABA0038BC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				EDA928522891AABB0038BC34 /* Assets.xcassets */,
 				EDA928572891AABB0038BC34 /* Info.plist */,
 				9D1BB7CE2892DC670079419A /* OdorMeanChey.ttf */,
+				9D1BB7D12892FA650079419A /* merriweather */,
 			);
 			path = "Birdie Golf";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */,
 				9D1BB7D02892DFFC0079419A /* OdorMeanChey.ttf in Resources */,
 				EDA928512891AABA0038BC34 /* Main.storyboard in Resources */,
+				9D1BB7D22892FA650079419A /* merriweather in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
