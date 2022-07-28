@@ -5,6 +5,14 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>OdorMeanChey.ttf</string>
+		<string>Merriweather-Black.otf</string>
+		<string>Merriweather-BlackItalic.otf</string>
+		<string>Merriweather-Bold.otf</string>
+		<string>Merriweather-BoldItalic.otf</string>
+		<string>Merriweather-Italic.otf</string>
+		<string>Merriweather-Light.otf</string>
+		<string>Merriweather-LightItalic.otf</string>
+		<string>Merriweather-Regular.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
