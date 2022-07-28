@@ -17,6 +17,9 @@
 		EDB236F22892D97900D0E96B /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB236F12892D97900D0E96B /* Chat.storyboard */; };
 		EDB236F42892D98C00D0E96B /* Scorecard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB236F32892D98C00D0E96B /* Scorecard.storyboard */; };
 		EDB236F62892E16000D0E96B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB236F52892E16000D0E96B /* Main.storyboard */; };
+		EDB237032893392700D0E96B /* AlertPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB237022893392700D0E96B /* AlertPinView.swift */; };
+		EDB237052893395800D0E96B /* AlertPinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB237042893395800D0E96B /* AlertPinView.xib */; };
+		EDB2370728933FEF00D0E96B /* NumberOfHolesAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB2370628933FEF00D0E96B /* NumberOfHolesAlertView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		EDB236F12892D97900D0E96B /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		EDB236F32892D98C00D0E96B /* Scorecard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scorecard.storyboard; sourceTree = "<group>"; };
 		EDB236F52892E16000D0E96B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		EDB237022893392700D0E96B /* AlertPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPinView.swift; sourceTree = "<group>"; };
+		EDB237042893395800D0E96B /* AlertPinView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertPinView.xib; sourceTree = "<group>"; };
+		EDB2370628933FEF00D0E96B /* NumberOfHolesAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberOfHolesAlertView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		EDA928482891AABA0038BC34 /* Birdie Golf */ = {
 			isa = PBXGroup;
 			children = (
+				EDB237012893378900D0E96B /* AlertNibs */,
 				EDAB2E0D2892D51B00E58DA3 /* Storyboards */,
 				EDAB2E072892D27500E58DA3 /* Resources */,
 			);
@@ -93,6 +100,16 @@
 				EDB236F32892D98C00D0E96B /* Scorecard.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EDB237012893378900D0E96B /* AlertNibs */ = {
+			isa = PBXGroup;
+			children = (
+				EDB237022893392700D0E96B /* AlertPinView.swift */,
+				EDB237042893395800D0E96B /* AlertPinView.xib */,
+				EDB2370628933FEF00D0E96B /* NumberOfHolesAlertView.xib */,
+			);
+			path = AlertNibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDB237052893395800D0E96B /* AlertPinView.xib in Resources */,
 				EDB236F22892D97900D0E96B /* Chat.storyboard in Resources */,
 				EDB236F42892D98C00D0E96B /* Scorecard.storyboard in Resources */,
 				EDB236F02892D96E00D0E96B /* Leaderboard.storyboard in Resources */,
@@ -161,6 +179,7 @@
 				EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */,
 				EDB236E82892D85100D0E96B /* TabBarController.storyboard in Resources */,
 				EDB236EE2892D96100D0E96B /* Play.storyboard in Resources */,
+				EDB2370728933FEF00D0E96B /* NumberOfHolesAlertView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDB237032893392700D0E96B /* AlertPinView.swift in Sources */,
 				EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */,
 				EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */,
 			);
