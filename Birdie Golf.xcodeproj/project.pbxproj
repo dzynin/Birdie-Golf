@@ -11,10 +11,14 @@
 		9D1BB7D22892FA650079419A /* merriweather in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BB7D12892FA650079419A /* merriweather */; };
 		EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA928492891AABA0038BC34 /* AppDelegate.swift */; };
 		EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */; };
-		EDA9284E2891AABA0038BC34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9284D2891AABA0038BC34 /* ViewController.swift */; };
-		EDA928512891AABA0038BC34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA9284F2891AABA0038BC34 /* Main.storyboard */; };
 		EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA928522891AABB0038BC34 /* Assets.xcassets */; };
 		EDA928562891AABB0038BC34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDA928542891AABB0038BC34 /* LaunchScreen.storyboard */; };
+		EDB236E82892D85100D0E96B /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB236E72892D85100D0E96B /* TabBarController.storyboard */; };
+		EDB236EE2892D96100D0E96B /* Play.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB236ED2892D96100D0E96B /* Play.storyboard */; };
+		EDB236F02892D96E00D0E96B /* Leaderboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB236EF2892D96E00D0E96B /* Leaderboard.storyboard */; };
+		EDB236F22892D97900D0E96B /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB236F12892D97900D0E96B /* Chat.storyboard */; };
+		EDB236F42892D98C00D0E96B /* Scorecard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB236F32892D98C00D0E96B /* Scorecard.storyboard */; };
+		EDB236F62892E16000D0E96B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB236F52892E16000D0E96B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +27,15 @@
 		EDA928462891AABA0038BC34 /* Birdie Golf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birdie Golf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA928492891AABA0038BC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EDA9284D2891AABA0038BC34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EDA928502891AABA0038BC34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EDA928522891AABB0038BC34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDA928552891AABB0038BC34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDA928572891AABB0038BC34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDB236E72892D85100D0E96B /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
+		EDB236ED2892D96100D0E96B /* Play.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Play.storyboard; sourceTree = "<group>"; };
+		EDB236EF2892D96E00D0E96B /* Leaderboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Leaderboard.storyboard; sourceTree = "<group>"; };
+		EDB236F12892D97900D0E96B /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		EDB236F32892D98C00D0E96B /* Scorecard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scorecard.storyboard; sourceTree = "<group>"; };
+		EDB236F52892E16000D0E96B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,17 +76,44 @@
 		EDA928482891AABA0038BC34 /* Birdie Golf */ = {
 			isa = PBXGroup;
 			children = (
-				9D1BB7CF2892DD590079419A /* LaunchScreen */,
-				EDA928492891AABA0038BC34 /* AppDelegate.swift */,
-				EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */,
-				EDA9284D2891AABA0038BC34 /* ViewController.swift */,
-				EDA9284F2891AABA0038BC34 /* Main.storyboard */,
-				EDA928522891AABB0038BC34 /* Assets.xcassets */,
-				EDA928572891AABB0038BC34 /* Info.plist */,
-				9D1BB7CE2892DC670079419A /* OdorMeanChey.ttf */,
-				9D1BB7D12892FA650079419A /* merriweather */,
+<<<<<<< HEAD
+				EDAB2E0D2892D51B00E58DA3 /* Storyboards */,
+				EDAB2E072892D27500E58DA3 /* Resources */,
 			);
 			path = "Birdie Golf";
+			sourceTree = "<group>";
+		};
+		EDAB2E072892D27500E58DA3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+=======
+				9D1BB7CF2892DD590079419A /* LaunchScreen */,
+>>>>>>> develop
+				EDA928492891AABA0038BC34 /* AppDelegate.swift */,
+				EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */,
+				EDA928522891AABB0038BC34 /* Assets.xcassets */,
+				EDA928572891AABB0038BC34 /* Info.plist */,
+<<<<<<< HEAD
+				EDA928542891AABB0038BC34 /* LaunchScreen.storyboard */,
+=======
+				9D1BB7CE2892DC670079419A /* OdorMeanChey.ttf */,
+				9D1BB7D12892FA650079419A /* merriweather */,
+>>>>>>> develop
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EDAB2E0D2892D51B00E58DA3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EDB236F52892E16000D0E96B /* Main.storyboard */,
+				EDB236E72892D85100D0E96B /* TabBarController.storyboard */,
+				EDB236ED2892D96100D0E96B /* Play.storyboard */,
+				EDB236EF2892D96E00D0E96B /* Leaderboard.storyboard */,
+				EDB236F12892D97900D0E96B /* Chat.storyboard */,
+				EDB236F32892D98C00D0E96B /* Scorecard.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,11 +174,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDB236F22892D97900D0E96B /* Chat.storyboard in Resources */,
+				EDB236F42892D98C00D0E96B /* Scorecard.storyboard in Resources */,
+				EDB236F02892D96E00D0E96B /* Leaderboard.storyboard in Resources */,
+				EDB236F62892E16000D0E96B /* Main.storyboard in Resources */,
 				EDA928562891AABB0038BC34 /* LaunchScreen.storyboard in Resources */,
 				EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */,
+<<<<<<< HEAD
+				EDB236E82892D85100D0E96B /* TabBarController.storyboard in Resources */,
+				EDB236EE2892D96100D0E96B /* Play.storyboard in Resources */,
+=======
 				9D1BB7D02892DFFC0079419A /* OdorMeanChey.ttf in Resources */,
 				EDA928512891AABA0038BC34 /* Main.storyboard in Resources */,
 				9D1BB7D22892FA650079419A /* merriweather in Resources */,
+>>>>>>> develop
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +198,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDA9284E2891AABA0038BC34 /* ViewController.swift in Sources */,
 				EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */,
 				EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */,
 			);
@@ -163,14 +206,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EDA9284F2891AABA0038BC34 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EDA928502891AABA0038BC34 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EDA928542891AABB0038BC34 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -304,7 +339,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Birdie Golf/Info.plist";
+				INFOPLIST_FILE = "Birdie Golf/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -332,7 +367,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Birdie Golf/Info.plist";
+				INFOPLIST_FILE = "Birdie Golf/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
