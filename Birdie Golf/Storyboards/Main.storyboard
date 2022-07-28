@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,8 +15,85 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sC4-g5-XDn">
+                                <rect key="frame" x="45" y="239" width="321" height="423"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULe-Xo-6W0">
+                                        <rect key="frame" x="55" y="20" width="226" height="37"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="b4H-cH-UFT">
+                                        <rect key="frame" x="60" y="97" width="200" height="200"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxC-Bk-fGc">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="53.5"/>
+                                                <color key="backgroundColor" red="0.00020880332159999999" green="0.45717734100000001" blue="0.24039614200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.00020880332159999999" green="0.45717734100000001" blue="0.24039614200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Email">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMo-nm-F2d">
+                                                <rect key="frame" x="0.0" y="73.5" width="200" height="53"/>
+                                                <color key="backgroundColor" red="0.00020880332159999999" green="0.45717734100000001" blue="0.24039614200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.00044454680759999999" green="0.34252047540000002" blue="0.1753354073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Password">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5e-iF-Ail">
+                                                <rect key="frame" x="0.0" y="146.5" width="200" height="53.5"/>
+                                                <color key="backgroundColor" red="0.00044454680759999999" green="0.34252047540000002" blue="0.1753354073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.00044454680759999999" green="0.34252047540000002" blue="0.1753354073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Re-type Password">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="Nsx-fe-jly"/>
+                                            <constraint firstAttribute="width" constant="200" id="dUJ-e0-tLm"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ULe-Xo-6W0" firstAttribute="leading" secondItem="sC4-g5-XDn" secondAttribute="leading" constant="55" id="4xi-Mx-SBz"/>
+                                    <constraint firstAttribute="trailing" secondItem="b4H-cH-UFT" secondAttribute="trailing" constant="60" id="Dih-8P-fmy"/>
+                                    <constraint firstItem="ULe-Xo-6W0" firstAttribute="top" secondItem="sC4-g5-XDn" secondAttribute="top" constant="20" id="HSu-3m-fLe"/>
+                                    <constraint firstItem="b4H-cH-UFT" firstAttribute="leading" secondItem="sC4-g5-XDn" secondAttribute="leading" constant="60" id="L6z-gW-oIe"/>
+                                    <constraint firstItem="b4H-cH-UFT" firstAttribute="top" secondItem="ULe-Xo-6W0" secondAttribute="bottom" constant="40" id="XFI-8Z-9VV"/>
+                                    <constraint firstAttribute="trailing" secondItem="ULe-Xo-6W0" secondAttribute="trailing" constant="40" id="jp7-Md-1ie"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2022-07-28 at 11.18.01 AM" translatesAutoresizingMaskIntoConstraints="NO" id="HHC-JJ-FnG">
+                                <rect key="frame" x="87" y="71" width="237" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="vj3-Co-qJt"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.00020880332159999999" green="0.45717734100000001" blue="0.24039614200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HHC-JJ-FnG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="27" id="2ub-Bx-j6b"/>
+                            <constraint firstItem="HHC-JJ-FnG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="87" id="3r6-Vs-m81"/>
+                            <constraint firstItem="sC4-g5-XDn" firstAttribute="top" secondItem="HHC-JJ-FnG" secondAttribute="bottom" constant="40" id="8rO-W9-M60"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sC4-g5-XDn" secondAttribute="trailing" constant="40" id="Aep-ZY-WOA"/>
+                            <constraint firstItem="sC4-g5-XDn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="Har-U3-7BT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="sC4-g5-XDn" secondAttribute="bottom" constant="200" id="QCk-7b-fpF"/>
+                            <constraint firstItem="HHC-JJ-FnG" firstAttribute="centerX" secondItem="sC4-g5-XDn" secondAttribute="centerX" id="bqJ-xn-5H3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xMX-qM-oIU"/>
                 </viewController>
@@ -26,6 +103,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Screen Shot 2022-07-28 at 11.18.01 AM" width="133" height="130"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
