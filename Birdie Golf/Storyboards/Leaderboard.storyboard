@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Leaderboard" image="Leaderboard" selectedImage="Leaderboard" id="V7t-lX-g5B"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -28,8 +28,8 @@
     </scenes>
     <resources>
         <image name="Leaderboard" width="33" height="32"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
