@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41BE2E6128931B0D00A214EF /* OdorMeanChey.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6028931B0D00A214EF /* OdorMeanChey.ttf */; };
 		EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA928492891AABA0038BC34 /* AppDelegate.swift */; };
 		EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */; };
 		EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA928522891AABB0038BC34 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41BE2E6028931B0D00A214EF /* OdorMeanChey.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = OdorMeanChey.ttf; sourceTree = "<group>"; };
 		EDA928462891AABA0038BC34 /* Birdie Golf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birdie Golf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA928492891AABA0038BC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41BE2E5C2893197B00A214EF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				41BE2E6028931B0D00A214EF /* OdorMeanChey.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		EDA9283D2891AABA0038BC34 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		EDA928482891AABA0038BC34 /* Birdie Golf */ = {
 			isa = PBXGroup;
 			children = (
+				41BE2E5C2893197B00A214EF /* Fonts */,
 				EDAB2E0D2892D51B00E58DA3 /* Storyboards */,
 				EDAB2E072892D27500E58DA3 /* Resources */,
 			);
@@ -160,6 +171,7 @@
 				EDA928562891AABB0038BC34 /* LaunchScreen.storyboard in Resources */,
 				EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */,
 				EDB236E82892D85100D0E96B /* TabBarController.storyboard in Resources */,
+				41BE2E6128931B0D00A214EF /* OdorMeanChey.ttf in Resources */,
 				EDB236EE2892D96100D0E96B /* Play.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
