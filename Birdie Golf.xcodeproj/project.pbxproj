@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41BE2E6128931B0D00A214EF /* OdorMeanChey.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6028931B0D00A214EF /* OdorMeanChey.ttf */; };
+		41BE2E6C28931DDB00A214EF /* Merriweather-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6428931DDB00A214EF /* Merriweather-Italic.otf */; };
+		41BE2E6D28931DDB00A214EF /* Merriweather-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6528931DDB00A214EF /* Merriweather-LightItalic.otf */; };
+		41BE2E6E28931DDB00A214EF /* Merriweather-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6628931DDB00A214EF /* Merriweather-Regular.otf */; };
+		41BE2E6F28931DDB00A214EF /* Merriweather-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6728931DDB00A214EF /* Merriweather-BlackItalic.otf */; };
+		41BE2E7028931DDB00A214EF /* Merriweather-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6828931DDB00A214EF /* Merriweather-Black.otf */; };
+		41BE2E7128931DDB00A214EF /* Merriweather-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6928931DDB00A214EF /* Merriweather-Bold.otf */; };
+		41BE2E7228931DDB00A214EF /* Merriweather-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6A28931DDB00A214EF /* Merriweather-BoldItalic.otf */; };
+		41BE2E7328931DDB00A214EF /* Merriweather-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6B28931DDB00A214EF /* Merriweather-Light.otf */; };
 		EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA928492891AABA0038BC34 /* AppDelegate.swift */; };
 		EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */; };
 		EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA928522891AABB0038BC34 /* Assets.xcassets */; };
@@ -20,6 +29,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41BE2E6028931B0D00A214EF /* OdorMeanChey.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = OdorMeanChey.ttf; sourceTree = "<group>"; };
+		41BE2E6428931DDB00A214EF /* Merriweather-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Italic.otf"; sourceTree = "<group>"; };
+		41BE2E6528931DDB00A214EF /* Merriweather-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-LightItalic.otf"; sourceTree = "<group>"; };
+		41BE2E6628931DDB00A214EF /* Merriweather-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Regular.otf"; sourceTree = "<group>"; };
+		41BE2E6728931DDB00A214EF /* Merriweather-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-BlackItalic.otf"; sourceTree = "<group>"; };
+		41BE2E6828931DDB00A214EF /* Merriweather-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Black.otf"; sourceTree = "<group>"; };
+		41BE2E6928931DDB00A214EF /* Merriweather-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Bold.otf"; sourceTree = "<group>"; };
+		41BE2E6A28931DDB00A214EF /* Merriweather-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-BoldItalic.otf"; sourceTree = "<group>"; };
+		41BE2E6B28931DDB00A214EF /* Merriweather-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Light.otf"; sourceTree = "<group>"; };
 		EDA928462891AABA0038BC34 /* Birdie Golf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birdie Golf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA928492891AABA0038BC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +63,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41BE2E5C2893197B00A214EF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				41BE2E6328931D9500A214EF /* Merriweather */,
+				41BE2E6228931D7F00A214EF /* OdorMeanChey */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		41BE2E6228931D7F00A214EF /* OdorMeanChey */ = {
+			isa = PBXGroup;
+			children = (
+				41BE2E6028931B0D00A214EF /* OdorMeanChey.ttf */,
+			);
+			path = OdorMeanChey;
+			sourceTree = "<group>";
+		};
+		41BE2E6328931D9500A214EF /* Merriweather */ = {
+			isa = PBXGroup;
+			children = (
+				41BE2E6828931DDB00A214EF /* Merriweather-Black.otf */,
+				41BE2E6728931DDB00A214EF /* Merriweather-BlackItalic.otf */,
+				41BE2E6928931DDB00A214EF /* Merriweather-Bold.otf */,
+				41BE2E6A28931DDB00A214EF /* Merriweather-BoldItalic.otf */,
+				41BE2E6428931DDB00A214EF /* Merriweather-Italic.otf */,
+				41BE2E6B28931DDB00A214EF /* Merriweather-Light.otf */,
+				41BE2E6528931DDB00A214EF /* Merriweather-LightItalic.otf */,
+				41BE2E6628931DDB00A214EF /* Merriweather-Regular.otf */,
+			);
+			path = Merriweather;
+			sourceTree = "<group>";
+		};
 		EDA9283D2891AABA0038BC34 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +114,7 @@
 		EDA928482891AABA0038BC34 /* Birdie Golf */ = {
 			isa = PBXGroup;
 			children = (
+				41BE2E5C2893197B00A214EF /* Fonts */,
 				EDAB2E0D2892D51B00E58DA3 /* Storyboards */,
 				EDAB2E072892D27500E58DA3 /* Resources */,
 			);
@@ -157,9 +208,18 @@
 				EDB236F42892D98C00D0E96B /* Scorecard.storyboard in Resources */,
 				EDB236F02892D96E00D0E96B /* Leaderboard.storyboard in Resources */,
 				EDB236F62892E16000D0E96B /* Main.storyboard in Resources */,
+				41BE2E7028931DDB00A214EF /* Merriweather-Black.otf in Resources */,
+				41BE2E7228931DDB00A214EF /* Merriweather-BoldItalic.otf in Resources */,
+				41BE2E7328931DDB00A214EF /* Merriweather-Light.otf in Resources */,
 				EDA928562891AABB0038BC34 /* LaunchScreen.storyboard in Resources */,
 				EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */,
+				41BE2E6D28931DDB00A214EF /* Merriweather-LightItalic.otf in Resources */,
 				EDB236E82892D85100D0E96B /* TabBarController.storyboard in Resources */,
+				41BE2E6128931B0D00A214EF /* OdorMeanChey.ttf in Resources */,
+				41BE2E6E28931DDB00A214EF /* Merriweather-Regular.otf in Resources */,
+				41BE2E6C28931DDB00A214EF /* Merriweather-Italic.otf in Resources */,
+				41BE2E7128931DDB00A214EF /* Merriweather-Bold.otf in Resources */,
+				41BE2E6F28931DDB00A214EF /* Merriweather-BlackItalic.otf in Resources */,
 				EDB236EE2892D96100D0E96B /* Play.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
