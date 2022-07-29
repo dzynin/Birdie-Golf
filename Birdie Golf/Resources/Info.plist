@@ -4,10 +4,16 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string></string>
+		<string>OdorMeanChey.ttf</string>
+		<string>Merriweather-Black.otf</string>
+		<string>Merriweather-BlackItalic.otf</string>
+		<string>Merriweather-Bold.otf</string>
+		<string>Merriweather-BoldItalic.otf</string>
+		<string>Merriweather-Italic.otf</string>
+		<string>Merriweather-Light.otf</string>
+		<string>Merriweather-LightItalic.otf</string>
+		<string>Merriweather-Regular.otf</string>
 	</array>
-	<key>item 0</key>
-	<string>OdorMeanChey.ttf</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -22,7 +28,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
+					<string>TabBarController</string>
 				</dict>
 			</array>
 		</dict>
