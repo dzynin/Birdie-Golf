@@ -36,7 +36,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(random PIN)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9h-dp-exW">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(123456)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9h-dp-exW">
                     <rect key="frame" x="75" y="149.5" width="150" height="31.5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="h7W-0Q-lkJ"/>
@@ -49,9 +49,17 @@
                     <rect key="frame" x="20" y="231" width="260" height="31"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Button">
-                        <color key="baseBackgroundColor" red="0.0" green="0.45994293689999999" blue="0.23727780579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="baseBackgroundColor" red="0.0" green="0.61620969315787688" blue="0.32657441530463704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </buttonConfiguration>
                 </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="_ _ _ _ _ _" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Acg-xo-H4y">
+                    <rect key="frame" x="30" y="181" width="240" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -67,7 +75,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xZH-6W-IAr" secondAttribute="trailing" constant="20" id="wgu-dt-C0K"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="190.57971014492756" y="136.60714285714286"/>
+            <point key="canvasLocation" x="189.85507246376812" y="136.60714285714286"/>
         </view>
     </objects>
     <resources>

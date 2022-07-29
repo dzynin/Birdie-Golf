@@ -17,7 +17,6 @@
 		EDB236F22892D97900D0E96B /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB236F12892D97900D0E96B /* Chat.storyboard */; };
 		EDB236F42892D98C00D0E96B /* Scorecard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB236F32892D98C00D0E96B /* Scorecard.storyboard */; };
 		EDB236F62892E16000D0E96B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB236F52892E16000D0E96B /* Main.storyboard */; };
-		EDB237032893392700D0E96B /* AlertPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB237022893392700D0E96B /* AlertPinView.swift */; };
 		EDB237052893395800D0E96B /* AlertPinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB237042893395800D0E96B /* AlertPinView.xib */; };
 		EDB2370728933FEF00D0E96B /* NumberOfHolesAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB2370628933FEF00D0E96B /* NumberOfHolesAlertView.xib */; };
 /* End PBXBuildFile section */
@@ -35,7 +34,6 @@
 		EDB236F12892D97900D0E96B /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		EDB236F32892D98C00D0E96B /* Scorecard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scorecard.storyboard; sourceTree = "<group>"; };
 		EDB236F52892E16000D0E96B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		EDB237022893392700D0E96B /* AlertPinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPinView.swift; sourceTree = "<group>"; };
 		EDB237042893395800D0E96B /* AlertPinView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertPinView.xib; sourceTree = "<group>"; };
 		EDB2370628933FEF00D0E96B /* NumberOfHolesAlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberOfHolesAlertView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,7 +103,6 @@
 		EDB237012893378900D0E96B /* AlertNibs */ = {
 			isa = PBXGroup;
 			children = (
-				EDB237022893392700D0E96B /* AlertPinView.swift */,
 				EDB237042893395800D0E96B /* AlertPinView.xib */,
 				EDB2370628933FEF00D0E96B /* NumberOfHolesAlertView.xib */,
 			);
@@ -190,7 +187,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDB237032893392700D0E96B /* AlertPinView.swift in Sources */,
 				EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */,
 				EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */,
 			);
