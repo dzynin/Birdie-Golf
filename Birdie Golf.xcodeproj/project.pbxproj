@@ -20,6 +20,7 @@
 		9D1BB7D7289354D20079419A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BB7D6289354D20079419A /* SignInViewController.swift */; };
 		ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D0089289838D600075CB4 /* ChatViewController.swift */; };
 		ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D008F289844B900075CB4 /* ScorecardViewController.swift */; };
+		9D76E8DE28984323001D03F1 /* Tourney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D76E8DD28984323001D03F1 /* Tourney.storyboard */; };
 		EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA928492891AABA0038BC34 /* AppDelegate.swift */; };
 		EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */; };
 		EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA928522891AABB0038BC34 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		9D1BB7D6289354D20079419A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		ED8D0089289838D600075CB4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		ED8D008F289844B900075CB4 /* ScorecardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardViewController.swift; sourceTree = "<group>"; };
+		9D76E8DD28984323001D03F1 /* Tourney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tourney.storyboard; sourceTree = "<group>"; };
 		EDA928462891AABA0038BC34 /* Birdie Golf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birdie Golf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA928492891AABA0038BC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				EDB236F12892D97900D0E96B /* Chat.storyboard */,
 				EDB236F32892D98C00D0E96B /* Scorecard.storyboard */,
 				9D1BB7D3289336F10079419A /* SignIn.storyboard */,
+				9D76E8DD28984323001D03F1 /* Tourney.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				EDB236F62892E16000D0E96B /* Main.storyboard in Resources */,
 				9D1BB7D4289336F10079419A /* SignIn.storyboard in Resources */,
 				41BE2E7028931DDB00A214EF /* Merriweather-Black.otf in Resources */,
+				9D76E8DE28984323001D03F1 /* Tourney.storyboard in Resources */,
 				41BE2E7228931DDB00A214EF /* Merriweather-BoldItalic.otf in Resources */,
 				EDB2370B289376E000D0E96B /* AlertPinView.xib in Resources */,
 				41BE2E7328931DDB00A214EF /* Merriweather-Light.otf in Resources */,
