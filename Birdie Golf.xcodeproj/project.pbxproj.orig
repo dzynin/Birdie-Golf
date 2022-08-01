@@ -130,8 +130,11 @@
 		EDA928482891AABA0038BC34 /* Birdie Golf */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< .merge_file_U2q0Zn
 				9D1BB7D5289354990079419A /* SignInScreenView */,
+=======
 				EDB2370C289376E700D0E96B /* Alert Nibs */,
+>>>>>>> .merge_file_QHKMOJ
 				41BE2E5C2893197B00A214EF /* Fonts */,
 				EDAB2E0D2892D51B00E58DA3 /* Storyboards */,
 				EDAB2E072892D27500E58DA3 /* Resources */,
