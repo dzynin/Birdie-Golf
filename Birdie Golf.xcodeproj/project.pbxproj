@@ -17,6 +17,7 @@
 		41BE2E7228931DDB00A214EF /* Merriweather-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6A28931DDB00A214EF /* Merriweather-BoldItalic.otf */; };
 		41BE2E7328931DDB00A214EF /* Merriweather-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6B28931DDB00A214EF /* Merriweather-Light.otf */; };
 		9D1BB7D4289336F10079419A /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BB7D3289336F10079419A /* SignIn.storyboard */; };
+		9D1BB7D7289354D20079419A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BB7D6289354D20079419A /* SignInViewController.swift */; };
 		EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA928492891AABA0038BC34 /* AppDelegate.swift */; };
 		EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */; };
 		EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA928522891AABB0038BC34 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		41BE2E6A28931DDB00A214EF /* Merriweather-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-BoldItalic.otf"; sourceTree = "<group>"; };
 		41BE2E6B28931DDB00A214EF /* Merriweather-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Light.otf"; sourceTree = "<group>"; };
 		9D1BB7D3289336F10079419A /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		9D1BB7D6289354D20079419A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EDA928462891AABA0038BC34 /* Birdie Golf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birdie Golf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA928492891AABA0038BC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,14 @@
 			path = Merriweather;
 			sourceTree = "<group>";
 		};
+		9D1BB7D5289354990079419A /* SignInScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				9D1BB7D6289354D20079419A /* SignInViewController.swift */,
+			);
+			path = SignInScreenView;
+			sourceTree = "<group>";
+		};
 		EDA9283D2891AABA0038BC34 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +126,7 @@
 		EDA928482891AABA0038BC34 /* Birdie Golf */ = {
 			isa = PBXGroup;
 			children = (
+				9D1BB7D5289354990079419A /* SignInScreenView */,
 				41BE2E5C2893197B00A214EF /* Fonts */,
 				EDAB2E0D2892D51B00E58DA3 /* Storyboards */,
 				EDAB2E072892D27500E58DA3 /* Resources */,
@@ -237,6 +248,7 @@
 			files = (
 				EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */,
 				EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */,
+				9D1BB7D7289354D20079419A /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
