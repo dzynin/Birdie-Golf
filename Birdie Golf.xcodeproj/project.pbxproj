@@ -18,9 +18,12 @@
 		41BE2E7328931DDB00A214EF /* Merriweather-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6B28931DDB00A214EF /* Merriweather-Light.otf */; };
 		9D1BB7D4289336F10079419A /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BB7D3289336F10079419A /* SignIn.storyboard */; };
 		9D1BB7D7289354D20079419A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BB7D6289354D20079419A /* SignInViewController.swift */; };
+		9D2471012899B27A0004EFAF /* GoogleService-Info-6.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D2471002899B27A0004EFAF /* GoogleService-Info-6.plist */; };
+		9D2471042899B4680004EFAF /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9D2471032899B4680004EFAF /* FirebaseDatabase */; };
+		9D2471062899B4680004EFAF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9D2471052899B4680004EFAF /* FirebaseFirestore */; };
+		9D76E8DE28984323001D03F1 /* Tourney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D76E8DD28984323001D03F1 /* Tourney.storyboard */; };
 		ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D0089289838D600075CB4 /* ChatViewController.swift */; };
 		ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D008F289844B900075CB4 /* ScorecardViewController.swift */; };
-		9D76E8DE28984323001D03F1 /* Tourney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D76E8DD28984323001D03F1 /* Tourney.storyboard */; };
 		EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA928492891AABA0038BC34 /* AppDelegate.swift */; };
 		EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */; };
 		EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA928522891AABB0038BC34 /* Assets.xcassets */; };
@@ -47,9 +50,10 @@
 		41BE2E6B28931DDB00A214EF /* Merriweather-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Light.otf"; sourceTree = "<group>"; };
 		9D1BB7D3289336F10079419A /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		9D1BB7D6289354D20079419A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		9D2471002899B27A0004EFAF /* GoogleService-Info-6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-6.plist"; path = "../../../../../Downloads/GoogleService-Info-6.plist"; sourceTree = "<group>"; };
+		9D76E8DD28984323001D03F1 /* Tourney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tourney.storyboard; sourceTree = "<group>"; };
 		ED8D0089289838D600075CB4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		ED8D008F289844B900075CB4 /* ScorecardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardViewController.swift; sourceTree = "<group>"; };
-		9D76E8DD28984323001D03F1 /* Tourney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tourney.storyboard; sourceTree = "<group>"; };
 		EDA928462891AABA0038BC34 /* Birdie Golf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birdie Golf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA928492891AABA0038BC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D2471042899B4680004EFAF /* FirebaseDatabase in Frameworks */,
+				9D2471062899B4680004EFAF /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +158,7 @@
 		EDA928482891AABA0038BC34 /* Birdie Golf */ = {
 			isa = PBXGroup;
 			children = (
+				9D2471002899B27A0004EFAF /* GoogleService-Info-6.plist */,
 				ED8D008E289844A100075CB4 /* Scorecard */,
 				ED8D00862898385500075CB4 /* Chat */,
 				9D1BB7D5289354990079419A /* SignInScreenView */,
@@ -215,6 +222,10 @@
 			dependencies = (
 			);
 			name = "Birdie Golf";
+			packageProductDependencies = (
+				9D2471032899B4680004EFAF /* FirebaseDatabase */,
+				9D2471052899B4680004EFAF /* FirebaseFirestore */,
+			);
 			productName = "Birdie Golf";
 			productReference = EDA928462891AABA0038BC34 /* Birdie Golf.app */;
 			productType = "com.apple.product-type.application";
@@ -243,6 +254,9 @@
 				Base,
 			);
 			mainGroup = EDA9283D2891AABA0038BC34;
+			packageReferences = (
+				9D2471022899B4670004EFAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = EDA928472891AABA0038BC34 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -277,6 +291,7 @@
 				41BE2E6C28931DDB00A214EF /* Merriweather-Italic.otf in Resources */,
 				41BE2E7128931DDB00A214EF /* Merriweather-Bold.otf in Resources */,
 				41BE2E6F28931DDB00A214EF /* Merriweather-BlackItalic.otf in Resources */,
+				9D2471012899B27A0004EFAF /* GoogleService-Info-6.plist in Resources */,
 				EDB236EE2892D96100D0E96B /* Play.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +517,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9D2471022899B4670004EFAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9D2471032899B4680004EFAF /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D2471022899B4670004EFAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		9D2471052899B4680004EFAF /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D2471022899B4670004EFAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EDA9283E2891AABA0038BC34 /* Project object */;
 }
