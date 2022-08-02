@@ -18,6 +18,8 @@
 		41BE2E7328931DDB00A214EF /* Merriweather-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6B28931DDB00A214EF /* Merriweather-Light.otf */; };
 		9D1BB7D4289336F10079419A /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BB7D3289336F10079419A /* SignIn.storyboard */; };
 		9D1BB7D7289354D20079419A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BB7D6289354D20079419A /* SignInViewController.swift */; };
+		ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D0089289838D600075CB4 /* ChatViewController.swift */; };
+		ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D008F289844B900075CB4 /* ScorecardViewController.swift */; };
 		9D76E8DE28984323001D03F1 /* Tourney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D76E8DD28984323001D03F1 /* Tourney.storyboard */; };
 		EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA928492891AABA0038BC34 /* AppDelegate.swift */; };
 		EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */; };
@@ -45,6 +47,8 @@
 		41BE2E6B28931DDB00A214EF /* Merriweather-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Light.otf"; sourceTree = "<group>"; };
 		9D1BB7D3289336F10079419A /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		9D1BB7D6289354D20079419A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		ED8D0089289838D600075CB4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		ED8D008F289844B900075CB4 /* ScorecardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardViewController.swift; sourceTree = "<group>"; };
 		9D76E8DD28984323001D03F1 /* Tourney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tourney.storyboard; sourceTree = "<group>"; };
 		EDA928462891AABA0038BC34 /* Birdie Golf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birdie Golf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA928492891AABA0038BC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,22 @@
 			path = SignInScreenView;
 			sourceTree = "<group>";
 		};
+		ED8D00862898385500075CB4 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				ED8D0089289838D600075CB4 /* ChatViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		ED8D008E289844A100075CB4 /* Scorecard */ = {
+			isa = PBXGroup;
+			children = (
+				ED8D008F289844B900075CB4 /* ScorecardViewController.swift */,
+			);
+			path = Scorecard;
+			sourceTree = "<group>";
+		};
 		EDA9283D2891AABA0038BC34 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +152,8 @@
 		EDA928482891AABA0038BC34 /* Birdie Golf */ = {
 			isa = PBXGroup;
 			children = (
+				ED8D008E289844A100075CB4 /* Scorecard */,
+				ED8D00862898385500075CB4 /* Chat */,
 				9D1BB7D5289354990079419A /* SignInScreenView */,
 				EDB2370C289376E700D0E96B /* Alert Nibs */,
 				41BE2E5C2893197B00A214EF /* Fonts */,
@@ -268,7 +290,9 @@
 			files = (
 				EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */,
 				EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */,
+				ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */,
 				9D1BB7D7289354D20079419A /* SignInViewController.swift in Sources */,
+				ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
