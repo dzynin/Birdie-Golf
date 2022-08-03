@@ -74,14 +74,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="386" height="47"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-<<<<<<< HEAD
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="Zqb-Yj-djN">
                                                     <rect key="frame" x="0.0" y="0.0" width="386" height="40"/>
-=======
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="Zqb-Yj-djN">
-                                                    <rect key="frame" x="0.0" y="4" width="386" height="39"/>
->>>>>>> develop
-                                                    <subviews>
+						<subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hP-fm-Oud">
                                                             <rect key="frame" x="0.0" y="0.0" width="39" height="40"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
