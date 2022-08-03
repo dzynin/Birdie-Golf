@@ -16,11 +16,11 @@
 		41BE2E7128931DDB00A214EF /* Merriweather-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6928931DDB00A214EF /* Merriweather-Bold.otf */; };
 		41BE2E7228931DDB00A214EF /* Merriweather-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6A28931DDB00A214EF /* Merriweather-BoldItalic.otf */; };
 		41BE2E7328931DDB00A214EF /* Merriweather-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6B28931DDB00A214EF /* Merriweather-Light.otf */; };
+		9D1B949E289AD64B00CC57DC /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9D1B949D289AD64B00CC57DC /* FirebaseDatabase */; };
+		9D1B94A0289AD64B00CC57DC /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9D1B949F289AD64B00CC57DC /* FirebaseDatabaseSwift */; };
 		9D1BB7D4289336F10079419A /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BB7D3289336F10079419A /* SignIn.storyboard */; };
 		9D1BB7D7289354D20079419A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BB7D6289354D20079419A /* SignInViewController.swift */; };
 		9D2471012899B27A0004EFAF /* GoogleService-Info-6.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D2471002899B27A0004EFAF /* GoogleService-Info-6.plist */; };
-		9D2471042899B4680004EFAF /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9D2471032899B4680004EFAF /* FirebaseDatabase */; };
-		9D2471062899B4680004EFAF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9D2471052899B4680004EFAF /* FirebaseFirestore */; };
 		9D76E8DE28984323001D03F1 /* Tourney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D76E8DD28984323001D03F1 /* Tourney.storyboard */; };
 		ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D0089289838D600075CB4 /* ChatViewController.swift */; };
 		ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D008F289844B900075CB4 /* ScorecardViewController.swift */; };
@@ -75,8 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D2471042899B4680004EFAF /* FirebaseDatabase in Frameworks */,
-				9D2471062899B4680004EFAF /* FirebaseFirestore in Frameworks */,
+				9D1B94A0289AD64B00CC57DC /* FirebaseDatabaseSwift in Frameworks */,
+				9D1B949E289AD64B00CC57DC /* FirebaseDatabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,8 +223,8 @@
 			);
 			name = "Birdie Golf";
 			packageProductDependencies = (
-				9D2471032899B4680004EFAF /* FirebaseDatabase */,
-				9D2471052899B4680004EFAF /* FirebaseFirestore */,
+				9D1B949D289AD64B00CC57DC /* FirebaseDatabase */,
+				9D1B949F289AD64B00CC57DC /* FirebaseDatabaseSwift */,
 			);
 			productName = "Birdie Golf";
 			productReference = EDA928462891AABA0038BC34 /* Birdie Golf.app */;
@@ -255,7 +255,7 @@
 			);
 			mainGroup = EDA9283D2891AABA0038BC34;
 			packageReferences = (
-				9D2471022899B4670004EFAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				9D1B949C289AD64B00CC57DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = EDA928472891AABA0038BC34 /* Products */;
 			projectDirPath = "";
@@ -519,7 +519,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9D2471022899B4670004EFAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		9D1B949C289AD64B00CC57DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -530,15 +530,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9D2471032899B4680004EFAF /* FirebaseDatabase */ = {
+		9D1B949D289AD64B00CC57DC /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9D2471022899B4670004EFAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 9D1B949C289AD64B00CC57DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
 		};
-		9D2471052899B4680004EFAF /* FirebaseFirestore */ = {
+		9D1B949F289AD64B00CC57DC /* FirebaseDatabaseSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9D2471022899B4670004EFAF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
+			package = 9D1B949C289AD64B00CC57DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
