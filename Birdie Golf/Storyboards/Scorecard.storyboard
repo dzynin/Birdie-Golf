@@ -74,8 +74,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="386" height="47"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+<<<<<<< HEAD
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="Zqb-Yj-djN">
                                                     <rect key="frame" x="0.0" y="0.0" width="386" height="40"/>
+=======
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="Zqb-Yj-djN">
+                                                    <rect key="frame" x="0.0" y="4" width="386" height="39"/>
+>>>>>>> develop
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hP-fm-Oud">
                                                             <rect key="frame" x="0.0" y="0.0" width="39" height="40"/>
@@ -151,6 +156,9 @@
                                                 <constraint firstItem="Zqb-Yj-djN" firstAttribute="leading" secondItem="juS-0Y-Gan" secondAttribute="leading" id="teJ-JL-wsV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="Zqb-Yj-djN" firstAttribute="centerY" secondItem="kZ9-vO-By6" secondAttribute="centerY" id="uk0-ID-fBP"/>
+                                        </constraints>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="47" id="cf8-Ko-NmJ">
                                         <rect key="frame" x="0.0" y="91.5" width="386" height="47"/>
@@ -159,8 +167,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="386" height="47"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="EV7-Bt-huL">
-                                                    <rect key="frame" x="0.0" y="0.0" width="386" height="40"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="EV7-Bt-huL">
+                                                    <rect key="frame" x="0.0" y="3.5" width="386" height="40"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(hole)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1h-cf-zuh">
                                                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -234,6 +242,9 @@
                                                 <constraint firstItem="EV7-Bt-huL" firstAttribute="leading" secondItem="TQY-za-bQM" secondAttribute="leading" id="TJn-5c-RXa"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="EV7-Bt-huL" firstAttribute="centerY" secondItem="cf8-Ko-NmJ" secondAttribute="centerY" id="LNn-lZ-kyP"/>
+                                        </constraints>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
