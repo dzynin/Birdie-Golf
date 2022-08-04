@@ -14,9 +14,4 @@ struct Hole: Codable {
     var strokes: Int
     var putts: Int?
     
-    init(holeNumber: Int, strokes: Int, putts: Int?) {
-        self.holeNumber = holeNumber
-        self.strokes = strokes
-        self.putts = putts
-    }
 }
