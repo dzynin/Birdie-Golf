@@ -7,7 +7,7 @@
 
 import Foundation
 
-class User {
+class User: Codable {
     enum Key {
         static var userName = "userName"
         static let userID = "userID"
