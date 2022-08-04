@@ -20,19 +20,17 @@
 		9D1B94A0289AD64B00CC57DC /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9D1B949F289AD64B00CC57DC /* FirebaseDatabaseSwift */; };
 		9D1BB7D4289336F10079419A /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BB7D3289336F10079419A /* SignIn.storyboard */; };
 		9D1BB7D7289354D20079419A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BB7D6289354D20079419A /* SignInViewController.swift */; };
-		9D76E8DE28984323001D03F1 /* Tourney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D76E8DD28984323001D03F1 /* Tourney.storyboard */; };
-		9DF3D5BA2899F63800A64583 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF3D5B92899F63800A64583 /* User.swift */; };
-		ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D0089289838D600075CB4 /* ChatViewController.swift */; };
-		ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D008F289844B900075CB4 /* ScorecardViewController.swift */; };
-		9D2471012899B27A0004EFAF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D2471002899B27A0004EFAF /* GoogleService-Info.plist */; };
-		9D76E8DE28984323001D03F1 /* Tourney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D76E8DD28984323001D03F1 /* Tourney.storyboard */; };
-		ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D0089289838D600075CB4 /* ChatViewController.swift */; };
-		ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D008F289844B900075CB4 /* ScorecardViewController.swift */; };
-		ED8D00942899D2F700075CB4 /* Pre-game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8D00932899D2F700075CB4 /* Pre-game.storyboard */; };
+<<<<<<<<< Temporary merge branch 1
 		9D2471012899B27A0004EFAF /* GoogleService-Info-6.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D2471002899B27A0004EFAF /* GoogleService-Info-6.plist */; };
 		9D76E8DE28984323001D03F1 /* Tourney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D76E8DD28984323001D03F1 /* Tourney.storyboard */; };
 		ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D0089289838D600075CB4 /* ChatViewController.swift */; };
 		ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D008F289844B900075CB4 /* ScorecardViewController.swift */; };
+=========
+		9D76E8DE28984323001D03F1 /* Tourney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D76E8DD28984323001D03F1 /* Tourney.storyboard */; };
+		ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D0089289838D600075CB4 /* ChatViewController.swift */; };
+		ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D008F289844B900075CB4 /* ScorecardViewController.swift */; };
+		ED8D00942899D2F700075CB4 /* Pre-game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8D00932899D2F700075CB4 /* Pre-game.storyboard */; };
+>>>>>>>>> Temporary merge branch 2
 		EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA928492891AABA0038BC34 /* AppDelegate.swift */; };
 		EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */; };
 		EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA928522891AABB0038BC34 /* Assets.xcassets */; };
@@ -59,13 +57,17 @@
 		41BE2E6B28931DDB00A214EF /* Merriweather-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Light.otf"; sourceTree = "<group>"; };
 		9D1BB7D3289336F10079419A /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		9D1BB7D6289354D20079419A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+<<<<<<<<< Temporary merge branch 1
+		9D2471002899B27A0004EFAF /* GoogleService-Info-6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-6.plist"; path = "../../../../../Downloads/GoogleService-Info-6.plist"; sourceTree = "<group>"; };
 		9D76E8DD28984323001D03F1 /* Tourney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tourney.storyboard; sourceTree = "<group>"; };
-		9DF3D5B92899F63800A64583 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		9D2471002899B27A0004EFAF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ED8D0089289838D600075CB4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		ED8D008F289844B900075CB4 /* ScorecardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardViewController.swift; sourceTree = "<group>"; };
+=========
 		9D76E8DD28984323001D03F1 /* Tourney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tourney.storyboard; sourceTree = "<group>"; };
 		ED8D0089289838D600075CB4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		ED8D008F289844B900075CB4 /* ScorecardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardViewController.swift; sourceTree = "<group>"; };
 		ED8D00932899D2F700075CB4 /* Pre-game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Pre-game.storyboard"; sourceTree = "<group>"; };
+>>>>>>>>> Temporary merge branch 2
 		EDA928462891AABA0038BC34 /* Birdie Golf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birdie Golf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA928492891AABA0038BC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,14 +137,6 @@
 			path = SignInScreenView;
 			sourceTree = "<group>";
 		};
-		9DF3D5B82899F61C00A64583 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				9DF3D5B92899F63800A64583 /* User.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		ED8D00862898385500075CB4 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,8 +172,7 @@
 		EDA928482891AABA0038BC34 /* Birdie Golf */ = {
 			isa = PBXGroup;
 			children = (
-				9DF3D5B82899F61C00A64583 /* Models */,
-				9D2471002899B27A0004EFAF /* GoogleService-Info.plist */,
+				9D2471002899B27A0004EFAF /* GoogleService-Info-6.plist */,
 				ED8D008E289844A100075CB4 /* Scorecard */,
 				ED8D00862898385500075CB4 /* Chat */,
 				9D1BB7D5289354990079419A /* SignInScreenView */,
@@ -314,7 +307,7 @@
 				41BE2E6C28931DDB00A214EF /* Merriweather-Italic.otf in Resources */,
 				41BE2E7128931DDB00A214EF /* Merriweather-Bold.otf in Resources */,
 				41BE2E6F28931DDB00A214EF /* Merriweather-BlackItalic.otf in Resources */,
-				9D2471012899B27A0004EFAF /* GoogleService-Info.plist in Resources */,
+				9D2471012899B27A0004EFAF /* GoogleService-Info-6.plist in Resources */,
 				EDB236EE2892D96100D0E96B /* Play.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,7 +321,6 @@
 			files = (
 				EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */,
 				EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */,
-				9DF3D5BA2899F63800A64583 /* User.swift in Sources */,
 				ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */,
 				9D1BB7D7289354D20079419A /* SignInViewController.swift in Sources */,
 				ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */,
