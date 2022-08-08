@@ -46,6 +46,8 @@
 		EDB236F62892E16000D0E96B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB236F52892E16000D0E96B /* Main.storyboard */; };
 		EDB2370A289376E000D0E96B /* NumberOfHolesAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB23708289376E000D0E96B /* NumberOfHolesAlertView.xib */; };
 		EDB2370B289376E000D0E96B /* AlertPinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB23709289376E000D0E96B /* AlertPinView.xib */; };
+		EDF7071F28A17B5700E488F4 /* PregameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */; };
+		EDF7072128A17D6300E488F4 /* PregameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7072028A17D6300E488F4 /* PregameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +89,8 @@
 		EDB236F52892E16000D0E96B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EDB23708289376E000D0E96B /* NumberOfHolesAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberOfHolesAlertView.xib; sourceTree = "<group>"; };
 		EDB23709289376E000D0E96B /* AlertPinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertPinView.xib; sourceTree = "<group>"; };
+		EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregameViewModel.swift; sourceTree = "<group>"; };
+		EDF7072028A17D6300E488F4 /* PregameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,7 @@
 				9D2471002899B27A0004EFAF /* GoogleService-Info.plist */,
 				ED8D008E289844A100075CB4 /* Scorecard */,
 				ED8D00862898385500075CB4 /* Chat */,
+				EDF7071D28A17B3500E488F4 /* Pre-Game */,
 				9DA3CA2C28A067CF00AD880D /* CreateAccountView */,
 				9D1BB7D5289354990079419A /* SignInScreenView */,
 				EDB2370C289376E700D0E96B /* Alert Nibs */,
@@ -258,6 +263,15 @@
 				EDB23708289376E000D0E96B /* NumberOfHolesAlertView.xib */,
 			);
 			path = "Alert Nibs";
+			sourceTree = "<group>";
+		};
+		EDF7071D28A17B3500E488F4 /* Pre-Game */ = {
+			isa = PBXGroup;
+			children = (
+				EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */,
+				EDF7072028A17D6300E488F4 /* PregameViewController.swift */,
+			);
+			path = "Pre-Game";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,7 +380,9 @@
 				9DF3D5BA2899F63800A64583 /* User.swift in Sources */,
 				ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */,
 				9DF13325289DC022006049DE /* SignInViewModel.swift in Sources */,
+				EDF7071F28A17B5700E488F4 /* PregameViewModel.swift in Sources */,
 				9DF1331A289C3FEF006049DE /* FirebaseService.swift in Sources */,
+				EDF7072128A17D6300E488F4 /* PregameViewController.swift in Sources */,
 				9DA3CA3028A0683D00AD880D /* CreateAccountViewModel.swift in Sources */,
 				9D1BB7D7289354D20079419A /* SignInViewController.swift in Sources */,
 				ED8D0098289C24B700075CB4 /* Hole.swift in Sources */,
