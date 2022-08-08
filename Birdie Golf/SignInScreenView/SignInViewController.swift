@@ -46,9 +46,9 @@ class SignInViewController: UIViewController {
         guard let password = passwordTextField.text,
               let email = emailTextField.text else { return }
         viewModel.signIn(with: email, password: password)
-        let storyboard = UIStoryboard(name: "TabBarController", bundle: nil)
-        guard let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarMain") as? UITabBarController else { return }
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(viewController: tabBarController)
+        let storyboard = UIStoryboard(name: "Pre-game", bundle: nil)
+        let preGameView = storyboard.instantiateViewController(withIdentifier: "PregameView")
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(viewController: preGameView)
         
     }
     
@@ -116,9 +116,9 @@ extension SignInViewController: SignInViewModelDelegate {
     }
     
     func userSignedIn() {
-        let storyboard = UIStoryboard(name: "TabBarController", bundle: nil)
-        guard let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarMain") as? UITabBarController else { return }
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(viewController: tabBarController)
+        let storyboard = UIStoryboard(name: "Pre-game", bundle: nil)
+        let preGameView = storyboard.instantiateViewController(withIdentifier: "PregameView")
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(viewController: preGameView)
     }
 }
 
