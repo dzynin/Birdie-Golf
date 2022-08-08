@@ -32,6 +32,8 @@
 		ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D0089289838D600075CB4 /* ChatViewController.swift */; };
 		ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D008F289844B900075CB4 /* ScorecardViewController.swift */; };
 		ED8D00942899D2F700075CB4 /* Pre-game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8D00932899D2F700075CB4 /* Pre-game.storyboard */; };
+		ED8D0096289C232100075CB4 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D0095289C232100075CB4 /* Round.swift */; };
+		ED8D0098289C24B700075CB4 /* Hole.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D0097289C24B700075CB4 /* Hole.swift */; };
 		EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA928492891AABA0038BC34 /* AppDelegate.swift */; };
 		EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */; };
 		EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA928522891AABB0038BC34 /* Assets.xcassets */; };
@@ -68,6 +70,8 @@
 		ED8D0089289838D600075CB4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		ED8D008F289844B900075CB4 /* ScorecardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardViewController.swift; sourceTree = "<group>"; };
 		ED8D00932899D2F700075CB4 /* Pre-game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Pre-game.storyboard"; sourceTree = "<group>"; };
+		ED8D0095289C232100075CB4 /* Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
+		ED8D0097289C24B700075CB4 /* Hole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hole.swift; sourceTree = "<group>"; };
 		EDA928462891AABA0038BC34 /* Birdie Golf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birdie Golf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA928492891AABA0038BC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				9DF3D5B92899F63800A64583 /* User.swift */,
+				ED8D0095289C232100075CB4 /* Round.swift */,
+				ED8D0097289C24B700075CB4 /* Hole.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -361,6 +367,8 @@
 				9DF1331A289C3FEF006049DE /* FirebaseService.swift in Sources */,
 				9DA3CA3028A0683D00AD880D /* CreateAccountViewModel.swift in Sources */,
 				9D1BB7D7289354D20079419A /* SignInViewController.swift in Sources */,
+				ED8D0098289C24B700075CB4 /* Hole.swift in Sources */,
+				ED8D0096289C232100075CB4 /* Round.swift in Sources */,
 				ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
