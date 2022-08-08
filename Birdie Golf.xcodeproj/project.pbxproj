@@ -64,6 +64,7 @@
 		9D76E8DD28984323001D03F1 /* Tourney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tourney.storyboard; sourceTree = "<group>"; };
 		9DA3CA2F28A0683D00AD880D /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		9DC4C13328A0ECB3000F5E67 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		9DE7F38128A159570078E256 /* Birdie Golf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Birdie Golf.entitlements"; sourceTree = "<group>"; };
 		9DF13319289C3FEF006049DE /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		9DF13324289DC022006049DE /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		9DF3D5B92899F63800A64583 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -206,6 +207,7 @@
 		EDA928482891AABA0038BC34 /* Birdie Golf */ = {
 			isa = PBXGroup;
 			children = (
+				9DE7F38128A159570078E256 /* Birdie Golf.entitlements */,
 				9DF13318289C3FD1006049DE /* Helper Files */,
 				9DF3D5B82899F61C00A64583 /* Models */,
 				9D2471002899B27A0004EFAF /* GoogleService-Info.plist */,
@@ -506,9 +508,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Birdie Golf/Birdie Golf.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RFDDACS7L9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Birdie Golf/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -535,9 +538,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Birdie Golf/Birdie Golf.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RFDDACS7L9;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Birdie Golf/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -30,9 +30,9 @@ class SignInViewModel {
                 self.delegate?.userSignedIn()
             case .failure(let error):
                 self.delegate?.presentAlertController(error: error)
-                let storyboard = UIStoryboard(name: "TabBarController", bundle: nil)
+                let storyboard = UIStoryboard(name: "Pre-game", bundle: nil)
                 guard let tabBarController =
-                        storyboard.instantiateViewController(withIdentifier: "TabBarMain") as? UITabBarController else { return }
+                        storyboard.instantiateViewController(withIdentifier: "PregameView") as? UITabBarController else { return }
                 (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(viewController: tabBarController)
             }
         }

@@ -19,10 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         if UserDefaults.standard.string(forKey: "email") != nil {
-            let storyboard = UIStoryboard(name: "TabBarController", bundle: nil)
-            guard let tabBarController =
-                    storyboard.instantiateViewController(withIdentifier: "TabBarMain") as? UITabBarController else { return }
-            window?.rootViewController = tabBarController
+            let storyboard = UIStoryboard(name: "Pre-game", bundle: nil)
+            let preGameViewController =
+                    storyboard.instantiateViewController(withIdentifier: "PregameView")
+            window?.rootViewController = preGameViewController
         } else {
             let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
             guard let tabBarController =
