@@ -16,7 +16,7 @@
         <!--Leaderboard-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="LeaderboardTableViewController" customModule="Birdie_Golf" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,6 +115,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Leaderboard" image="Leaderboard" selectedImage="Leaderboard" id="V7t-lX-g5B"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="rankLabel" destination="DZz-vm-fiJ" id="crb-VJ-qSh"/>
+                        <outlet property="scoresLabel" destination="7Kw-vA-QtK" id="vtg-8F-ube"/>
+                        <outlet property="userNameLabel" destination="anG-hv-Oqk" id="HlH-On-1Le"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
