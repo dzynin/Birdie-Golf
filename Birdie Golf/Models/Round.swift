@@ -14,11 +14,15 @@ class Round: Codable {
         static let date = "date"
         static let uuid = "uuid"
         static let collectionType = "rounds"
+        static let holes = "holes"
+        static let users = "users"
+        static let numberOfHoles = "numberOfHoles"
     }
     
     // MARK: - Properties
     var courseName: String
-    let date: Date
+    var numberOfHoles: Int
+//    let date: Date
     let uuid: String
     var holes: [Hole]
     var users: [User]
@@ -27,14 +31,16 @@ class Round: Codable {
     // Dictionary representation
     var roundData: [String: AnyHashable] {
         [RoundKeys.courseName: self.courseName,
-         RoundKeys.date: self.date.timeIntervalSince1970,
+         RoundKeys.numberOfHoles: self.numberOfHoles,
+//         RoundKeys.date: self.date.timeIntervalSince1970,
          RoundKeys.uuid: self.uuid]
     }
     
     // MARK: - Initializers
-    init(courseName: String, date: Date = Date(), holes: [Hole] = [], users: [User] = [], uuid: String = UUID().uuidString) {
+    init(courseName: String, numberOfHoles: Int, date: Date = Date(), holes: [Hole] = [], users: [User] = [], uuid: String = UUID().uuidString) {
         self.courseName = courseName
-        self.date = date
+        self.numberOfHoles = numberOfHoles
+//        self.date = date
         self.holes = holes
         self.users = users
         self.uuid = uuid
@@ -45,12 +51,14 @@ extension Round {
 
     convenience init?(fromDictionary dictionary: [String: Any]) {
         guard let courseName = dictionary[RoundKeys.courseName] as? String,
-              let date = dictionary[RoundKeys.date] as? Double,
+              let numberOfHoles = dictionary[RoundKeys.numberOfHoles] as? Int,
+//              let date = dictionary[RoundKeys.date] as? Double,
               let uuid = dictionary[RoundKeys.uuid] as? String else {
             return nil
         }
         self.init(courseName: courseName,
-                  date: Date(timeIntervalSince1970: date),
+                  numberOfHoles: numberOfHoles,
+//                  date: Date(timeIntervalSince1970: date),
                   uuid: uuid)
     }
 }

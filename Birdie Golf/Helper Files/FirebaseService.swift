@@ -20,7 +20,7 @@ protocol FirebaseSyncable {
     func signIn(with email: String, password: String, completion: @escaping (Result<Bool,FirebaseError>) -> Void)
     func createAccount(with email: String, password: String, completion: @escaping (Result<Bool, FirebaseError>) -> Void )
     func signInWithApple(token: String, nonce: String)
-    func saveRound(_ round: Round)
+    func saveRound(_ round: Round, completion: @escaping (Result<Round, FirebaseError>) -> Void)
     func loadRounds(completion: @escaping (Result<[Round], FirebaseError>) -> Void)
     func deleteRound(round: Round)
 }
@@ -69,8 +69,14 @@ struct FirebaseService: FirebaseSyncable {
     }
     
     // MARK: - Saving, Loading, and Deleting rounds
-    func saveRound(_ round: Round) {
-        reference.child("rounds").updateChildValues([round.uuid : round.roundData])
+    func saveRound(_ round: Round, completion: @escaping (Result<Round, FirebaseError>) -> Void) {
+        reference.child("rounds").updateChildValues([round.uuid : round.roundData]) { error, reference in
+            if let error = error {
+                print(error)
+                completion(.failure(.firebaseError(error)))
+            }
+            completion(.success(round))
+        }
     }
     
     func loadRounds(completion: @escaping (Result<[Round], FirebaseError>) -> Void) {

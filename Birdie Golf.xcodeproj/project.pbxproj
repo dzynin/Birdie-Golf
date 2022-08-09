@@ -46,6 +46,7 @@
 		EDB236F62892E16000D0E96B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB236F52892E16000D0E96B /* Main.storyboard */; };
 		EDB2370A289376E000D0E96B /* NumberOfHolesAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB23708289376E000D0E96B /* NumberOfHolesAlertView.xib */; };
 		EDB2370B289376E000D0E96B /* AlertPinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB23709289376E000D0E96B /* AlertPinView.xib */; };
+		EDB6E02328A3095E00782091 /* RoundStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB6E02228A3095E00782091 /* RoundStartViewModel.swift */; };
 		EDF7071F28A17B5700E488F4 /* PregameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */; };
 		EDF7072128A17D6300E488F4 /* PregameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7072028A17D6300E488F4 /* PregameViewController.swift */; };
 		EDF7072328A1BD5400E488F4 /* NumberOfHolesNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7072228A1BD5400E488F4 /* NumberOfHolesNib.swift */; };
@@ -92,6 +93,7 @@
 		EDB236F52892E16000D0E96B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EDB23708289376E000D0E96B /* NumberOfHolesAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberOfHolesAlertView.xib; sourceTree = "<group>"; };
 		EDB23709289376E000D0E96B /* AlertPinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertPinView.xib; sourceTree = "<group>"; };
+		EDB6E02228A3095E00782091 /* RoundStartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStartViewModel.swift; sourceTree = "<group>"; };
 		EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregameViewModel.swift; sourceTree = "<group>"; };
 		EDF7072028A17D6300E488F4 /* PregameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregameViewController.swift; sourceTree = "<group>"; };
 		EDF7072228A1BD5400E488F4 /* NumberOfHolesNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfHolesNib.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				EDF7072028A17D6300E488F4 /* PregameViewController.swift */,
 				EDF7072228A1BD5400E488F4 /* NumberOfHolesNib.swift */,
 				EDF7072628A1C88100E488F4 /* HoleSelectionAlertViewController.swift */,
+				EDB6E02228A3095E00782091 /* RoundStartViewModel.swift */,
 			);
 			path = "Pre-Game";
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				9DA3CA3028A0683D00AD880D /* CreateAccountViewModel.swift in Sources */,
 				9D1BB7D7289354D20079419A /* SignInViewController.swift in Sources */,
 				ED8D0098289C24B700075CB4 /* Hole.swift in Sources */,
+				EDB6E02328A3095E00782091 /* RoundStartViewModel.swift in Sources */,
 				ED8D0096289C232100075CB4 /* Round.swift in Sources */,
 				ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */,
 			);
