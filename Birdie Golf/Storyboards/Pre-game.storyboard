@@ -13,10 +13,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Pregame View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="PregameView" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PregameView" id="Y6W-OH-hqX" customClass="PregameViewController" customModule="Birdie_Golf" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="startRoundButtonTapped:" destination="dFv-3H-U1m" eventType="touchUpInside" id="YSd-Sj-RHV"/>
+                                            <action selector="startRoundButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="291-KD-0PK"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birdie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA3-Dc-ovh">
@@ -67,7 +67,7 @@
                                             <color key="baseBackgroundColor" red="0.001134904684" green="0.37271827460000001" blue="0.19108915330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="joinRoundButtonTapped:" destination="dFv-3H-U1m" eventType="touchUpInside" id="rzB-oe-2UF"/>
+                                            <action selector="joinRoundButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZWF-nX-UWg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -348,7 +348,6 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="dFv-3H-U1m" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="106.47321428571428"/>
         </scene>

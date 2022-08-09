@@ -48,6 +48,9 @@
 		EDB2370B289376E000D0E96B /* AlertPinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB23709289376E000D0E96B /* AlertPinView.xib */; };
 		EDF7071F28A17B5700E488F4 /* PregameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */; };
 		EDF7072128A17D6300E488F4 /* PregameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7072028A17D6300E488F4 /* PregameViewController.swift */; };
+		EDF7072328A1BD5400E488F4 /* NumberOfHolesNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7072228A1BD5400E488F4 /* NumberOfHolesNib.swift */; };
+		EDF7072528A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF7072428A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard */; };
+		EDF7072728A1C88100E488F4 /* HoleSelectionAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7072628A1C88100E488F4 /* HoleSelectionAlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +94,9 @@
 		EDB23709289376E000D0E96B /* AlertPinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertPinView.xib; sourceTree = "<group>"; };
 		EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregameViewModel.swift; sourceTree = "<group>"; };
 		EDF7072028A17D6300E488F4 /* PregameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregameViewController.swift; sourceTree = "<group>"; };
+		EDF7072228A1BD5400E488F4 /* NumberOfHolesNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfHolesNib.swift; sourceTree = "<group>"; };
+		EDF7072428A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HoleSelectionAlertViewController.storyboard; sourceTree = "<group>"; };
+		EDF7072628A1C88100E488F4 /* HoleSelectionAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleSelectionAlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +254,7 @@
 				9D1BB7D3289336F10079419A /* SignIn.storyboard */,
 				EDB236ED2892D96100D0E96B /* Play.storyboard */,
 				ED8D00932899D2F700075CB4 /* Pre-game.storyboard */,
+				EDF7072428A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard */,
 				EDB236F32892D98C00D0E96B /* Scorecard.storyboard */,
 				EDB236F12892D97900D0E96B /* Chat.storyboard */,
 				EDB236EF2892D96E00D0E96B /* Leaderboard.storyboard */,
@@ -270,6 +277,8 @@
 			children = (
 				EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */,
 				EDF7072028A17D6300E488F4 /* PregameViewController.swift */,
+				EDF7072228A1BD5400E488F4 /* NumberOfHolesNib.swift */,
+				EDF7072628A1C88100E488F4 /* HoleSelectionAlertViewController.swift */,
 			);
 			path = "Pre-Game";
 			sourceTree = "<group>";
@@ -364,6 +373,7 @@
 				41BE2E6F28931DDB00A214EF /* Merriweather-BlackItalic.otf in Resources */,
 				9D2471012899B27A0004EFAF /* GoogleService-Info.plist in Resources */,
 				EDB236EE2892D96100D0E96B /* Play.storyboard in Resources */,
+				EDF7072528A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +390,9 @@
 				9DF3D5BA2899F63800A64583 /* User.swift in Sources */,
 				ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */,
 				9DF13325289DC022006049DE /* SignInViewModel.swift in Sources */,
+				EDF7072728A1C88100E488F4 /* HoleSelectionAlertViewController.swift in Sources */,
 				EDF7071F28A17B5700E488F4 /* PregameViewModel.swift in Sources */,
+				EDF7072328A1BD5400E488F4 /* NumberOfHolesNib.swift in Sources */,
 				9DF1331A289C3FEF006049DE /* FirebaseService.swift in Sources */,
 				EDF7072128A17D6300E488F4 /* PregameViewController.swift in Sources */,
 				9DA3CA3028A0683D00AD880D /* CreateAccountViewModel.swift in Sources */,

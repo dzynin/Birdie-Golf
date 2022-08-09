@@ -23,6 +23,7 @@ class Round: Codable {
     var holes: [Hole]
     var users: [User]
     
+    
     // Dictionary representation
     var roundData: [String: AnyHashable] {
         [RoundKeys.courseName: self.courseName,
@@ -31,7 +32,7 @@ class Round: Codable {
     }
     
     // MARK: - Initializers
-    init(courseName: String, date: Date = Date(), holes: [Hole] = [], users: [User] = [], uuid: String = UUID().uuidString, collectionType: String) {
+    init(courseName: String, date: Date = Date(), holes: [Hole] = [], users: [User] = [], uuid: String = UUID().uuidString) {
         self.courseName = courseName
         self.date = date
         self.holes = holes
@@ -45,14 +46,12 @@ extension Round {
     convenience init?(fromDictionary dictionary: [String: Any]) {
         guard let courseName = dictionary[RoundKeys.courseName] as? String,
               let date = dictionary[RoundKeys.date] as? Double,
-              let collectionType = dictionary[RoundKeys.collectionType] as? String,
               let uuid = dictionary[RoundKeys.uuid] as? String else {
             return nil
         }
         self.init(courseName: courseName,
                   date: Date(timeIntervalSince1970: date),
-                  uuid: uuid,
-                  collectionType: collectionType)
+                  uuid: uuid)
     }
 }
 

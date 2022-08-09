@@ -68,7 +68,7 @@ struct FirebaseService: FirebaseSyncable {
         }
     }
     
-    // MARK: - Saving, Loading, and deleting rounds
+    // MARK: - Saving, Loading, and Deleting rounds
     func saveRound(_ round: Round) {
         reference.child("rounds").updateChildValues([round.uuid : round.roundData])
     }

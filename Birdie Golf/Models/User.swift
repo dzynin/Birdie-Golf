@@ -6,6 +6,7 @@
 //
 
 import Foundation
+// update the User to have a current round which is a round object and a roundHistory [Round]
 
 class User: Codable {
     enum Key {
@@ -20,6 +21,7 @@ class User: Codable {
     let userID: String
     var email: String
     var password: String
+    
     
     init(userName: String, firebaseID: String, userID: String, email: String, password: String) {
         self.userName = userName
