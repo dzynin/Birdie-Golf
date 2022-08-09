@@ -19,8 +19,8 @@ class RoundStartViewModel {
         self.service = service
     }
     
-    func startRound(with courseName: String, numberOfHoles: Int) {
-        let round = Round(courseName: courseName, numberOfHoles: numberOfHoles)
+    func startRound(with courseName: String, numberOfHoles: Int, users: [User] = [], holes: [Hole] = []) {
+        let round = Round(courseName: courseName, numberOfHoles: numberOfHoles, holes: holes, users: users)
         service.saveRound(round) { [weak self] result in
             switch result {
             case .failure(let error):

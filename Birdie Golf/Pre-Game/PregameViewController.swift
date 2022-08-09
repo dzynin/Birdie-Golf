@@ -29,24 +29,24 @@ class PregameViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @objc private func startRoundAlert() {
-        
-        let alert = UIAlertController(title: "Course Name", message: "What course are you playing today?", preferredStyle: .alert)
-        alert.addTextField { field in
-            field.placeholder = "Course name..."
-            field.returnKeyType = .continue
-        }
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Start Round", style: .default, handler: { _ in
-            guard let field = alert.textFields else { return }
-            let courseField = field[0]
-            guard let course = courseField.text, !course.isEmpty else {
-                print("Invalid course entry")
-                return
-            }
-        }))
-     present(alert, animated: true)
-    }
+//    @objc private func startRoundAlert() {
+//        
+//        let alert = UIAlertController(title: "Course Name", message: "What course are you playing today?", preferredStyle: .alert)
+//        alert.addTextField { field in
+//            field.placeholder = "Course name..."
+//            field.returnKeyType = .continue
+//        }
+//        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+//        alert.addAction(UIAlertAction(title: "Start Round", style: .default, handler: { _ in
+//            guard let field = alert.textFields else { return }
+//            let courseField = field[0]
+//            guard let course = courseField.text, !course.isEmpty else {
+//                print("Invalid course entry")
+//                return
+//            }
+//        }))
+//     present(alert, animated: true)
+//    }
     
     @IBAction func startRoundButtonTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "HoleSelectionAlertViewController", bundle: nil)
