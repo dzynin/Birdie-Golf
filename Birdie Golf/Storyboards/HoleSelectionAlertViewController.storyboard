@@ -46,8 +46,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByR-cK-v7V">
-                                        <rect key="frame" x="21" y="220" width="209" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByR-cK-v7V">
+                                        <rect key="frame" x="20" y="220" width="210" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Enter Round">
                                             <color key="baseBackgroundColor" red="0.0025140692009999999" green="0.610170722" blue="0.31615209579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -69,6 +69,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="6bP-RP-G4l" secondAttribute="trailing" constant="20" id="3wN-k7-W6z"/>
                                     <constraint firstAttribute="trailing" secondItem="1IU-78-hSQ" secondAttribute="trailing" constant="4" id="4Qf-pk-eZY"/>
+                                    <constraint firstItem="ByR-cK-v7V" firstAttribute="leading" secondItem="jvu-6i-o3n" secondAttribute="leading" constant="20" id="7IT-Hg-uF4"/>
                                     <constraint firstItem="6bP-RP-G4l" firstAttribute="leading" secondItem="jvu-6i-o3n" secondAttribute="leading" constant="20" id="9HC-o8-ejH"/>
                                     <constraint firstItem="dTs-kX-Dib" firstAttribute="top" secondItem="1IU-78-hSQ" secondAttribute="bottom" constant="12" id="Aay-Qu-6WO"/>
                                     <constraint firstItem="q7E-VF-b2O" firstAttribute="centerX" secondItem="6bP-RP-G4l" secondAttribute="centerX" id="FzZ-W8-xUe"/>
@@ -79,10 +80,12 @@
                                     <constraint firstItem="ByR-cK-v7V" firstAttribute="top" secondItem="q7E-VF-b2O" secondAttribute="bottom" constant="45" id="apq-D3-utY"/>
                                     <constraint firstAttribute="height" constant="275" id="cFR-pB-AGX"/>
                                     <constraint firstItem="dTs-kX-Dib" firstAttribute="leading" secondItem="jvu-6i-o3n" secondAttribute="leading" constant="20" id="fxX-59-0ZW"/>
+                                    <constraint firstAttribute="trailing" secondItem="ByR-cK-v7V" secondAttribute="trailing" constant="20" id="gnj-9j-M5s"/>
                                     <constraint firstItem="q7E-VF-b2O" firstAttribute="top" secondItem="6bP-RP-G4l" secondAttribute="bottom" constant="21" id="is0-9A-YBG"/>
                                     <constraint firstItem="gY7-xm-kXb" firstAttribute="top" secondItem="jvu-6i-o3n" secondAttribute="top" constant="8" id="ko6-tq-f2b"/>
                                     <constraint firstItem="q7E-VF-b2O" firstAttribute="width" secondItem="jvu-6i-o3n" secondAttribute="width" multiplier="0.75" id="l3e-1B-EOG"/>
                                     <constraint firstAttribute="trailing" secondItem="gY7-xm-kXb" secondAttribute="trailing" constant="50" id="nkN-Gd-ngj"/>
+                                    <constraint firstItem="ByR-cK-v7V" firstAttribute="top" secondItem="q7E-VF-b2O" secondAttribute="bottom" constant="45" id="pS3-aV-aVG"/>
                                     <constraint firstAttribute="trailing" secondItem="dTs-kX-Dib" secondAttribute="trailing" constant="20" id="xko-mq-7sC"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
