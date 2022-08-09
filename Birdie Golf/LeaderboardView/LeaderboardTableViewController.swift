@@ -8,14 +8,14 @@
 import UIKit
 
 class LeaderboardTableViewController: UITableViewController {
-    @IBOutlet weak var rankLabel: UILabel!
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var scoresLabel: UILabel!
     
     
-    var usersList: [User]
+    var usersList: [User] = []
+    var mockUserList: [[String:Int]] = [[:]]
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Mock data
+        mockUserList = [["Karl":10],["Isiah":8], ["Scott": 7]]
     }
 
 
@@ -23,7 +23,7 @@ class LeaderboardTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return mockUserList.count
     }
 
     /*

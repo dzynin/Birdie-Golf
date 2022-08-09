@@ -59,10 +59,10 @@
                                     <constraint firstAttribute="height" constant="675" id="9QB-Vf-VM1"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="tpV-xc-aNv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="tpV-xc-aNv" customClass="LeaderboardTableViewCell" customModule="Birdie_Golf" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="382" height="59"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tpV-xc-aNv" id="MWr-ae-GFQ">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tpV-xc-aNv" id="MWr-ae-GFQ" customClass="LeaderboardTableViewCell" customModule="Birdie_Golf" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="382" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -97,6 +97,11 @@
                                                 <constraint firstItem="zet-ig-Q2P" firstAttribute="top" secondItem="MWr-ae-GFQ" secondAttribute="topMargin" constant="8" id="xpk-9A-cXN"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="rankLabel" destination="DZz-vm-fiJ" id="cKs-9N-7wi"/>
+                                            <outlet property="scoreLabel" destination="7Kw-vA-QtK" id="hj4-jy-LC0"/>
+                                            <outlet property="userNameLabel" destination="anG-hv-Oqk" id="iPX-Gg-42e"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -115,11 +120,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Leaderboard" image="Leaderboard" selectedImage="Leaderboard" id="V7t-lX-g5B"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="rankLabel" destination="DZz-vm-fiJ" id="crb-VJ-qSh"/>
-                        <outlet property="scoresLabel" destination="7Kw-vA-QtK" id="vtg-8F-ube"/>
-                        <outlet property="userNameLabel" destination="anG-hv-Oqk" id="HlH-On-1Le"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

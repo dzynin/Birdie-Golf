@@ -13,5 +13,11 @@ struct Hole: Codable {
     var holeNumber: Int
     var strokes: Int
     var putts: Int?
+    let par: Int
+    var userID: String
+    var userScore: [UserScore]    // array of user scores
+    
+    var holeData: [String:AnyHashable]
+    
     
 }
