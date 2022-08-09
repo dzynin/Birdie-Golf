@@ -6,18 +6,38 @@
 //
 
 import Foundation
+import CoreText
 
-struct Hole: Codable {
+struct Hole {
     
     // MARK: - Properties
     var holeNumber: Int
-    var strokes: Int
-    var putts: Int?
     let par: Int
-    var userID: String
     var userScore: [UserScore]    // array of user scores
     
-    var holeData: [String:AnyHashable]
+    enum HoleKey {
+        static let holeNumber = "holeNumber"
+        static let par = "par"
+        static let userScore = "userScore"
+        static let collectionType = "holes"
+    }
     
+    var holeData: [String:AnyHashable] {
+        [HoleKey.holeNumber : self.holeNumber,
+         HoleKey.par : self.par]
+    }
+    init (holeNumber: Int, par: Int, userScore: [UserScore] = [], collectionType: String) {
+        self.holeNumber = holeNumber
+        self.par = par
+        self.userScore = userScore
+    }
+    init?(from dictionary: [String:Any]) {
+        guard let holeNumber = dictionary[HoleKey.holeNumber] as? Int,
+              let par = dictionary[HoleKey.par] as? Int,
+              let collectionType = dictionary[HoleKey.collectionType] as? String else {
+                  return nil
+              }
+        self.init(holeNumber: holeNumber, par: par, collectionType: collectionType)
+    }
     
 }

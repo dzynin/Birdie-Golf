@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Round: Codable {
+class Round {
     
     enum RoundKeys {
         static let courseName = "courseName"
