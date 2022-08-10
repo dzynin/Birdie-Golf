@@ -8,16 +8,27 @@
 import UIKit
 
 class LeaderboardTableViewController: UITableViewController {
+    @IBOutlet weak var optionsBtn: UIButton!
     
-    
+    var settingsPopUp: PopUp!
     var usersList: [User] = []
     var mockUserList: [[String:Int]] = [[:]]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Mock data
         mockUserList = [["Karl":10],["Isiah":8], ["Scott": 7]]
     }
 
+    @IBAction func optionsBtnTapped(_ sender: Any) {
+        self.settingsPopUp = PopUp(frame: self.view.frame)
+        self.settingsPopUp.closeBtn.addTarget(self, action: #selector(closeBtnTapped), for: .touchUpInside)
+        self.view.addSubview(settingsPopUp)
+    }
+    @objc func closeBtnTapped() {
+        self.settingsPopUp.removeFromSuperview()
+    }
+    
 
     // MARK: - Table view data source
 
