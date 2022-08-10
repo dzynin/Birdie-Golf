@@ -26,7 +26,7 @@ struct Hole {
         [HoleKey.holeNumber : self.holeNumber,
          HoleKey.par : self.par]
     }
-    init (holeNumber: Int, par: Int, userScore: [UserScore] = [], collectionType: String) {
+    init (holeNumber: Int, par: Int = 0, userScore: [UserScore] = [], collectionType: String = "holes") {
         self.holeNumber = holeNumber
         self.par = par
         self.userScore = userScore

@@ -32,7 +32,8 @@ class Round {
     var roundData: [String: AnyHashable] {
         [RoundKeys.courseName: self.courseName,
          RoundKeys.numberOfHoles: self.numberOfHoles,
-//         RoundKeys.date: self.date.timeIntervalSince1970,
+         RoundKeys.holes: self.holes,
+         RoundKeys.users: self.users,
          RoundKeys.uuid: self.uuid]
     }
     
@@ -52,13 +53,15 @@ extension Round {
     convenience init?(fromDictionary dictionary: [String: Any]) {
         guard let courseName = dictionary[RoundKeys.courseName] as? String,
               let numberOfHoles = dictionary[RoundKeys.numberOfHoles] as? Int,
-//              let date = dictionary[RoundKeys.date] as? Double,
+              let holes = dictionary[RoundKeys.holes] as? [Hole],
+              let users = dictionary[RoundKeys.users] as? [User],
               let uuid = dictionary[RoundKeys.uuid] as? String else {
             return nil
         }
         self.init(courseName: courseName,
                   numberOfHoles: numberOfHoles,
-//                  date: Date(timeIntervalSince1970: date),
+                  holes: holes,
+                  users: users,
                   uuid: uuid)
     }
 }
