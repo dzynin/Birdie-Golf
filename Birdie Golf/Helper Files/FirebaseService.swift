@@ -53,7 +53,7 @@ struct FirebaseService: FirebaseSyncable {
         Auth.auth().signIn(withEmail: email, password: password) { signInResult, error in
             switch signInResult {
             case .some(let result):
-                UserDefaults.standard.set(result.user.uid, forKey: "userID")
+                completion(.success(true))
             case .none:
                 if let error = error {
                     completion(.failure(.firebaseError(error)))

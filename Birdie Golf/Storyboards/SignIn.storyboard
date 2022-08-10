@@ -8,9 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Merriweather-Regular.otf">
-            <string>Merriweather-Regular</string>
-        </array>
         <array key="OdorMeanChey.ttf">
             <string>OdorMeanChey-Regular</string>
         </array>
@@ -25,16 +22,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ik4-mw-Pi0">
-                                <rect key="frame" x="20" y="260.5" width="335" height="375"/>
+                                <rect key="frame" x="20" y="268" width="335" height="375"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9g6-ND-006">
-                                        <rect key="frame" x="132.5" y="20" width="70.5" height="101"/>
+                                        <rect key="frame" x="132.5" y="20" width="70.5" height="29"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1L-eg-iRv">
-                                        <rect key="frame" x="60" y="291" width="215" height="44"/>
+                                        <rect key="frame" x="60" y="219" width="215" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="klT-hI-Ioe"/>
                                         </constraints>
@@ -53,7 +50,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ram-FB-ZDl">
-                                        <rect key="frame" x="20" y="143" width="295" height="108"/>
+                                        <rect key="frame" x="20" y="71" width="295" height="108"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wAK-ph-uuV">
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="44"/>
@@ -101,41 +98,17 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAV-6a-IIQ">
-                                        <rect key="frame" x="81" y="353" width="126" height="14"/>
-                                        <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="11"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNI-yd-khl">
-                                        <rect key="frame" x="208" y="324" width="119" height="24"/>
-                                        <color key="tintColor" red="0.00020880332159999999" green="0.45717734100000001" blue="0.24039614200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Create Account">
-                                            <fontDescription key="titleFontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="11"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="drz-P8-Wj8" kind="show" id="6iM-iH-cat"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="hNI-yd-khl" secondAttribute="bottom" constant="2" id="1bt-l4-AJP"/>
                                     <constraint firstAttribute="trailing" secondItem="ram-FB-ZDl" secondAttribute="trailing" constant="20" id="4ex-Tj-NQS"/>
-                                    <constraint firstAttribute="bottom" secondItem="t1L-eg-iRv" secondAttribute="bottom" constant="40" id="9ne-9y-M3B"/>
                                     <constraint firstItem="9g6-ND-006" firstAttribute="top" secondItem="ik4-mw-Pi0" secondAttribute="top" constant="20" id="Dmp-fh-s7s"/>
                                     <constraint firstItem="ram-FB-ZDl" firstAttribute="leading" secondItem="ik4-mw-Pi0" secondAttribute="leading" constant="20" id="GDi-oq-TTV"/>
-                                    <constraint firstItem="hNI-yd-khl" firstAttribute="top" secondItem="t1L-eg-iRv" secondAttribute="bottom" constant="14" id="K1D-d7-42h"/>
-                                    <constraint firstAttribute="trailing" secondItem="hNI-yd-khl" secondAttribute="trailing" constant="8" id="UAK-bc-Eey"/>
                                     <constraint firstAttribute="height" constant="375" id="Ya0-NM-eBn"/>
                                     <constraint firstItem="t1L-eg-iRv" firstAttribute="leading" secondItem="ik4-mw-Pi0" secondAttribute="leading" constant="60" id="aYo-AB-TF0"/>
                                     <constraint firstItem="9g6-ND-006" firstAttribute="centerX" secondItem="ram-FB-ZDl" secondAttribute="centerX" id="bT4-3J-pqB"/>
-                                    <constraint firstItem="uAV-6a-IIQ" firstAttribute="top" secondItem="t1L-eg-iRv" secondAttribute="bottom" constant="18" id="gvk-Hs-BLf"/>
-                                    <constraint firstAttribute="bottom" secondItem="uAV-6a-IIQ" secondAttribute="bottom" constant="8" id="jlD-fu-zYw"/>
                                     <constraint firstItem="ram-FB-ZDl" firstAttribute="top" secondItem="9g6-ND-006" secondAttribute="bottom" constant="22" id="nJh-uZ-XK6"/>
                                     <constraint firstAttribute="trailing" secondItem="t1L-eg-iRv" secondAttribute="trailing" constant="60" id="oyz-dM-Mqn"/>
-                                    <constraint firstItem="uAV-6a-IIQ" firstAttribute="leading" secondItem="ik4-mw-Pi0" secondAttribute="leading" constant="81" id="r7S-GJ-FHm"/>
                                     <constraint firstItem="t1L-eg-iRv" firstAttribute="top" secondItem="ram-FB-ZDl" secondAttribute="bottom" constant="40" id="yRy-5j-cNf"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -151,7 +124,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BIRDIE GOLF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMB-vz-k9t">
-                                <rect key="frame" x="47.5" y="150" width="280.5" height="90.5"/>
+                                <rect key="frame" x="47.5" y="150" width="280.5" height="98"/>
                                 <fontDescription key="fontDescription" name="OdorMeanChey-Regular" family="Odor Mean Chey" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -167,6 +140,7 @@
                         <color key="backgroundColor" red="0.00020880332159999999" green="0.45717734100000001" blue="0.24039614200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jbx-LW-d06" secondAttribute="trailing" constant="153" id="09H-YK-wfK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ik4-mw-Pi0" secondAttribute="bottom" constant="24" id="94u-i1-3RI"/>
                             <constraint firstItem="LMB-vz-k9t" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="DrC-hB-0di"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ik4-mw-Pi0" secondAttribute="trailing" constant="20" id="WZ1-RE-wJ0"/>
                             <constraint firstItem="jbx-LW-d06" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="Xdg-oS-j53"/>
@@ -185,16 +159,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.399999999999999" y="97.601199400299862"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="fU9-xr-OE9">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="drz-P8-Wj8" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="vrd-PA-7FR"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fdZ-yo-fse" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1445" y="-20"/>
         </scene>
     </scenes>
     <resources>

@@ -25,6 +25,7 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         setUpSignInWithAppleProvider()
         viewModel = SignInViewModel(delegate: self)
+       
     }
     
     @IBAction func submitButtonTapped(_ sender: Any) {
@@ -46,9 +47,9 @@ class SignInViewController: UIViewController {
         guard let password = passwordTextField.text,
               let email = emailTextField.text else { return }
         viewModel.signIn(with: email, password: password)
-        let storyboard = UIStoryboard(name: "Pre-game", bundle: nil)
-        let preGameView = storyboard.instantiateViewController(withIdentifier: "PregameView")
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(viewController: preGameView)
+//        let storyboard = UIStoryboard(name: "Pre-game", bundle: nil)
+//        let preGameView = storyboard.instantiateViewController(withIdentifier: "PregameView")
+//        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(viewController: preGameView)
         
     }
     
@@ -92,17 +93,7 @@ class SignInViewController: UIViewController {
      }
      */
     
-    @objc
-    func handleAuthorizationAppleButtonPress() {
-        let appleIDProvider = ASAuthorizationAppleIDProvider()
-        let request = appleIDProvider.createRequest()
-        request.requestedScopes = [.fullName, .email]
-        
-        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
-        authorizationController.delegate = self
-        authorizationController.presentationContextProvider = self
-        authorizationController.performRequests()
-    }
+
     
     
 }// End of Class
