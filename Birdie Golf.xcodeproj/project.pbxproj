@@ -51,6 +51,8 @@
 		EDB2370A289376E000D0E96B /* NumberOfHolesAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB23708289376E000D0E96B /* NumberOfHolesAlertView.xib */; };
 		EDB2370B289376E000D0E96B /* AlertPinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB23709289376E000D0E96B /* AlertPinView.xib */; };
 		EDB6E02328A3095E00782091 /* RoundStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB6E02228A3095E00782091 /* RoundStartViewModel.swift */; };
+		EDB82B8428A33AA000CF974C /* PlayRoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB82B8328A33AA000CF974C /* PlayRoundViewModel.swift */; };
+		EDB82B8628A33AB000CF974C /* PlayRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB82B8528A33AB000CF974C /* PlayRoundViewController.swift */; };
 		EDF7071F28A17B5700E488F4 /* PregameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */; };
 		EDF7072128A17D6300E488F4 /* PregameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7072028A17D6300E488F4 /* PregameViewController.swift */; };
 		EDF7072328A1BD5400E488F4 /* NumberOfHolesNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7072228A1BD5400E488F4 /* NumberOfHolesNib.swift */; };
@@ -102,6 +104,8 @@
 		EDB23708289376E000D0E96B /* NumberOfHolesAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberOfHolesAlertView.xib; sourceTree = "<group>"; };
 		EDB23709289376E000D0E96B /* AlertPinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertPinView.xib; sourceTree = "<group>"; };
 		EDB6E02228A3095E00782091 /* RoundStartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStartViewModel.swift; sourceTree = "<group>"; };
+		EDB82B8328A33AA000CF974C /* PlayRoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRoundViewModel.swift; sourceTree = "<group>"; };
+		EDB82B8528A33AB000CF974C /* PlayRoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRoundViewController.swift; sourceTree = "<group>"; };
 		EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregameViewModel.swift; sourceTree = "<group>"; };
 		EDF7072028A17D6300E488F4 /* PregameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregameViewController.swift; sourceTree = "<group>"; };
 		EDF7072228A1BD5400E488F4 /* NumberOfHolesNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfHolesNib.swift; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 				9D2471002899B27A0004EFAF /* GoogleService-Info.plist */,
 				ED8D008E289844A100075CB4 /* Scorecard */,
 				ED8D00862898385500075CB4 /* Chat */,
+				EDB82B8228A3355700CF974C /* PlayRound */,
 				EDF7071D28A17B3500E488F4 /* Pre-Game */,
 				9DA3CA2C28A067CF00AD880D /* CreateAccountView */,
 				9D1BB7D5289354990079419A /* SignInScreenView */,
@@ -292,6 +297,15 @@
 				EDB23708289376E000D0E96B /* NumberOfHolesAlertView.xib */,
 			);
 			path = "Alert Nibs";
+			sourceTree = "<group>";
+		};
+		EDB82B8228A3355700CF974C /* PlayRound */ = {
+			isa = PBXGroup;
+			children = (
+				EDB82B8328A33AA000CF974C /* PlayRoundViewModel.swift */,
+				EDB82B8528A33AB000CF974C /* PlayRoundViewController.swift */,
+			);
+			path = PlayRound;
 			sourceTree = "<group>";
 		};
 		EDF7071D28A17B3500E488F4 /* Pre-Game */ = {
@@ -422,6 +436,8 @@
 				EDF7072128A17D6300E488F4 /* PregameViewController.swift in Sources */,
 				9DA3CA3028A0683D00AD880D /* CreateAccountViewModel.swift in Sources */,
 				9D1BB7D7289354D20079419A /* SignInViewController.swift in Sources */,
+				EDB82B8628A33AB000CF974C /* PlayRoundViewController.swift in Sources */,
+				EDB82B8428A33AA000CF974C /* PlayRoundViewModel.swift in Sources */,
 				9DE7F38628A184670078E256 /* LeaderboardViewModel.swift in Sources */,
 				ED8D0098289C24B700075CB4 /* Hole.swift in Sources */,
 				EDB6E02328A3095E00782091 /* RoundStartViewModel.swift in Sources */,
