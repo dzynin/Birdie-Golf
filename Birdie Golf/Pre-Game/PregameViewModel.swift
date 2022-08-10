@@ -17,6 +17,7 @@ class PregameViewModel {
     var rounds: [Round] = []
     var round: Round?
     
+    
     private let service: FirebaseSyncable
     private weak var delegate: PregameViewModelDelegate?
     

@@ -125,8 +125,19 @@
                                                     <color key="baseBackgroundColor" red="0.001134904684" green="0.37271827460000001" blue="0.19108915330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xyk-i9-RhX">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CES-zc-hFP">
                                                 <rect key="frame" x="90" y="0.0" width="45" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Dmv-oL-4Bl"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="circle" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="filled" image="circle" catalog="system">
+                                                    <color key="baseBackgroundColor" red="0.001134904684" green="0.37271827460000001" blue="0.19108915330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xyk-i9-RhX">
+                                                <rect key="frame" x="135" y="0.0" width="45" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="xOV-8Y-jHS"/>
                                                 </constraints>
@@ -137,20 +148,9 @@
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGl-ZT-iny">
-                                                <rect key="frame" x="135" y="0.0" width="45" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="sVT-Df-hBD"/>
-                                                </constraints>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="circle" catalog="system"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="circle" catalog="system">
-                                                    <color key="baseBackgroundColor" red="0.001134904684" green="0.37271827460000001" blue="0.19108915330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CES-zc-hFP">
                                                 <rect key="frame" x="180" y="0.0" width="45" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="Dmv-oL-4Bl"/>
+                                                    <constraint firstAttribute="height" constant="40" id="sVT-Df-hBD"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="circle" catalog="system"/>
