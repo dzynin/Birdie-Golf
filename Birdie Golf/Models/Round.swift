@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Round {
+class Round: Codable {
     
     enum RoundKeys {
         static let courseName = "courseName"
@@ -22,18 +22,17 @@ class Round {
     // MARK: - Properties
     var courseName: String
     var numberOfHoles: Int
-//    let date: Date
     let uuid: String
     var holes: [Hole]
     var users: [User]
     
     
     // Dictionary representation
-    var roundData: [String: AnyHashable] {
+    var roundData: [String: Any] {
         [RoundKeys.courseName: self.courseName,
          RoundKeys.numberOfHoles: self.numberOfHoles,
-         RoundKeys.holes: self.holes,
-         RoundKeys.users: self.users,
+         RoundKeys.holes: self.holes.map {$0.holeData},
+         RoundKeys.users: self.users.map {$0.userData},
          RoundKeys.uuid: self.uuid]
     }
     
@@ -41,7 +40,6 @@ class Round {
     init(courseName: String, numberOfHoles: Int, date: Date = Date(), holes: [Hole] = [], users: [User] = [], uuid: String = UUID().uuidString) {
         self.courseName = courseName
         self.numberOfHoles = numberOfHoles
-//        self.date = date
         self.holes = holes
         self.users = users
         self.uuid = uuid

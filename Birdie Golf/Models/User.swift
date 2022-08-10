@@ -7,7 +7,7 @@
 
 import Foundation
 
-class User {
+class User: Codable {
     enum Key {
         static var userName = "userName"
         static let userID = "userID"
@@ -23,10 +23,22 @@ class User {
     let userID: String
     var email: String
     var password: String
-    let currentRound: Round?
+    let currentRound: Round
     let historicalRounds: [Round]?
+    let collectionType: String
     
-    init(userName: String, firebaseID: String, userID: String, email: String, password: String, currentRound: Round?, historicalRounds: [Round]?, collectionType: String ) {
+    // Dictionary representation
+    var userData: [String : Any] {
+        [Key.userName : self.userName,
+         Key.firebaseID : self.firebaseID,
+         Key.userID : self.userID,
+         Key.email : self.email,
+         Key.password : self.password,
+         Key.currentRound : self.currentRound,
+         Key.historicalRounds : self.historicalRounds]
+    }
+    
+    init(userName: String, firebaseID: String, userID: String, email: String, password: String, currentRound: Round, historicalRounds: [Round]?, collectionType: String ) {
         self.userName = userName
         self.firebaseID = firebaseID
         self.userID = userID
@@ -34,6 +46,7 @@ class User {
         self.password = password
         self.currentRound = currentRound
         self.historicalRounds = historicalRounds
+        self.collectionType = collectionType
     }
     convenience init?(from dictionary: [String:Any]) {
             guard let userName = dictionary[Key.userName] as? String,
@@ -47,4 +60,12 @@ class User {
             else { return nil }
         self.init(userName: userName, firebaseID: firebaseID, userID: userID, email: email, password: password, currentRound: currentRound, historicalRounds: historicalRounds, collectionType: collectionType)
         }
+}
+
+extension User: Equatable {
+    static func == (lhs: User, rhs: User) -> Bool {
+        return lhs.userID == rhs.userID
+    }
+    
+    
 }
