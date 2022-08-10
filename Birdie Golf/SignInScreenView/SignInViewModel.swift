@@ -10,6 +10,7 @@ import FirebaseAuth
 import CryptoKit
 import UIKit
 import AuthenticationServices
+
 protocol SignInViewModelDelegate: AnyObject {
     func presentAlertController(error: Error)
     func userSignedIn()
@@ -27,13 +28,14 @@ class SignInViewModel {
         service.signIn(with: email, password: password) { result in
             switch result {
             case .success:
+                UserDefaults.standard.set(true, forKey: "email")
                 self.delegate?.userSignedIn()
             case .failure(let error):
                 self.delegate?.presentAlertController(error: error)
-                let storyboard = UIStoryboard(name: "Pre-game", bundle: nil)
-                guard let tabBarController =
-                        storyboard.instantiateViewController(withIdentifier: "PregameView") as? UITabBarController else { return }
-                (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(viewController: tabBarController)
+//                let storyboard = UIStoryboard(name: "Pre-game", bundle: nil)
+//                guard let tabBarController =
+//                        storyboard.instantiateViewController(withIdentifier: "PregameView") as? UITabBarController else { return }
+//                (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(viewController: tabBarController)
             }
         }
     }

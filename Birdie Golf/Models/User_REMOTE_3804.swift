@@ -6,7 +6,6 @@
 //
 
 import Foundation
-// update the User to have a current round which is a round object and a roundHistory [Round]
 
 class User {
     enum Key {
@@ -27,12 +26,7 @@ class User {
     let currentRound: Round?
     let historicalRounds: [Round]?
     
-<<<<<<< HEAD
-    
-    init(userName: String, firebaseID: String, userID: String, email: String, password: String) {
-=======
     init(userName: String, firebaseID: String, userID: String, email: String, password: String, currentRound: Round?, historicalRounds: [Round]?, collectionType: String ) {
->>>>>>> 1faae14d806d0c7d3a91df9b3a0b1bf00cd1695a
         self.userName = userName
         self.firebaseID = firebaseID
         self.userID = userID
