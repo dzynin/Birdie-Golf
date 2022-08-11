@@ -66,7 +66,7 @@ struct FirebaseService: FirebaseSyncable {
                 guard let result = signInResult else { return }
                 let id = result.user.uid
                 let currentUser = User(userID: id, email: email, password: password, currentRound: nil, historicalRounds: [])
-                self.currentUser = currentUser
+ //               self.currentUser = currentUser
             case .none:
                 if let error = error {
                     completion(.failure(.firebaseError(error)))
@@ -77,11 +77,15 @@ struct FirebaseService: FirebaseSyncable {
     
     // MARK: - Saving, Loading, and Deleting rounds
     func saveRound(_ round: Round, completion: @escaping (Result<Round, FirebaseError>) -> Void) {
+        
+        // I have an issue with the view loading before the round is completely fetched. Race condition
+        
         reference.child("rounds").updateChildValues([round.uuid : round.roundData]) { error, reference in
             if let error = error {
                 print(error)
                 completion(.failure(.firebaseError(error)))
             }
+            UserDefaults.standard.set(round.uuid, forKey: "activeRoundId")
             completion(.success(round))
         }
     }
@@ -109,18 +113,23 @@ struct FirebaseService: FirebaseSyncable {
     
     
     func fetchRound(completion: @escaping (Result<Round, FirebaseError>) -> Void) {
-        reference.child("rounds").getData { error, snapshot in
+        let currentRoundId = UserDefaults.standard.string(forKey: "activeRoundId")
+        reference.child("rounds").child(currentRoundId!).getData { error, snapshot in
             if let error = error {
                 completion(.failure(.firebaseError(error)))
                 return
             }
-            guard let data = snapshot?.value as? [String : [String : Any]]
+            guard let data = snapshot?.value as? [String : Any]
             else {
                 completion(.failure(.noDataFound))
                 return
             }
-            let roundsArray = Array(data.values)
-            let currentUser =
-            let round = roundsArray.
-            
+            guard let round = Round(fromDictionary: data) else {
+                completion(.failure(.noDataFound))
+                return
+            }
+            completion(.success(round))
         }
+        
+    }
+}

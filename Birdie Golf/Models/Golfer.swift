@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Golfer {
+struct Golfer: Codable {
     enum GolferKey {
         static let golferName = "golferName"
         static let collectionType = "golfers"

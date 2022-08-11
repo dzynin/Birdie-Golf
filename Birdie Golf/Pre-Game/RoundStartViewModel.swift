@@ -18,8 +18,8 @@ class RoundStartViewModel {
     
     var holesArray: [Hole] = []
     var usersArray: [User] = []
-
-    
+    var golfersArray: [Golfer] = []
+    var userScoreArray: [UserScore] = []
  
    
     init(service: FirebaseSyncable = FirebaseService()) {
@@ -28,15 +28,29 @@ class RoundStartViewModel {
     
     func fetchNumberOfHoles(numberOfHoles: Int) {
         for hole in 1...numberOfHoles {
-            let newHole = Hole(holeNumber: hole)
+            let newHole = Hole(holeNumber: hole, userScore: userScoreArray)
             holesArray.append(newHole)
+        }
+    }
+    
+    func fetchUserScore() {
+            let userScore = UserScore(userID: "test")
+        userScoreArray.append(userScore)
+    }
+    
+    func fetchNumberOfGolfers(numberOfGolfers: Int) {
+        for golfer in 1...numberOfGolfers {
+            fetchUserScore()
+            let golferName = "Golfer #\(golfer)"
+            let newGolfer = Golfer(golferName: golferName)
+            golfersArray.append(newGolfer)
         }
     }
     
    
                           
     func startRound(with courseName: String, numberOfHoles: Int) {
-        let round = Round(courseName: courseName, numberOfHoles: numberOfHoles, holes: holesArray, users: usersArray)
+        let round = Round(courseName: courseName, numberOfHoles: numberOfHoles, holes: holesArray, golfers: golfersArray)
         service.saveRound(round) { [weak self] result in
             switch result {
             case .failure(let error):
@@ -48,6 +62,4 @@ class RoundStartViewModel {
             }
         }
     }
-    
-   
 }

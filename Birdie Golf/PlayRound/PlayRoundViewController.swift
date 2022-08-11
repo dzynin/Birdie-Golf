@@ -43,6 +43,10 @@ class PlayRoundViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let viewModel = PlayRoundViewModel()
+        self.viewModel = viewModel
+        viewModel.fetchCurrentRound()
+        
         firstGolferNameLabel.layer.borderWidth = 2.0
         firstGolferNameLabel.layer.cornerRadius = 8
         firstGolferNameLabel.layer.borderColor = UIColor.black.cgColor

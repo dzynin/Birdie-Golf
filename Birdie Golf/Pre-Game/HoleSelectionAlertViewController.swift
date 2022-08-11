@@ -43,8 +43,11 @@ class HoleSelectionAlertViewController: UIViewController {
         }
         
         let numberOfHoles = segmentedControl.selectedSegmentIndex == 1 ? 18 : 9
-        viewModel.fetchNumberOfHoles(numberOfHoles: numberOfHoles)
+        let userScore = 0
+        let numberofGolfers = 4
         
+        viewModel.fetchNumberOfGolfers(numberOfGolfers: numberofGolfers)
+        viewModel.fetchNumberOfHoles(numberOfHoles: numberOfHoles)
         viewModel.startRound(with: name, numberOfHoles: numberOfHoles)
     }
     @objc func closeView() {
@@ -57,7 +60,6 @@ extension HoleSelectionAlertViewController: RoundStartViewModelDelegate {
         // capture the first view controller on the tabBar and type cast it as the "Play" view controller and present it.
         let storyboard = UIStoryboard(name: "TabBarController", bundle: nil)
         guard let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarMain") as? UITabBarController else { return }
-        tabBarController.viewControllers[0].
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(viewController: tabBarController)
     }
 }
