@@ -23,12 +23,15 @@ protocol FirebaseSyncable {
     func saveRound(_ round: Round, completion: @escaping (Result<Round, FirebaseError>) -> Void)
     func loadRounds(completion: @escaping (Result<[Round], FirebaseError>) -> Void)
     func deleteRound(round: Round)
+    func fetchRound(completion: @escaping (Result<Round, FirebaseError>) -> Void)
 }
 
 struct FirebaseService: FirebaseSyncable {
     
     let storage = Storage.storage().reference()
     let reference = Firebase.Database.database().reference()
+    var currentUser: User?
+    
     
     func signInWithApple(token: String, nonce: String) {
         let credentials = OAuthProvider.credential(withProviderID: "apple.com", idToken: token, rawNonce: nonce)
@@ -60,6 +63,10 @@ struct FirebaseService: FirebaseSyncable {
             switch signInResult {
             case .some(let result):
                 completion(.success(true))
+                guard let result = signInResult else { return }
+                let id = result.user.uid
+                let currentUser = User(userID: id, email: email, password: password, currentRound: nil, historicalRounds: [])
+                self.currentUser = currentUser
             case .none:
                 if let error = error {
                     completion(.failure(.firebaseError(error)))
@@ -99,4 +106,21 @@ struct FirebaseService: FirebaseSyncable {
     func deleteRound(round: Round) {
         reference.child(Round.RoundKeys.collectionType).child(round.uuid).removeValue()
     }
-}
+    
+    
+    func fetchRound(completion: @escaping (Result<Round, FirebaseError>) -> Void) {
+        reference.child("rounds").getData { error, snapshot in
+            if let error = error {
+                completion(.failure(.firebaseError(error)))
+                return
+            }
+            guard let data = snapshot?.value as? [String : [String : Any]]
+            else {
+                completion(.failure(.noDataFound))
+                return
+            }
+            let roundsArray = Array(data.values)
+            let currentUser =
+            let round = roundsArray.
+            
+        }

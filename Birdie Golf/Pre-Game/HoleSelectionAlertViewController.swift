@@ -54,8 +54,10 @@ class HoleSelectionAlertViewController: UIViewController {
 
 extension HoleSelectionAlertViewController: RoundStartViewModelDelegate {
     func roundSuccessfullyStarted() {
+        // capture the first view controller on the tabBar and type cast it as the "Play" view controller and present it.
         let storyboard = UIStoryboard(name: "TabBarController", bundle: nil)
         guard let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarMain") as? UITabBarController else { return }
+        tabBarController.viewControllers[0].
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(viewController: tabBarController)
     }
 }

@@ -12,7 +12,7 @@ class AddUserViewController: UIViewController {
     @IBOutlet weak var golferNameTextField: UITextField!
     
     
-    var viewModel: AddUserViewModel = AddUserViewModel()
+    var viewModel: AddUserViewModel!
     
     
     override func viewDidLoad() {

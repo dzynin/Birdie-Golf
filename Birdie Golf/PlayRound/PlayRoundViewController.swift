@@ -38,6 +38,8 @@ class PlayRoundViewController: UIViewController {
     @IBOutlet weak var fourthGolferHoleDataStackView: UIStackView!
     
     
+    var viewModel: PlayRoundViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,7 +81,7 @@ class PlayRoundViewController: UIViewController {
     }
     
     
-
+    
     /*
     // MARK: - Navigation
 
@@ -89,10 +91,13 @@ class PlayRoundViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
     @IBAction func addUsersButtonTapped(_ sender: Any) {
-        
+        // before this view exists the add user view model needs to be initialized.
             let storyboard = UIStoryboard(name: "AddUserView", bundle: nil)
-            let userAlert = storyboard.instantiateViewController(withIdentifier: "userAlert")
+            let userAlert = storyboard.instantiateViewController(withIdentifier: "userAlert") as! AddUserViewController
+        userAlert.viewModel = AddUserViewModel(round: viewModel.round!)
+        
             userAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
             userAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
             self.present(userAlert, animated: true, completion: nil)

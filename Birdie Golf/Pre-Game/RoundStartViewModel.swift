@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 
 protocol RoundStartViewModelDelegate: HoleSelectionAlertViewController {
     func roundSuccessfullyStarted()
@@ -17,7 +18,9 @@ class RoundStartViewModel {
     
     var holesArray: [Hole] = []
     var usersArray: [User] = []
+
     
+ 
    
     init(service: FirebaseSyncable = FirebaseService()) {
         self.service = service
@@ -41,7 +44,10 @@ class RoundStartViewModel {
             case .success(let round):
                 print(round.courseName)
                 self?.delegate?.roundSuccessfullyStarted()
+                // now that the round exists... this is the round that needs to pass to all the other screens,
             }
         }
     }
+    
+   
 }
