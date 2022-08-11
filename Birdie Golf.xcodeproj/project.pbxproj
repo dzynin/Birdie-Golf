@@ -50,6 +50,18 @@
 		EDB236F62892E16000D0E96B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB236F52892E16000D0E96B /* Main.storyboard */; };
 		EDB2370A289376E000D0E96B /* NumberOfHolesAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB23708289376E000D0E96B /* NumberOfHolesAlertView.xib */; };
 		EDB2370B289376E000D0E96B /* AlertPinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB23709289376E000D0E96B /* AlertPinView.xib */; };
+		EDB6E02328A3095E00782091 /* RoundStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB6E02228A3095E00782091 /* RoundStartViewModel.swift */; };
+		EDB82B8428A33AA000CF974C /* PlayRoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB82B8328A33AA000CF974C /* PlayRoundViewModel.swift */; };
+		EDB82B8628A33AB000CF974C /* PlayRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB82B8528A33AB000CF974C /* PlayRoundViewController.swift */; };
+		EDB82BB328A4460400CF974C /* AddUserView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB82BB228A4460400CF974C /* AddUserView.storyboard */; };
+		EDB82BB528A4518700CF974C /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB82BB428A4518700CF974C /* AddUserViewController.swift */; };
+		EDB82BB728A452AE00CF974C /* AddUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB82BB628A452AE00CF974C /* AddUserViewModel.swift */; };
+		EDB82BB928A4889E00CF974C /* Golfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB82BB828A4889E00CF974C /* Golfer.swift */; };
+		EDF7071F28A17B5700E488F4 /* PregameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */; };
+		EDF7072128A17D6300E488F4 /* PregameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7072028A17D6300E488F4 /* PregameViewController.swift */; };
+		EDF7072328A1BD5400E488F4 /* NumberOfHolesNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7072228A1BD5400E488F4 /* NumberOfHolesNib.swift */; };
+		EDF7072528A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF7072428A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard */; };
+		EDF7072728A1C88100E488F4 /* HoleSelectionAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7072628A1C88100E488F4 /* HoleSelectionAlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +107,18 @@
 		EDB236F52892E16000D0E96B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EDB23708289376E000D0E96B /* NumberOfHolesAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberOfHolesAlertView.xib; sourceTree = "<group>"; };
 		EDB23709289376E000D0E96B /* AlertPinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertPinView.xib; sourceTree = "<group>"; };
+		EDB6E02228A3095E00782091 /* RoundStartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStartViewModel.swift; sourceTree = "<group>"; };
+		EDB82B8328A33AA000CF974C /* PlayRoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRoundViewModel.swift; sourceTree = "<group>"; };
+		EDB82B8528A33AB000CF974C /* PlayRoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRoundViewController.swift; sourceTree = "<group>"; };
+		EDB82BB228A4460400CF974C /* AddUserView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddUserView.storyboard; sourceTree = "<group>"; };
+		EDB82BB428A4518700CF974C /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		EDB82BB628A452AE00CF974C /* AddUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
+		EDB82BB828A4889E00CF974C /* Golfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Golfer.swift; sourceTree = "<group>"; };
+		EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregameViewModel.swift; sourceTree = "<group>"; };
+		EDF7072028A17D6300E488F4 /* PregameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregameViewController.swift; sourceTree = "<group>"; };
+		EDF7072228A1BD5400E488F4 /* NumberOfHolesNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfHolesNib.swift; sourceTree = "<group>"; };
+		EDF7072428A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HoleSelectionAlertViewController.storyboard; sourceTree = "<group>"; };
+		EDF7072628A1C88100E488F4 /* HoleSelectionAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleSelectionAlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +211,7 @@
 				ED8D0095289C232100075CB4 /* Round.swift */,
 				ED8D0097289C24B700075CB4 /* Hole.swift */,
 				9D4F1CE528A1DD86008F36EB /* UserScore.swift */,
+				EDB82BB828A4889E00CF974C /* Golfer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,6 +258,8 @@
 				9D2471002899B27A0004EFAF /* GoogleService-Info.plist */,
 				ED8D008E289844A100075CB4 /* Scorecard */,
 				ED8D00862898385500075CB4 /* Chat */,
+				EDB82B8228A3355700CF974C /* PlayRound */,
+				EDF7071D28A17B3500E488F4 /* Pre-Game */,
 				9DA3CA2C28A067CF00AD880D /* CreateAccountView */,
 				9D1BB7D5289354990079419A /* SignInScreenView */,
 				EDB2370C289376E700D0E96B /* Alert Nibs */,
@@ -261,8 +288,10 @@
 				EDB236F52892E16000D0E96B /* Main.storyboard */,
 				EDB236E72892D85100D0E96B /* TabBarController.storyboard */,
 				9D1BB7D3289336F10079419A /* SignIn.storyboard */,
-				EDB236ED2892D96100D0E96B /* Play.storyboard */,
 				ED8D00932899D2F700075CB4 /* Pre-game.storyboard */,
+				EDB236ED2892D96100D0E96B /* Play.storyboard */,
+				EDB82BB228A4460400CF974C /* AddUserView.storyboard */,
+				EDF7072428A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard */,
 				EDB236F32892D98C00D0E96B /* Scorecard.storyboard */,
 				EDB236F12892D97900D0E96B /* Chat.storyboard */,
 				EDB236EF2892D96E00D0E96B /* Leaderboard.storyboard */,
@@ -278,6 +307,29 @@
 				EDB23708289376E000D0E96B /* NumberOfHolesAlertView.xib */,
 			);
 			path = "Alert Nibs";
+			sourceTree = "<group>";
+		};
+		EDB82B8228A3355700CF974C /* PlayRound */ = {
+			isa = PBXGroup;
+			children = (
+				EDB82B8328A33AA000CF974C /* PlayRoundViewModel.swift */,
+				EDB82B8528A33AB000CF974C /* PlayRoundViewController.swift */,
+				EDB82BB428A4518700CF974C /* AddUserViewController.swift */,
+				EDB82BB628A452AE00CF974C /* AddUserViewModel.swift */,
+			);
+			path = PlayRound;
+			sourceTree = "<group>";
+		};
+		EDF7071D28A17B3500E488F4 /* Pre-Game */ = {
+			isa = PBXGroup;
+			children = (
+				EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */,
+				EDF7072028A17D6300E488F4 /* PregameViewController.swift */,
+				EDF7072228A1BD5400E488F4 /* NumberOfHolesNib.swift */,
+				EDF7072628A1C88100E488F4 /* HoleSelectionAlertViewController.swift */,
+				EDB6E02228A3095E00782091 /* RoundStartViewModel.swift */,
+			);
+			path = "Pre-Game";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +422,8 @@
 				41BE2E6F28931DDB00A214EF /* Merriweather-BlackItalic.otf in Resources */,
 				9D2471012899B27A0004EFAF /* GoogleService-Info.plist in Resources */,
 				EDB236EE2892D96100D0E96B /* Play.storyboard in Resources */,
+				EDB82BB328A4460400CF974C /* AddUserView.storyboard in Resources */,
+				EDF7072528A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,16 +437,26 @@
 				9DC4C13428A0ECB3000F5E67 /* CreateAccountViewController.swift in Sources */,
 				EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */,
 				EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */,
+				EDB82BB728A452AE00CF974C /* AddUserViewModel.swift in Sources */,
 				9DF3D5BA2899F63800A64583 /* User.swift in Sources */,
 				ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */,
 				9D4F1CE628A1DD86008F36EB /* UserScore.swift in Sources */,
 				9DF13325289DC022006049DE /* SignInViewModel.swift in Sources */,
+				EDF7072728A1C88100E488F4 /* HoleSelectionAlertViewController.swift in Sources */,
+				EDF7071F28A17B5700E488F4 /* PregameViewModel.swift in Sources */,
+				EDF7072328A1BD5400E488F4 /* NumberOfHolesNib.swift in Sources */,
 				9DE7F38828A1A6A30078E256 /* LeaderboardTableViewCell.swift in Sources */,
 				9DF1331A289C3FEF006049DE /* FirebaseService.swift in Sources */,
+				EDF7072128A17D6300E488F4 /* PregameViewController.swift in Sources */,
+				EDB82BB528A4518700CF974C /* AddUserViewController.swift in Sources */,
 				9DA3CA3028A0683D00AD880D /* CreateAccountViewModel.swift in Sources */,
+				EDB82BB928A4889E00CF974C /* Golfer.swift in Sources */,
 				9D1BB7D7289354D20079419A /* SignInViewController.swift in Sources */,
+				EDB82B8628A33AB000CF974C /* PlayRoundViewController.swift in Sources */,
+				EDB82B8428A33AA000CF974C /* PlayRoundViewModel.swift in Sources */,
 				9DE7F38628A184670078E256 /* LeaderboardViewModel.swift in Sources */,
 				ED8D0098289C24B700075CB4 /* Hole.swift in Sources */,
+				EDB6E02328A3095E00782091 /* RoundStartViewModel.swift in Sources */,
 				ED8D0096289C232100075CB4 /* Round.swift in Sources */,
 				ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */,
 				9DE7F38428A1844E0078E256 /* LeaderboardTableViewController.swift in Sources */,
