@@ -16,7 +16,7 @@
         <!--Leaderboard-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="LeaderboardTableViewController" customModule="Birdie_Golf" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LeaderboardView" id="Y6W-OH-hqX" customClass="LeaderboardViewController" customModule="Birdie_Golf" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +40,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="ellipsis.circle.fill" catalog="system"/>
                                         <connections>
-                                            <action selector="optionsBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Kz4-gB-FH0"/>
+                                            <action selector="optionsBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DSF-1f-rN4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -126,9 +126,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Leaderboard" image="Leaderboard" selectedImage="Leaderboard" id="V7t-lX-g5B"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="optionsBtn" destination="Xi8-J6-ekS" id="lya-gv-Wfd"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -23,9 +23,10 @@
 		9D76E8DE28984323001D03F1 /* Tourney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D76E8DD28984323001D03F1 /* Tourney.storyboard */; };
 		9DA3CA3028A0683D00AD880D /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3CA2F28A0683D00AD880D /* CreateAccountViewModel.swift */; };
 		9DC4C13428A0ECB3000F5E67 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4C13328A0ECB3000F5E67 /* CreateAccountViewController.swift */; };
-		9DDD044428A40C3300628D26 /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD044328A40C3300628D26 /* PopUp.swift */; };
-		9DDD044628A40C4700628D26 /* PopUpSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DDD044528A40C4700628D26 /* PopUpSettings.xib */; };
-		9DE7F38428A1844E0078E256 /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7F38328A1844E0078E256 /* LeaderboardTableViewController.swift */; };
+		9DDD044D28A443CF00628D26 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD044C28A443CF00628D26 /* LeaderboardViewController.swift */; };
+		9DDD045528A465CC00628D26 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDD045428A465CC00628D26 /* Settings.storyboard */; };
+		9DDD045728A46A6D00628D26 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD045628A46A6D00628D26 /* SettingsViewController.swift */; };
+		9DDD045928A46BA100628D26 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD045828A46BA100628D26 /* SettingsViewModel.swift */; };
 		9DE7F38628A184670078E256 /* LeaderboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7F38528A184670078E256 /* LeaderboardViewModel.swift */; };
 		9DE7F38828A1A6A30078E256 /* LeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7F38728A1A6A30078E256 /* LeaderboardTableViewCell.swift */; };
 		9DF1331A289C3FEF006049DE /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF13319289C3FEF006049DE /* FirebaseService.swift */; };
@@ -79,10 +80,11 @@
 		9D76E8DD28984323001D03F1 /* Tourney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tourney.storyboard; sourceTree = "<group>"; };
 		9DA3CA2F28A0683D00AD880D /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		9DC4C13328A0ECB3000F5E67 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
-		9DDD044328A40C3300628D26 /* PopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
-		9DDD044528A40C4700628D26 /* PopUpSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpSettings.xib; sourceTree = "<group>"; };
+		9DDD044C28A443CF00628D26 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
+		9DDD045428A465CC00628D26 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		9DDD045628A46A6D00628D26 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9DDD045828A46BA100628D26 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		9DE7F38128A159570078E256 /* Birdie Golf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Birdie Golf.entitlements"; sourceTree = "<group>"; };
-		9DE7F38328A1844E0078E256 /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
 		9DE7F38528A184670078E256 /* LeaderboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewModel.swift; sourceTree = "<group>"; };
 		9DE7F38728A1A6A30078E256 /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
 		9DF13319289C3FEF006049DE /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
@@ -185,17 +187,25 @@
 		9DDD044228A40BF800628D26 /* PopUpSettings */ = {
 			isa = PBXGroup;
 			children = (
-				9DDD044328A40C3300628D26 /* PopUp.swift */,
 			);
 			path = PopUpSettings;
+			sourceTree = "<group>";
+		};
+		9DDD045A28A46BAC00628D26 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9DDD045628A46A6D00628D26 /* SettingsViewController.swift */,
+				9DDD045828A46BA100628D26 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		9DE7F38228A184270078E256 /* LeaderboardView */ = {
 			isa = PBXGroup;
 			children = (
-				9DE7F38328A1844E0078E256 /* LeaderboardTableViewController.swift */,
 				9DE7F38528A184670078E256 /* LeaderboardViewModel.swift */,
 				9DE7F38728A1A6A30078E256 /* LeaderboardTableViewCell.swift */,
+				9DDD044C28A443CF00628D26 /* LeaderboardViewController.swift */,
 			);
 			path = LeaderboardView;
 			sourceTree = "<group>";
@@ -264,6 +274,7 @@
 				ED8D00862898385500075CB4 /* Chat */,
 				EDB82B8228A3355700CF974C /* PlayRound */,
 				EDF7071D28A17B3500E488F4 /* Pre-Game */,
+				9DDD045A28A46BAC00628D26 /* Settings */,
 				9DA3CA2C28A067CF00AD880D /* CreateAccountView */,
 				9D1BB7D5289354990079419A /* SignInScreenView */,
 				EDB2370C289376E700D0E96B /* Alert Nibs */,
@@ -299,6 +310,7 @@
 				EDB236F12892D97900D0E96B /* Chat.storyboard */,
 				EDB236EF2892D96E00D0E96B /* Leaderboard.storyboard */,
 				9D76E8DD28984323001D03F1 /* Tourney.storyboard */,
+				9DDD045428A465CC00628D26 /* Settings.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -306,7 +318,6 @@
 		EDB2370C289376E700D0E96B /* Alert Nibs */ = {
 			isa = PBXGroup;
 			children = (
-				9DDD044528A40C4700628D26 /* PopUpSettings.xib */,
 				EDB23709289376E000D0E96B /* AlertPinView.xib */,
 				EDB23708289376E000D0E96B /* NumberOfHolesAlertView.xib */,
 			);
@@ -408,10 +419,10 @@
 				9D1BB7D4289336F10079419A /* SignIn.storyboard in Resources */,
 				41BE2E7028931DDB00A214EF /* Merriweather-Black.otf in Resources */,
 				9D76E8DE28984323001D03F1 /* Tourney.storyboard in Resources */,
-				9DDD044628A40C4700628D26 /* PopUpSettings.xib in Resources */,
 				41BE2E7228931DDB00A214EF /* Merriweather-BoldItalic.otf in Resources */,
 				EDB2370B289376E000D0E96B /* AlertPinView.xib in Resources */,
 				41BE2E7328931DDB00A214EF /* Merriweather-Light.otf in Resources */,
+				9DDD045528A465CC00628D26 /* Settings.storyboard in Resources */,
 				ED8D00942899D2F700075CB4 /* Pre-game.storyboard in Resources */,
 				EDA928562891AABB0038BC34 /* LaunchScreen.storyboard in Resources */,
 				EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */,
@@ -443,8 +454,10 @@
 				ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */,
 				9D4F1CE628A1DD86008F36EB /* UserScore.swift in Sources */,
 				9DF13325289DC022006049DE /* SignInViewModel.swift in Sources */,
+				9DDD044D28A443CF00628D26 /* LeaderboardViewController.swift in Sources */,
 				EDF7072728A1C88100E488F4 /* HoleSelectionAlertViewController.swift in Sources */,
 				EDF7071F28A17B5700E488F4 /* PregameViewModel.swift in Sources */,
+				9DDD045928A46BA100628D26 /* SettingsViewModel.swift in Sources */,
 				EDF7072328A1BD5400E488F4 /* NumberOfHolesNib.swift in Sources */,
 				9DE7F38828A1A6A30078E256 /* LeaderboardTableViewCell.swift in Sources */,
 				9DF1331A289C3FEF006049DE /* FirebaseService.swift in Sources */,
@@ -455,11 +468,10 @@
 				EDB82B8428A33AA000CF974C /* PlayRoundViewModel.swift in Sources */,
 				9DE7F38628A184670078E256 /* LeaderboardViewModel.swift in Sources */,
 				ED8D0098289C24B700075CB4 /* Hole.swift in Sources */,
-				9DDD044428A40C3300628D26 /* PopUp.swift in Sources */,
 				EDB6E02328A3095E00782091 /* RoundStartViewModel.swift in Sources */,
 				ED8D0096289C232100075CB4 /* Round.swift in Sources */,
 				ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */,
-				9DE7F38428A1844E0078E256 /* LeaderboardTableViewController.swift in Sources */,
+				9DDD045728A46A6D00628D26 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

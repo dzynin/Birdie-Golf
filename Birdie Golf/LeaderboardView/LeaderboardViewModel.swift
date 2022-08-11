@@ -36,7 +36,7 @@ class LeaderboardViewModel {
             // how am i going to take this score and tie it to a user
                 user.currentScore += score
                 // possibly append the score to the certain user it belongs to?
-                var idk = hole.userScore.sorted(by: {$0.currentScore <= $1.currentScore})
+                let idk = hole.userScore.sorted(by: {$0.currentScore <= $1.currentScore})
             userScoreArray = idk
             }
         }

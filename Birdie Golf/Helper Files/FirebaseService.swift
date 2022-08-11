@@ -23,12 +23,25 @@ protocol FirebaseSyncable {
     func saveRound(_ round: Round, completion: @escaping (Result<Round, FirebaseError>) -> Void)
     func loadRounds(completion: @escaping (Result<[Round], FirebaseError>) -> Void)
     func deleteRound(round: Round)
+    func logoutUser()
 }
 
 struct FirebaseService: FirebaseSyncable {
+        
+    
+    
     
     let storage = Storage.storage().reference()
     let reference = Firebase.Database.database().reference()
+    
+func logoutUser() {
+    let firebaseAuth = Auth.auth()
+    do {
+        try firebaseAuth.signOut()
+    } catch let signOutError as NSError {
+        print("Error signing out", signOutError)
+    }
+}
     
     func signInWithApple(token: String, nonce: String) {
         let credentials = OAuthProvider.credential(withProviderID: "apple.com", idToken: token, rawNonce: nonce)
