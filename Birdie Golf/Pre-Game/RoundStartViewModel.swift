@@ -16,7 +16,7 @@ class RoundStartViewModel {
     weak var delegate: RoundStartViewModelDelegate?
     
     var holesArray: [Hole] = []
-    
+    var usersArray: [User] = []
     
    
     init(service: FirebaseSyncable = FirebaseService()) {
@@ -30,8 +30,9 @@ class RoundStartViewModel {
         }
     }
     
+   
                           
-    func startRound(with courseName: String, numberOfHoles: Int, usersArray: [User] = []) {
+    func startRound(with courseName: String, numberOfHoles: Int) {
         let round = Round(courseName: courseName, numberOfHoles: numberOfHoles, holes: holesArray, users: usersArray)
         service.saveRound(round) { [weak self] result in
             switch result {

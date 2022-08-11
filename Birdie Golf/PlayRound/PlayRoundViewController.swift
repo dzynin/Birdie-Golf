@@ -40,15 +40,6 @@ class PlayRoundViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        firstGolferNameLabel.text = "Scott"
-        firstGolferCurrentScoreLabel.text = "+3"
-        secondGolferNameLabel.text = "Isiah"
-        secondGolferCurrentScoreLabel.text = "+7"
-        thirdGolferNameLabel.text = "Karl"
-        thirdGolferCurrentScoreLabel.text = "+5"
-        fourthGolferNameLabel.text = "Ryan"
-        fourthGolferCurrentScoreLabel.text = "+10"
         
         firstGolferNameLabel.layer.borderWidth = 2.0
         firstGolferNameLabel.layer.cornerRadius = 8
@@ -98,6 +89,15 @@ class PlayRoundViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func addUsersButtonTapped(_ sender: Any) {
+        
+            let storyboard = UIStoryboard(name: "AddUserView", bundle: nil)
+            let userAlert = storyboard.instantiateViewController(withIdentifier: "userAlert")
+            userAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+            userAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+            self.present(userAlert, animated: true, completion: nil)
+        }
+    
     @IBAction func firstGolferHoleDataInputButtonTapped(_ sender: Any) {
         firstGolferHoleDataStackView.isHidden.toggle()
     }
