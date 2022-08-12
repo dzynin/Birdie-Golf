@@ -27,18 +27,6 @@ class SettingsViewModel {
         UserDefaults.standard.removeObject(forKey: "email")
     }
     
-    func saveRound() {
-        guard let round = round else {
-            return
-        }
-        service.saveRound( round ) {  result in
-            switch result {
-            case.success(let round):
-                self.round = round
-        
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
+    
+    
 }

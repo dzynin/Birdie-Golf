@@ -25,6 +25,7 @@ protocol FirebaseSyncable {
     func deleteRound(round: Round)
     func logoutUser()
     func fetchRound(completion: @escaping (Result<Round, FirebaseError>) -> Void)
+    
 }
 
 struct FirebaseService: FirebaseSyncable {

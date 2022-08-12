@@ -49,7 +49,7 @@ class SettingsViewController: UIViewController {
     }
     
     func saveRoundToPreGame() {
-        viewModel.saveRound()
+       
     
     }
     
