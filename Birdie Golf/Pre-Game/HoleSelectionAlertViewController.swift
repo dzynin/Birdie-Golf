@@ -12,6 +12,11 @@ class HoleSelectionAlertViewController: UIViewController {
     @IBOutlet weak var courseNameTextField: UITextField!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    @IBOutlet weak var firstGolferTextField: UITextField!
+    @IBOutlet weak var secondGolferTextField: UITextField!
+    @IBOutlet weak var thirdGolferTextField: UITextField!
+    @IBOutlet weak var fourthGolferTextField: UITextField!
+    
     var viewModel: RoundStartViewModel = RoundStartViewModel()
     
     
@@ -43,6 +48,14 @@ class HoleSelectionAlertViewController: UIViewController {
         }
         
         let numberOfHoles = segmentedControl.selectedSegmentIndex == 1 ? 18 : 9
+        
+        
+        let firstGolfer = firstGolferTextField.text?.capitalized
+        let secondGolfer = secondGolferTextField.text?.capitalized
+        let thirdGolfer = thirdGolferTextField.text?.capitalized
+        let fourthGolfer = fourthGolferTextField.text?.capitalized
+       
+      
         let userScore = 0
         let numberofGolfers = 4
         
