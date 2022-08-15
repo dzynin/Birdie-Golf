@@ -53,11 +53,17 @@
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRl-fj-McM">
-                                        <rect key="frame" x="369" y="80" width="45" height="31"/>
+                                        <rect key="frame" x="346" y="80" width="56" height="46"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="ellipsis.circle.fill" catalog="system">
+                                        <buttonConfiguration key="configuration" style="plain" image="Menu">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82e-Pj-oqI">
                                         <rect key="frame" x="12" y="189" width="390" height="40"/>
@@ -81,7 +87,7 @@
                                     <constraint firstItem="82e-Pj-oqI" firstAttribute="top" secondItem="dz1-5c-cUE" secondAttribute="bottom" constant="20" id="aAt-Zw-8uv"/>
                                     <constraint firstItem="82e-Pj-oqI" firstAttribute="leading" secondItem="33W-gV-Edt" secondAttribute="leading" constant="12" id="ccS-16-MiK"/>
                                     <constraint firstItem="dz1-5c-cUE" firstAttribute="top" secondItem="SRm-E4-RS6" secondAttribute="bottom" constant="20" id="d1o-7n-q9r"/>
-                                    <constraint firstAttribute="trailing" secondItem="lRl-fj-McM" secondAttribute="trailing" id="jiA-Ak-5Sf"/>
+                                    <constraint firstAttribute="trailing" secondItem="lRl-fj-McM" secondAttribute="trailing" constant="12" id="jiA-Ak-5Sf"/>
                                     <constraint firstItem="dz1-5c-cUE" firstAttribute="trailing" secondItem="82e-Pj-oqI" secondAttribute="trailing" id="lEW-RP-917"/>
                                     <constraint firstItem="SRm-E4-RS6" firstAttribute="top" secondItem="33W-gV-Edt" secondAttribute="top" constant="80" id="pyh-Xs-uA1"/>
                                     <constraint firstAttribute="bottom" secondItem="82e-Pj-oqI" secondAttribute="bottom" constant="12" id="qwv-hB-XzN"/>
@@ -353,7 +359,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ellipsis.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="Menu" width="32" height="32"/>
         <image name="logo-placeholder" width="63" height="36"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

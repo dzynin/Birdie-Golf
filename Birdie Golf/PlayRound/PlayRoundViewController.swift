@@ -8,7 +8,7 @@
 import UIKit
 
 class PlayRoundViewController: UIViewController {
-
+    
     @IBOutlet weak var firstGolferView: UIView!
     @IBOutlet weak var firstGolferNameLabel: UILabel!
     @IBOutlet weak var firstGolferCurrentScoreLabel: UILabel!
@@ -39,73 +39,95 @@ class PlayRoundViewController: UIViewController {
     
     
     var viewModel: PlayRoundViewModel!
+    private var golferViews: [UIView] = []
+    private var golferNameLabels: [UILabel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        golferViews = [firstGolferView, secondGolferView, thirdGolferView, fourthGolferView]
+        golferNameLabels = [firstGolferNameLabel, secondGolferNameLabel, thirdGolferNameLabel, fourthGolferNameLabel]
         
         let viewModel = PlayRoundViewModel()
         self.viewModel = viewModel
-        viewModel.fetchCurrentRound()
+        viewModel.fetchCurrentRound {
+            self.populateGolferNameLabels()
+        }
         
+        firstGolferView.isHidden = true
         firstGolferNameLabel.layer.borderWidth = 2.0
         firstGolferNameLabel.layer.cornerRadius = 8
         firstGolferNameLabel.layer.borderColor = UIColor.black.cgColor
- 
+        
         firstGolferCurrentScoreLabel.layer.borderWidth = 2.0
         firstGolferCurrentScoreLabel.layer.cornerRadius = 8
         firstGolferCurrentScoreLabel.layer.borderColor = UIColor.black.cgColor
-            
         
+        secondGolferView.isHidden = true
         secondGolferNameLabel.layer.borderWidth = 2.0
         secondGolferNameLabel.layer.cornerRadius = 8
         secondGolferNameLabel.layer.borderColor = UIColor.black.cgColor
- 
+        
         secondGolferCurrentScoreLabel.layer.borderWidth = 2.0
         secondGolferCurrentScoreLabel.layer.cornerRadius = 8
         secondGolferCurrentScoreLabel.layer.borderColor = UIColor.black.cgColor
-            
         
+        thirdGolferView.isHidden = true
         thirdGolferNameLabel.layer.borderWidth = 2.0
         thirdGolferNameLabel.layer.cornerRadius = 8
         thirdGolferNameLabel.layer.borderColor = UIColor.black.cgColor
- 
+        
         thirdGolferCurrentScoreLabel.layer.borderWidth = 2.0
         thirdGolferCurrentScoreLabel.layer.cornerRadius = 8
         thirdGolferCurrentScoreLabel.layer.borderColor = UIColor.black.cgColor
-            
         
+        fourthGolferView.isHidden = true
         fourthGolferNameLabel.layer.borderWidth = 2.0
         fourthGolferNameLabel.layer.cornerRadius = 8
         fourthGolferNameLabel.layer.borderColor = UIColor.black.cgColor
- 
+        
         fourthGolferCurrentScoreLabel.layer.borderWidth = 2.0
         fourthGolferCurrentScoreLabel.layer.cornerRadius = 8
         fourthGolferCurrentScoreLabel.layer.borderColor = UIColor.black.cgColor
-            
+        
+        
     }
     
-    
-    
-    /*
-    // MARK: - Navigation
+    private func populateGolferNameLabels() {
+        guard viewModel.numberOfGolfers() > 0 else { return }
+//        for index in 0...viewModel.numberOfGolfers() - 1 {
+        for index in 0...3 {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+            if let golfer = viewModel.golfer(at: index) {
+                let label = golferNameLabels[index]
+                label.text = golfer.golferName
+                let view = golferViews[index]
+                view.isHidden = false
+            } else {
+                let view = golferViews[index]
+                view.isHidden = true
+            }
+        }
     }
-    */
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     @IBAction func addUsersButtonTapped(_ sender: Any) {
         // before this view exists the add user view model needs to be initialized.
-            let storyboard = UIStoryboard(name: "AddUserView", bundle: nil)
-            let userAlert = storyboard.instantiateViewController(withIdentifier: "userAlert") as! AddUserViewController
+        let storyboard = UIStoryboard(name: "AddUserView", bundle: nil)
+        let userAlert = storyboard.instantiateViewController(withIdentifier: "userAlert") as! AddUserViewController
         userAlert.viewModel = AddUserViewModel(round: viewModel.round!)
         
-            userAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-            userAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-            self.present(userAlert, animated: true, completion: nil)
-        }
+        userAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        userAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(userAlert, animated: true, completion: nil)
+    }
     
     @IBAction func firstGolferHoleDataInputButtonTapped(_ sender: Any) {
         firstGolferHoleDataStackView.isHidden.toggle()

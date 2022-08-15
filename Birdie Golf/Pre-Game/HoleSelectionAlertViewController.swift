@@ -12,6 +12,11 @@ class HoleSelectionAlertViewController: UIViewController {
     @IBOutlet weak var courseNameTextField: UITextField!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    @IBOutlet weak var firstGolferTextField: UITextField!
+    @IBOutlet weak var secondGolferTextField: UITextField!
+    @IBOutlet weak var thirdGolferTextField: UITextField!
+    @IBOutlet weak var fourthGolferTextField: UITextField!
+    
     var viewModel: RoundStartViewModel = RoundStartViewModel()
     
     
@@ -43,12 +48,34 @@ class HoleSelectionAlertViewController: UIViewController {
         }
         
         let numberOfHoles = segmentedControl.selectedSegmentIndex == 1 ? 18 : 9
+        
+        var golfers: [Golfer] = []
+        
+        if let firstGolfer = firstGolferTextField.text?.capitalized, !firstGolfer.isEmpty {
+            let golfer = Golfer(golferName: firstGolfer)
+            golfers.append(golfer)
+        }
+        if let secondGolfer = secondGolferTextField.text?.capitalized, !secondGolfer.isEmpty {
+            let golfer = Golfer(golferName: secondGolfer)
+            golfers.append(golfer)
+        }
+        if let thirdGolfer = thirdGolferTextField.text?.capitalized, !thirdGolfer.isEmpty {
+            let golfer = Golfer(golferName: thirdGolfer)
+            golfers.append(golfer)
+        }
+        if let fourthGolfer = fourthGolferTextField.text?.capitalized, !fourthGolfer.isEmpty {
+            let golfer = Golfer(golferName: fourthGolfer)
+            golfers.append(golfer)
+        }
+       
+       
+      
         let userScore = 0
         let numberofGolfers = 4
         
-        viewModel.fetchNumberOfGolfers(numberOfGolfers: numberofGolfers)
+//        viewModel.fetchNumberOfGolfers(numberOfGolfers: numberofGolfers)
         viewModel.fetchNumberOfHoles(numberOfHoles: numberOfHoles)
-        viewModel.startRound(with: name, numberOfHoles: numberOfHoles)
+        viewModel.startRound(with: name, numberOfHoles: numberOfHoles, golfers: golfers)
     }
     @objc func closeView() {
         self.dismiss(animated: true)

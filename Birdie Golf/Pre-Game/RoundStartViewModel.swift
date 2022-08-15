@@ -18,7 +18,7 @@ class RoundStartViewModel {
     
     var holesArray: [Hole] = []
     var usersArray: [User] = []
-    var golfersArray: [Golfer] = []
+//    var golfersArray: [Golfer] = []
     var userScoreArray: [UserScore] = []
  
    
@@ -38,19 +38,22 @@ class RoundStartViewModel {
         userScoreArray.append(userScore)
     }
     
-    func fetchNumberOfGolfers(numberOfGolfers: Int) {
-        for golfer in 1...numberOfGolfers {
-            fetchUserScore()
-            let golferName = "Golfer #\(golfer)"
-            let newGolfer = Golfer(golferName: golferName)
-            golfersArray.append(newGolfer)
-        }
-    }
+//    func fetchNumberOfGolfers(numberOfGolfers: Int) {
+//        for golfer in 1...numberOfGolfers {
+//            fetchUserScore()
+//            let golferName = "Golfer #\(golfer)"
+//            let newGolfer = Golfer(golferName: golferName)
+//            golfersArray.append(newGolfer)
+//        }
+//    }
     
+    func fetchGolfers() {
+        
+    }
    
                           
-    func startRound(with courseName: String, numberOfHoles: Int) {
-        let round = Round(courseName: courseName, numberOfHoles: numberOfHoles, holes: holesArray, golfers: golfersArray)
+    func startRound(with courseName: String, numberOfHoles: Int, golfers: [Golfer]) {
+        let round = Round(courseName: courseName, numberOfHoles: numberOfHoles, holes: holesArray, golfers: golfers)
         service.saveRound(round) { [weak self] result in
             switch result {
             case .failure(let error):
