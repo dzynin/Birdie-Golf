@@ -11,26 +11,41 @@ struct Golfer: Codable {
     enum GolferKey {
         static let golferName = "golferName"
         static let collectionType = "golfers"
+        static let strokes = "strokes"
+        static let putts = "putts"
+        static let currentScore = "currentScore"
     }
     
     var golferName: String
+    var strokes: Int
+    var putts: Int
+    var currentScore: Int
     var collectionType: String
     
     var golferData: [String : Any] {
         [GolferKey.golferName : self.golferName,
+         GolferKey.strokes : self.strokes,
+         GolferKey.putts : self.putts,
+         GolferKey.currentScore : self.currentScore,
          GolferKey.collectionType : self.collectionType]
     }
     
-    init(golferName: String, collectionType: String = "golfers") {
+    init(golferName: String, strokes: Int = 0, putts: Int = 0, currentScore: Int = 0, collectionType: String = "golfers") {
         self.golferName = golferName
+        self.strokes = strokes
+        self.putts = putts
+        self.currentScore = currentScore
         self.collectionType = collectionType
     }
     init?(from dictionary: [String : Any]) {
         guard let golferName = dictionary[GolferKey.golferName] as? String,
+              let strokes = dictionary[GolferKey.strokes] as? Int,
+              let putts = dictionary[GolferKey.putts] as? Int,
+              let currentScore = dictionary[GolferKey.currentScore] as? Int,
               let collectionType = dictionary[GolferKey.collectionType] as? String else {
             return nil
         }
-        self.init(golferName: golferName, collectionType: collectionType)
+        self.init(golferName: golferName, strokes: strokes, putts: putts, currentScore: currentScore, collectionType: collectionType)
     }
 }
 
