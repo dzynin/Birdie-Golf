@@ -62,7 +62,6 @@
 		EDB82BB928A4889E00CF974C /* Golfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB82BB828A4889E00CF974C /* Golfer.swift */; };
 		EDF7071F28A17B5700E488F4 /* PregameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */; };
 		EDF7072128A17D6300E488F4 /* PregameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7072028A17D6300E488F4 /* PregameViewController.swift */; };
-		EDF7072328A1BD5400E488F4 /* NumberOfHolesNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7072228A1BD5400E488F4 /* NumberOfHolesNib.swift */; };
 		EDF7072528A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF7072428A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard */; };
 		EDF7072728A1C88100E488F4 /* HoleSelectionAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7072628A1C88100E488F4 /* HoleSelectionAlertViewController.swift */; };
 /* End PBXBuildFile section */
@@ -122,7 +121,6 @@
 		EDB82BB828A4889E00CF974C /* Golfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Golfer.swift; sourceTree = "<group>"; };
 		EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregameViewModel.swift; sourceTree = "<group>"; };
 		EDF7072028A17D6300E488F4 /* PregameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregameViewController.swift; sourceTree = "<group>"; };
-		EDF7072228A1BD5400E488F4 /* NumberOfHolesNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfHolesNib.swift; sourceTree = "<group>"; };
 		EDF7072428A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HoleSelectionAlertViewController.storyboard; sourceTree = "<group>"; };
 		EDF7072628A1C88100E488F4 /* HoleSelectionAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleSelectionAlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,11 +220,11 @@
 		9DF3D5B82899F61C00A64583 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9D4F1CE528A1DD86008F36EB /* UserScore.swift */,
 				9DF3D5B92899F63800A64583 /* User.swift */,
 				ED8D0095289C232100075CB4 /* Round.swift */,
-				ED8D0097289C24B700075CB4 /* Hole.swift */,
-				9D4F1CE528A1DD86008F36EB /* UserScore.swift */,
 				EDB82BB828A4889E00CF974C /* Golfer.swift */,
+				ED8D0097289C24B700075CB4 /* Hole.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -342,7 +340,6 @@
 			children = (
 				EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */,
 				EDF7072028A17D6300E488F4 /* PregameViewController.swift */,
-				EDF7072228A1BD5400E488F4 /* NumberOfHolesNib.swift */,
 				EDF7072628A1C88100E488F4 /* HoleSelectionAlertViewController.swift */,
 				EDB6E02228A3095E00782091 /* RoundStartViewModel.swift */,
 			);
@@ -464,7 +461,6 @@
 				EDF7072728A1C88100E488F4 /* HoleSelectionAlertViewController.swift in Sources */,
 				EDF7071F28A17B5700E488F4 /* PregameViewModel.swift in Sources */,
 				9DDD045928A46BA100628D26 /* SettingsViewModel.swift in Sources */,
-				EDF7072328A1BD5400E488F4 /* NumberOfHolesNib.swift in Sources */,
 				9DE7F38828A1A6A30078E256 /* LeaderboardTableViewCell.swift in Sources */,
 				9DF1331A289C3FEF006049DE /* FirebaseService.swift in Sources */,
 				EDF7072128A17D6300E488F4 /* PregameViewController.swift in Sources */,

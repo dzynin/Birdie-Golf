@@ -27,7 +27,6 @@ class PlayRoundViewModel {
                 print(error)
             case.success(let round):
                 self.round = round
-                self.currentHole = round.holes.first
             }
             completion()
         }
@@ -38,8 +37,8 @@ class PlayRoundViewModel {
         return round?.golfers[index]
     }
     
-    
     func saveHole() {
+        // how do we know what hole we are on? 
         guard let round = round, let hole = currentHole else {
             return
         }
@@ -47,7 +46,7 @@ class PlayRoundViewModel {
         service.saveRound(round) { result in
             switch result {
             case .success(let data):
-                self.currentHole = data.holes.first(where: { $0.holeNumber == hole.holeNumber + 1 })
+                print(data)
             case .failure(let error):
                 print(error)
             }
@@ -57,5 +56,4 @@ class PlayRoundViewModel {
     func fetchHole(with hole: Hole) {
         
     }
-    
 } // end of class

@@ -8,6 +8,7 @@
 import UIKit
 
 class PlayRoundViewController: UIViewController {
+    @IBOutlet weak var holeNumberLabel: UILabel!
     
     @IBOutlet weak var firstGolferView: UIView!
     @IBOutlet weak var firstGolferNameLabel: UILabel!
@@ -130,8 +131,8 @@ class PlayRoundViewController: UIViewController {
             golferViews[golferIndex].isHidden = false
             // populate the labels.
             golferNameLabels[golferIndex].text = golfer.golferName
-            puttTextFields[golferIndex].text = "\(golfer.putts)"
-            strokeTextFields[golferIndex].text = "\(golfer.strokes)"
+//            puttTextFields[golferIndex].text = "\(golfer.putts)"
+//            strokeTextFields[golferIndex].text = "\(golfer.strokes)"
             golferIndex += 1
     }
     }
@@ -160,13 +161,18 @@ class PlayRoundViewController: UIViewController {
                     assertionFailure()
                     return
                 }
-                let score = Golfer(golferName: golfer.golferName, strokes: strokesInt, putts: puttsInt, currentScore: golfer.currentScore)
+//                let score = Golfer(golferName: golfer.golferName, strokes: strokesInt, putts: puttsInt, currentScore: golfer.currentScore)
                 
-                scores.append(score)
+//                scores.append(score)
             }
         }
         
         //viewModel.currentHole?.userScore = scores
         viewModel.saveHole()
+    }
+    
+    
+    @IBAction func holeButtonTapped(_ sender: Any) {
+        
     }
 }

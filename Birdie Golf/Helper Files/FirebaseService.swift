@@ -122,7 +122,7 @@ func logoutUser() {
     }
     
     func deleteRound(round: Round) {
-        reference.child(Round.RoundKeys.collectionType).child(round.uuid).removeValue()
+        reference.child("rounds").child(round.uuid).removeValue()
     }
     
     
