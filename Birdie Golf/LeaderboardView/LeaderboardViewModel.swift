@@ -12,34 +12,34 @@ protocol LeaderboardViewModelDelegate: AnyObject {
 }
 
 class LeaderboardViewModel {
-    private var round: Round?
-   private var userScoreArray: [UserScore] = []
+    var round: Round?
+    var userScoreArray: [Golfer] = []
+    let service: FirebaseSyncable
     
     private weak var delegate: LeaderboardViewModelDelegate?
     
-    init(round: Round, delegate: LeaderboardViewModelDelegate) {
+    init(delegate: LeaderboardViewModelDelegate, service: FirebaseSyncable = FirebaseService()) {
         self.delegate = delegate
-        self.round = round
+        self.service = service
+        filteredUsersByBestScore()
     }
     
     func filteredUsersByBestScore() {
-        guard let round = round else {
-            return
-        }
-        for hole in round.holes {
-            for var user in hole.userScore {
-                let strokes = user.strokes
-                let par = hole.par
-                // we have the score we need
-                let score = strokes - par
-                print(score)
-            // how am i going to take this score and tie it to a user
-                user.currentScore += score
-                // possibly append the score to the certain user it belongs to?
-                let TopScorer = hole.userScore.sorted(by: {$0.currentScore <= $1.currentScore})
-            userScoreArray = TopScorer
+        service.fetchRound { result in
+            switch result {
+            case .success(let round):
+                self.round = round
+                for gofler in round.golfers {
+                    let filteredGolfers = round.golfers.sorted(by: {$0.currentScore >= $1.currentScore})
+                    self.userScoreArray = filteredGolfers
+                    self.delegate?.updateViews()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
     }
-    
 }
+
+
+

@@ -12,10 +12,11 @@ class LeaderboardTableViewCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     
-    let round: Round?
+    
  
-    func fetchScore() {
-        
+    func updateViews(with golfer: Golfer) {
+        scoreLabel.text = "\(golfer.currentScore)"
+        userNameLabel.text = golfer.golferName
     }
-
+    
 }
