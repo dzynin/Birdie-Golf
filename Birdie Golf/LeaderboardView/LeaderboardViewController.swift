@@ -53,7 +53,7 @@ extension LeaderboardViewController: UITableViewDelegate, UITableViewDataSource 
             return UITableViewCell()
         }
         let golfer = viewModel.userScoreArray[indexPath.row]
-        cell.updateViews(with: golfer)
+        cell.updateViews(with: golfer, rank: indexPath.row + 1)
         return cell
     }
 

@@ -14,9 +14,13 @@ class LeaderboardTableViewCell: UITableViewCell {
     
     
  
-    func updateViews(with golfer: Golfer) {
+    func updateViews(with golfer: Golfer, rank: Int) {
         scoreLabel.text = "\(golfer.currentScore)"
         userNameLabel.text = golfer.golferName
+        rankLabel.text = "\(rank)"
     }
+    
+    
+    
     
 }
