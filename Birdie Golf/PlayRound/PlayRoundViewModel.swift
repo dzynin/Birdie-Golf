@@ -10,6 +10,9 @@ import Foundation
 class PlayRoundViewModel {
     
     var round: Round?
+    var currentHole: Hole?
+    
+    
     private let service: FirebaseSyncable
     
     init(service: FirebaseSyncable = FirebaseService()) {
@@ -24,6 +27,7 @@ class PlayRoundViewModel {
                 print(error)
             case.success(let round):
                 self.round = round
+                self.currentHole = round.holes.first
             }
             completion()
         }
@@ -34,11 +38,24 @@ class PlayRoundViewModel {
         return round?.golfers[index]
     }
     
-    func numberOfGolfers() -> Int {
-        guard let round = round else {
-            return 0
+    
+    func saveHole() {
+        guard let round = round, let hole = currentHole else {
+            return
         }
-        return round.golfers.count
+
+        service.saveRound(round) { result in
+            switch result {
+            case .success(let data):
+                self.currentHole = data.holes.first(where: { $0.holeNumber == hole.holeNumber + 1 })
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    func fetchHole(with hole: Hole) {
+        
     }
     
 } // end of class

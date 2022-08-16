@@ -56,17 +56,15 @@ extension Round {
         guard let courseName = dictionary[RoundKeys.courseName] as? String,
               let numberOfHoles = dictionary[RoundKeys.numberOfHoles] as? Int,
               let holesArray = dictionary[RoundKeys.holes] as? [[String : Any]],
-//              let users = dictionary[RoundKeys.users] as? [User],
               let golfersArray = dictionary[RoundKeys.golfers] as? [[String : Any]],
               let uuid = dictionary[RoundKeys.uuid] as? String else {
             return nil
         }
-        let holes = holesArray.compactMap({Hole(from: $0)})
+        let holes = holesArray.compactMap({ Hole(from: $0) })
         let golfers = golfersArray.compactMap({Golfer(from: $0)})
         self.init(courseName: courseName,
                   numberOfHoles: numberOfHoles,
                   holes: holes,
-//                  users: users,
                   golfers: golfers,
                   uuid: uuid)
     }

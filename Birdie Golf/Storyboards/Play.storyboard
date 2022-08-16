@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -109,16 +109,18 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fin-eO-z69">
                                         <rect key="frame" x="0.0" y="0.0" width="810" height="45"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tc-T4-2Hm">
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tc-T4-2Hm">
                                                 <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                <color key="backgroundColor" red="0.0" green="0.4582666755" blue="0.2403146327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="7qb-jZ-BeF"/>
                                                     <constraint firstAttribute="width" constant="45" id="Lmt-4A-l7X"/>
                                                 </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="circle" catalog="system"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="1">
-                                                    <color key="baseForegroundColor" red="0.001134904684" green="0.37271827460000001" blue="0.19108915330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="baseForegroundColor" red="0.0" green="0.4582666755" blue="0.2403146327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -862,24 +864,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMa-G0-kkn">
-                                <rect key="frame" x="314" y="685" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="ZL7-P0-Ys2"/>
-                                    <constraint firstAttribute="height" constant="60" id="tHz-e8-aDN"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Chevron-right"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwY-0a-OnM">
-                                <rect key="frame" x="40" y="685" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="ECr-v9-nxK"/>
-                                    <constraint firstAttribute="width" constant="60" id="gBU-io-6C9"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Chevron-left"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -887,12 +871,8 @@
                             <constraint firstItem="4nh-jG-plV" firstAttribute="top" secondItem="hvm-xp-AJb" secondAttribute="bottom" constant="20" id="8fM-JW-ndh"/>
                             <constraint firstItem="8Wt-p1-Xzt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="CWC-Or-9dM"/>
                             <constraint firstItem="4nh-jG-plV" firstAttribute="trailing" secondItem="hvm-xp-AJb" secondAttribute="trailing" id="DJ0-4i-gg8"/>
-                            <constraint firstItem="uwY-0a-OnM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="LL6-3P-mvW"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eMa-G0-kkn" secondAttribute="trailing" constant="40" id="P4D-OR-tw9"/>
                             <constraint firstItem="hvm-xp-AJb" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="XWI-vX-6GQ"/>
-                            <constraint firstItem="uwY-0a-OnM" firstAttribute="top" secondItem="8Wt-p1-Xzt" secondAttribute="bottom" constant="20" id="bsT-Ri-djg"/>
                             <constraint firstAttribute="trailing" secondItem="hvm-xp-AJb" secondAttribute="trailing" id="dwD-8i-wbq"/>
-                            <constraint firstItem="eMa-G0-kkn" firstAttribute="top" secondItem="8Wt-p1-Xzt" secondAttribute="bottom" constant="20" id="gVD-CG-xr5"/>
                             <constraint firstItem="4nh-jG-plV" firstAttribute="leading" secondItem="hvm-xp-AJb" secondAttribute="leading" id="jYf-1a-3k2"/>
                             <constraint firstItem="8Wt-p1-Xzt" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="jsq-ly-gu1"/>
                             <constraint firstItem="hvm-xp-AJb" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="sq2-L4-0bA"/>
@@ -917,6 +897,24 @@
                         <outlet property="fourthGolferPuttsTextField" destination="EEU-aW-phM" id="HJe-Lz-U1T"/>
                         <outlet property="fourthGolferStrokesTextField" destination="cKg-NG-GCd" id="bg8-Jg-h6Z"/>
                         <outlet property="fourthGolferView" destination="qKa-om-jOR" id="Lfu-YG-k3V"/>
+                        <outlet property="holeEightButton" destination="FXL-Mc-FYR" id="Ry8-aV-78a"/>
+                        <outlet property="holeEighteenButton" destination="rG5-XW-Lja" id="JGH-gD-xJO"/>
+                        <outlet property="holeElevenButton" destination="g8s-vP-Gcl" id="yQ1-vD-uFd"/>
+                        <outlet property="holeFifteenButton" destination="BP2-Ha-Esr" id="2KS-oB-4Mr"/>
+                        <outlet property="holeFiveButton" destination="e8c-rA-8lc" id="UkP-3v-Q88"/>
+                        <outlet property="holeFourButton" destination="VeO-57-uTd" id="EsU-Ed-iYn"/>
+                        <outlet property="holeFourteenButton" destination="xHe-jM-HH1" id="yPC-P6-fl3"/>
+                        <outlet property="holeNineButton" destination="ADX-Gr-lHk" id="qi6-2x-sNk"/>
+                        <outlet property="holeOneButton" destination="9tc-T4-2Hm" id="Vgw-32-gmY"/>
+                        <outlet property="holeSevenButton" destination="jkg-PQ-zRD" id="Syn-EB-RKD"/>
+                        <outlet property="holeSeventeenButton" destination="4GM-L7-Pl7" id="ppA-gS-vqE"/>
+                        <outlet property="holeSixButton" destination="gvD-kX-77J" id="N9C-6v-5Sq"/>
+                        <outlet property="holeSixteenButton" destination="aFu-Ri-j9g" id="J2Y-uS-A3p"/>
+                        <outlet property="holeTenButton" destination="ZFC-nw-pIX" id="pkI-s1-eez"/>
+                        <outlet property="holeThirteenButton" destination="g5a-YZ-iWW" id="bEF-WO-vgV"/>
+                        <outlet property="holeThreeButton" destination="CES-zc-hFP" id="QoP-1E-eOF"/>
+                        <outlet property="holeTwelveButton" destination="ur9-Bh-XLJ" id="L5J-hU-I9N"/>
+                        <outlet property="holeTwoButton" destination="p1Q-Ge-MYc" id="end-Zw-uEB"/>
                         <outlet property="secondGolferCurrentScoreLabel" destination="OKy-JT-Fmg" id="nzM-Te-Zdn"/>
                         <outlet property="secondGolferHoleDataStackView" destination="hpw-Kp-stK" id="MCw-cY-4Oa"/>
                         <outlet property="secondGolferNameLabel" destination="gHf-cD-G1o" id="ux5-aE-BH3"/>
@@ -937,8 +935,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Chevron-left" width="32" height="32"/>
-        <image name="Chevron-right" width="32" height="32"/>
         <image name="Menu" width="32" height="32"/>
         <image name="Play-selected" width="32" height="32"/>
         <image name="chevron.down.square.fill" catalog="system" width="128" height="114"/>

@@ -192,13 +192,6 @@
 			path = CreateAccountView;
 			sourceTree = "<group>";
 		};
-		9DDD044228A40BF800628D26 /* PopUpSettings */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PopUpSettings;
-			sourceTree = "<group>";
-		};
 		9DDD045A28A46BAC00628D26 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,7 +266,6 @@
 		EDA928482891AABA0038BC34 /* Birdie Golf */ = {
 			isa = PBXGroup;
 			children = (
-				9DDD044228A40BF800628D26 /* PopUpSettings */,
 				9DE7F38228A184270078E256 /* LeaderboardView */,
 				9DE7F38128A159570078E256 /* Birdie Golf.entitlements */,
 				9DF13318289C3FD1006049DE /* Helper Files */,

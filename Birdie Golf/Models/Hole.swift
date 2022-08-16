@@ -35,15 +35,16 @@ struct Hole: Codable {
         self.userScore = userScore
         self.collectionType = collectionType
     }
+    
     init?(from dictionary: [String:Any]) {
         guard let holeNumber = dictionary[HoleKey.holeNumber] as? Int,
-              let par = dictionary[HoleKey.par] as? Int,
               let userScoreArray = dictionary[HoleKey.userScore] as? [[String : Any]],
               let collectionType = dictionary[HoleKey.collectionType] as? String else {
                   return nil
               }
+        let par = dictionary[HoleKey.par] as? Int
         let userScores = userScoreArray.compactMap({UserScore(from: $0)})
-        self.init(holeNumber: holeNumber, par: par, userScore: userScores, collectionType: collectionType)
+        self.init(holeNumber: holeNumber, par: par ?? 0, userScore: userScores, collectionType: collectionType)
     }
     
 }
