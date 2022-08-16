@@ -10,18 +10,20 @@ import UIKit
 class LeaderboardViewController: UIViewController {
 
     
+    @IBOutlet weak var leaderboardTableView: UITableView!
     
-    var usersList: [User] = []
-    var mockUserList: [[String:Int]] = [[:]]
+    
+    var viewModel: LeaderboardViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        mockUserList = [["Karl":10],["Isiah":8], ["Scott": 7]]
+        leaderboardTableView.dataSource = self
+        viewModel = LeaderboardViewModel(delegate: self)
         // Do any additional setup after loading the view.
     }
     
     @IBAction func optionsBtnTapped(_ sender: Any) {
+        
         let storyboard = UIStoryboard(name: "Settings", bundle: nil)
         let myAlert = storyboard.instantiateViewController(withIdentifier: "SettingsView")
         myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
@@ -41,14 +43,27 @@ class LeaderboardViewController: UIViewController {
     */
 
 }
-//extension LeaderboardViewController: UITableViewDelegate, UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return mockUserList.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//    }
-//
-//
-//}
+extension LeaderboardViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.userScoreArray.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "LeaderboardCell", for: indexPath) as? LeaderboardTableViewCell else {
+            return UITableViewCell()
+        }
+        let golfer = viewModel.userScoreArray[indexPath.row]
+        cell.updateViews(with: golfer, rank: indexPath.row + 1)
+        return cell
+    }
+
+
+}
+
+extension LeaderboardViewController: LeaderboardViewModelDelegate {
+    func updateViews() {
+        self.leaderboardTableView.reloadData()
+    }
+    
+    
+}
