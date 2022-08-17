@@ -27,6 +27,7 @@ class PregameViewController: UIViewController {
     }
     
     @IBAction func joinRoundButtonTapped(_ sender: Any) {
+        // This functionality will be added in later revision
     }
 }
 

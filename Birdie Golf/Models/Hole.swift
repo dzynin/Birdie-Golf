@@ -19,7 +19,7 @@ struct Hole: Codable {
     
     // MARK: - Properties
     var holeNumber: Int
-    let par: Int
+    var par: Int
     var strokes: Int
     var putts: Int
     

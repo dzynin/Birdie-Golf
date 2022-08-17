@@ -93,8 +93,7 @@ func logoutUser() {
     func saveRound(_ round: Round, completion: @escaping (Result<Round, FirebaseError>) -> Void) {
         
         // I have an issue with the view loading before the round is completely fetched. Race condition
-        
-        reference.child("rounds").updateChildValues([round.uuid : round.roundData]) { error, reference in
+        reference.child("rounds").child(round.uuid).updateChildValues(round.roundData) { error, reference in
             if let error = error {
                 print(error)
                 completion(.failure(.firebaseError(error)))
@@ -146,4 +145,23 @@ func logoutUser() {
         }
         
     }
+//    func saveCurrentRound() {
+//        let currentRoundID = UserDefaults.standard.value(forKey: "activeRoundID")
+//        reference.child("rounds").child(currentRoundId!).getData { error, snapshot in
+//            if let error = error {
+//                completion(.failure(.firebaseError(error)))
+//                return
+//            }
+//            guard let data = snapshot?.value as? [String : Any]
+//            else {
+//                completion(.failure(.noDataFound))
+//                return
+//            }
+//            guard let round = Round(fromDictionary: data) else {
+//                completion(.failure(.noDataFound))
+//                return
+//            }
+//            completion(.success(round))
+//        }
+//    }
 }
