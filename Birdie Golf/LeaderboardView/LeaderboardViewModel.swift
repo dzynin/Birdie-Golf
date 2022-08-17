@@ -30,7 +30,7 @@ class LeaderboardViewModel {
             case .success(let round):
                 self.round = round
                 for gofler in round.golfers {
-                    let filteredGolfers = round.golfers.sorted(by: {$0.currentScore >= $1.currentScore})
+                    let filteredGolfers = round.golfers.sorted(by: {$0.currentScore <= $1.currentScore})
                     self.userScoreArray = filteredGolfers
                     self.delegate?.updateViews()
                 }
