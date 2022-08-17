@@ -17,25 +17,14 @@ class HoleSelectionAlertViewController: UIViewController {
     @IBOutlet weak var thirdGolferTextField: UITextField!
     @IBOutlet weak var fourthGolferTextField: UITextField!
     
-    var viewModel: RoundStartViewModel = RoundStartViewModel()
-    
+    var viewModel: RoundStartViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel.delegate = self
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(closeView)))
+        self.viewModel =  RoundStartViewModel(delegate: self)
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     @IBAction func cancelButtonTapped(_ sender: Any) {
         closeView()
@@ -49,33 +38,22 @@ class HoleSelectionAlertViewController: UIViewController {
         
         let numberOfHoles = segmentedControl.selectedSegmentIndex == 1 ? 18 : 9
         
-        var golfers: [Golfer] = []
+        var golfers: [String] = []
         
         if let firstGolfer = firstGolferTextField.text?.capitalized, !firstGolfer.isEmpty {
-            let golfer = Golfer(golferName: firstGolfer)
-            golfers.append(golfer)
+            golfers.append(firstGolfer)
         }
         if let secondGolfer = secondGolferTextField.text?.capitalized, !secondGolfer.isEmpty {
-            let golfer = Golfer(golferName: secondGolfer)
-            golfers.append(golfer)
+            golfers.append(secondGolfer)
         }
         if let thirdGolfer = thirdGolferTextField.text?.capitalized, !thirdGolfer.isEmpty {
-            let golfer = Golfer(golferName: thirdGolfer)
-            golfers.append(golfer)
+            golfers.append(thirdGolfer)
         }
         if let fourthGolfer = fourthGolferTextField.text?.capitalized, !fourthGolfer.isEmpty {
-            let golfer = Golfer(golferName: fourthGolfer)
-            golfers.append(golfer)
+            golfers.append(fourthGolfer)
         }
        
-       
-      
-        let userScore = 0
-        let numberofGolfers = 4
-        
-//        viewModel.fetchNumberOfGolfers(numberOfGolfers: numberofGolfers)
-        viewModel.fetchNumberOfHoles(numberOfHoles: numberOfHoles)
-        viewModel.startRound(with: name, numberOfHoles: numberOfHoles, golfers: golfers)
+        viewModel.createRound(with: name, numberOfHoles: numberOfHoles, golferNames: golfers)
     }
     @objc func closeView() {
         self.dismiss(animated: true)

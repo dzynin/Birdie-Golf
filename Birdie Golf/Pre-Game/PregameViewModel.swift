@@ -26,11 +26,7 @@ class PregameViewModel {
         self.service = firebaseService
         self.delegate = delegate
     }
-    
-    
-    func startRound() {
-        
-    }
+ 
     
     func loadRounds() {
         service.loadRounds { result in

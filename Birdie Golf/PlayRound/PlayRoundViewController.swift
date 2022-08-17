@@ -8,6 +8,8 @@
 import UIKit
 
 class PlayRoundViewController: UIViewController {
+    @IBOutlet weak var holeNumberLabel: UILabel!
+    @IBOutlet weak var parSelectionSegmentedControl: UISegmentedControl!
     
     @IBOutlet weak var firstGolferView: UIView!
     @IBOutlet weak var firstGolferNameLabel: UILabel!
@@ -37,21 +39,54 @@ class PlayRoundViewController: UIViewController {
     @IBOutlet weak var fourthGolferStrokesTextField: UITextField!
     @IBOutlet weak var fourthGolferHoleDataStackView: UIStackView!
     
+    @IBOutlet weak var holeOneButton: UIButton!
+    @IBOutlet weak var holeTwoButton: UIButton!
+    @IBOutlet weak var holeThreeButton: UIButton!
+    @IBOutlet weak var holeFourButton: UIButton!
+    @IBOutlet weak var holeFiveButton: UIButton!
+    @IBOutlet weak var holeSixButton: UIButton!
+    @IBOutlet weak var holeSevenButton: UIButton!
+    @IBOutlet weak var holeEightButton: UIButton!
+    @IBOutlet weak var holeNineButton: UIButton!
+    @IBOutlet weak var holeTenButton: UIButton!
+    @IBOutlet weak var holeElevenButton: UIButton!
+    @IBOutlet weak var holeTwelveButton: UIButton!
+    @IBOutlet weak var holeThirteenButton: UIButton!
+    @IBOutlet weak var holeFourteenButton: UIButton!
+    @IBOutlet weak var holeFifteenButton: UIButton!
+    @IBOutlet weak var holeSixteenButton: UIButton!
+    @IBOutlet weak var holeSeventeenButton: UIButton!
+    @IBOutlet weak var holeEighteenButton: UIButton!
+    
     
     var viewModel: PlayRoundViewModel!
+    
     private var golferViews: [UIView] = []
     private var golferNameLabels: [UILabel] = []
+    private var puttTextFields: [UITextField] = []
+    private var strokeTextFields: [UITextField] = []
+    private var currentScoreLabels: [UILabel] = []
     
+//    var currentSelectedHoleIndex: Int = 0
+    var currentHole = 0
+    var par: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         golferViews = [firstGolferView, secondGolferView, thirdGolferView, fourthGolferView]
         golferNameLabels = [firstGolferNameLabel, secondGolferNameLabel, thirdGolferNameLabel, fourthGolferNameLabel]
+        currentScoreLabels = [firstGolferCurrentScoreLabel, secondGolferCurrentScoreLabel, thirdGolferCurrentScoreLabel, fourthGolferCurrentScoreLabel]
+        puttTextFields = [firstGolferPuttsTextField, secondGolferPuttsTextField, thirdGolferPuttsTextField, fourthGolferPuttsTextField]
+        strokeTextFields = [firstGolferStrokesTextField, secondGolferStrokesTextField, thirdGolferStrokesTextField, fourthGolferStrokesTextField]
         
-        let viewModel = PlayRoundViewModel()
-        self.viewModel = viewModel
-        viewModel.fetchCurrentRound {
-            self.populateGolferNameLabels()
-        }
+//        holeOneButton.setTitleColor(.white, for: .selected)
+//        holeNumberLabel.text = "\(currentSelectedHoleIndex)"
+        
+        // fix how we are initializeg the view model
+        
+        self.viewModel = PlayRoundViewModel(delegate: self)
+        
+        viewModel.fetchCurrentRound()
         
         firstGolferView.isHidden = true
         firstGolferNameLabel.layer.borderWidth = 2.0
@@ -89,46 +124,30 @@ class PlayRoundViewController: UIViewController {
         fourthGolferCurrentScoreLabel.layer.cornerRadius = 8
         fourthGolferCurrentScoreLabel.layer.borderColor = UIColor.black.cgColor
         
-        
     }
     
-    private func populateGolferNameLabels() {
-        guard viewModel.numberOfGolfers() > 0 else { return }
-//        for index in 0...viewModel.numberOfGolfers() - 1 {
-        for index in 0...3 {
-
-            if let golfer = viewModel.golfer(at: index) {
-                let label = golferNameLabels[index]
-                label.text = golfer.golferName
-                let view = golferViews[index]
-                view.isHidden = false
-            } else {
-                let view = golferViews[index]
-                view.isHidden = true
-            }
+    // logic should not be done on the viewController
+    private func populateGolferData() {
+        
+        var golferIndex = 0
+        // fix force unwrap
+        holeNumberLabel.text = "\(currentHole + 1)"
+        parSelectionSegmentedControl.selectedSegmentIndex = viewModel.round!.golfers[0].holes[currentHole].par - 3
+        for golfer in viewModel.round!.golfers {
+            //unhide the view of the golfer that it is tied to
+            golferViews[golferIndex].isHidden = false
+            // populate the labels.
+            golferNameLabels[golferIndex].text = golfer.golferName
+            currentScoreLabels[golferIndex].text = "\(golfer.currentScore)"
+            puttTextFields[golferIndex].text = "\(golfer.holes[currentHole].putts)"
+            strokeTextFields[golferIndex].text = "\(golfer.holes[currentHole].strokes)"
+            golferIndex += 1
         }
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
-    @IBAction func addUsersButtonTapped(_ sender: Any) {
-        // before this view exists the add user view model needs to be initialized.
-        let storyboard = UIStoryboard(name: "AddUserView", bundle: nil)
-        let userAlert = storyboard.instantiateViewController(withIdentifier: "userAlert") as! AddUserViewController
-        userAlert.viewModel = AddUserViewModel(round: viewModel.round!)
-        
-        userAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        userAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
-        self.present(userAlert, animated: true, completion: nil)
+    @IBAction func parSelectionSegmentedControl(_ sender: Any) {
+       
     }
-    
     @IBAction func firstGolferHoleDataInputButtonTapped(_ sender: Any) {
         firstGolferHoleDataStackView.isHidden.toggle()
     }
@@ -142,4 +161,51 @@ class PlayRoundViewController: UIViewController {
         fourthGolferHoleDataStackView.isHidden.toggle()
     }
     
+    
+    @IBAction func SaveHoleInfoButtonTapped(_ sender: Any) {
+        // Update the current Hole...
+        var golfersPutts: [String] = []
+        var golfersStrokes: [String] = []
+        var currentGolferScores: [Int] = []
+        
+        
+        if let golferOnePutts = firstGolferPuttsTextField.text, let golferTwoPutts = secondGolferPuttsTextField.text, let golferThreePutts = thirdGolferPuttsTextField.text, let golferFourPutts = fourthGolferPuttsTextField.text {
+            golfersPutts.append(golferOnePutts)
+            golfersPutts.append(golferTwoPutts)
+            golfersPutts.append(golferThreePutts)
+            golfersPutts.append(golferFourPutts)
+        }
+        if let golferOneStrokes = firstGolferStrokesTextField.text, let golferTwoStrokes = secondGolferStrokesTextField.text, let golferThreeStrokes = thirdGolferStrokesTextField.text, let golferfourStrokes = fourthGolferStrokesTextField.text {
+            
+            par = parSelectionSegmentedControl.selectedSegmentIndex + 3
+            
+            let golferOneStrokeInt = Int(golferOneStrokes) ?? 0
+            let golferTwoStrokeInt = Int(golferTwoStrokes) ?? 0
+            let golferThreeStrokeInt = Int(golferThreeStrokes) ?? 0
+            let golferFourStrokeInt = Int(golferfourStrokes) ?? 0
+            golfersStrokes.append(golferOneStrokes)
+            golfersStrokes.append(golferTwoStrokes)
+            golfersStrokes.append(golferThreeStrokes)
+            golfersStrokes.append(golferfourStrokes)
+            currentGolferScores.append(golferOneStrokeInt - par)
+            currentGolferScores.append(golferTwoStrokeInt - par)
+            currentGolferScores.append(golferThreeStrokeInt - par)
+            currentGolferScores.append(golferFourStrokeInt - par)
+            
+        }
+        viewModel.updateRound(currentHole: currentHole, golfersPutts: golfersPutts, golfersStrokes: golfersStrokes, currentGolferScores: currentGolferScores, par: par)
+    }
+    
+    @IBAction func holeButtonTapped(_ sender: UIButton) {
+        currentHole = sender.tag
+        sender.backgroundColor = .red
+        self.populateGolferData()
+        
+    }
+    
+}
+extension PlayRoundViewController: PlayRoundViewModelDelegate {
+    func updateViews() {
+        populateGolferData()
+    }
 }

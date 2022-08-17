@@ -7,38 +7,57 @@
 
 import Foundation
 
+protocol PlayRoundViewModelDelegate: AnyObject {
+    func updateViews()
+}
 class PlayRoundViewModel {
     
     var round: Round?
-    private let service: FirebaseSyncable
+
     
-    init(service: FirebaseSyncable = FirebaseService()) {
-        
+    private let service: FirebaseSyncable
+    private weak var delegate: PlayRoundViewModelDelegate?
+    
+    init(service: FirebaseSyncable = FirebaseService(), delegate: PlayRoundViewModelDelegate){
+        self.delegate = delegate
         self.service = service
     }
     
-    func fetchCurrentRound(completion: @escaping () -> Void) {
+    func fetchCurrentRound() {
         service.fetchRound { result in
             switch result {
             case .failure(let error):
                 print(error)
             case.success(let round):
                 self.round = round
+                self.delegate?.updateViews()
             }
-            completion()
         }
     }
     
-    func golfer(at index: Int) -> Golfer? {
-        guard let golferCount = round?.golfers.count, index <= golferCount - 1 else { return nil }
-        return round?.golfers[index]
-    }
-    
-    func numberOfGolfers() -> Int {
-        guard let round = round else {
-            return 0
+    func updateRound(currentHole: Int, golfersPutts: [String], golfersStrokes: [String], currentGolferScores: [Int], par: Int) {
+        guard let round = round else {return}
+        for index in 0...round.golfers.count - 1 {
+            round.golfers[index].holes[currentHole].putts = Int(golfersPutts[index]) ?? 0
+            round.golfers[index].holes[currentHole].strokes = Int(golfersStrokes[index]) ?? 0
+            round.golfers[index].currentScore += currentGolferScores[index]
+            round.golfers[index].totalPutts += Int(golfersPutts[index]) ?? 0
+            round.golfers[index].totalStrokes += Int(golfersStrokes[index]) ?? 0
+            round.golfers[index].holes[currentHole].par = par
+            
         }
-        return round.golfers.count
+        service.saveRound(round) { result in
+            switch result {
+            case .success(let data):
+                print(data)
+                self.delegate?.updateViews()
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
+    func fetchHole(with hole: Hole) {
+        
+    }
 } // end of class

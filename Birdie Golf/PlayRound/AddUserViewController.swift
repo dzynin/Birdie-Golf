@@ -20,8 +20,6 @@ class AddUserViewController: UIViewController {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(closeView)))
     }
     
-
-   
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         closeView()

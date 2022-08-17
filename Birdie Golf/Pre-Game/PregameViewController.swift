@@ -8,45 +8,15 @@
 import UIKit
 
 class PregameViewController: UIViewController {
-
-    @IBOutlet var holesNib: UIView!
+    
+    
     
     var viewModel: PregameViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-//    @objc private func startRoundAlert() {
-//        
-//        let alert = UIAlertController(title: "Course Name", message: "What course are you playing today?", preferredStyle: .alert)
-//        alert.addTextField { field in
-//            field.placeholder = "Course name..."
-//            field.returnKeyType = .continue
-//        }
-//        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-//        alert.addAction(UIAlertAction(title: "Start Round", style: .default, handler: { _ in
-//            guard let field = alert.textFields else { return }
-//            let courseField = field[0]
-//            guard let course = courseField.text, !course.isEmpty else {
-//                print("Invalid course entry")
-//                return
-//            }
-//        }))
-//     present(alert, animated: true)
-//    }
     
     @IBAction func startRoundButtonTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "HoleSelectionAlertViewController", bundle: nil)
@@ -57,6 +27,7 @@ class PregameViewController: UIViewController {
     }
     
     @IBAction func joinRoundButtonTapped(_ sender: Any) {
+        // This functionality will be added in later revision
     }
 }
 
@@ -71,10 +42,9 @@ extension PregameViewController: UITableViewDelegate, UITableViewDataSource {
         
         let round = viewModel.rounds[indexPath.row]
         cell.textLabel?.text = round.courseName
-//        cell.detailTextLabel?.text = String(round.date)
+        //        cell.detailTextLabel?.text = String(round.date)
         return cell
     }
-    
     
 }
 

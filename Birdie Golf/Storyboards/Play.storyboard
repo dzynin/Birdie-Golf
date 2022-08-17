@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,6 +10,9 @@
     <customFonts key="customFonts">
         <array key="Merriweather-Bold.otf">
             <string>Merriweather-Bold</string>
+        </array>
+        <array key="Merriweather-Regular.otf">
+            <string>Merriweather-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -109,27 +112,32 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fin-eO-z69">
                                         <rect key="frame" x="0.0" y="0.0" width="810" height="45"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tc-T4-2Hm">
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tc-T4-2Hm">
                                                 <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                <color key="backgroundColor" red="0.0" green="0.4582666755" blue="0.2403146327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="7qb-jZ-BeF"/>
                                                     <constraint firstAttribute="width" constant="45" id="Lmt-4A-l7X"/>
                                                 </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="circle" catalog="system"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="1">
-                                                    <color key="baseForegroundColor" red="0.001134904684" green="0.37271827460000001" blue="0.19108915330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="baseForegroundColor" red="0.0" green="0.4582666755" blue="0.2403146327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Iju-a5-Zn2"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1Q-Ge-MYc">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1Q-Ge-MYc">
                                                 <rect key="frame" x="45" y="0.0" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="oDA-fZ-Edn"/>
@@ -145,11 +153,14 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cWv-iL-Lpp"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CES-zc-hFP">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CES-zc-hFP">
                                                 <rect key="frame" x="90" y="0.0" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="Dl6-bN-Pph"/>
@@ -165,11 +176,14 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BYZ-ey-vdj"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeO-57-uTd">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeO-57-uTd">
                                                 <rect key="frame" x="135" y="0.0" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="5MG-hV-oeg"/>
@@ -185,11 +199,14 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bTc-Vo-23r"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8c-rA-8lc">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8c-rA-8lc">
                                                 <rect key="frame" x="180" y="0.0" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="Ops-bI-Q7m"/>
@@ -205,11 +222,14 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yAk-bq-vKg"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvD-kX-77J">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvD-kX-77J">
                                                 <rect key="frame" x="225" y="0.0" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="EaS-9P-xZa"/>
@@ -225,11 +245,14 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HWK-By-REL"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkg-PQ-zRD">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkg-PQ-zRD">
                                                 <rect key="frame" x="270" y="0.0" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="N0p-l6-j5g"/>
@@ -245,11 +268,14 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dZI-w7-0xz"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXL-Mc-FYR">
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXL-Mc-FYR">
                                                 <rect key="frame" x="315" y="0.0" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="O1I-hI-DIA"/>
@@ -265,11 +291,14 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oir-GS-azy"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADX-Gr-lHk">
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADX-Gr-lHk">
                                                 <rect key="frame" x="360" y="0.0" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="PWa-r6-6e9"/>
@@ -285,11 +314,14 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xeD-nZ-U8e"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFC-nw-pIX">
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFC-nw-pIX">
                                                 <rect key="frame" x="405" y="0.0" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="uHs-lY-9Vh"/>
@@ -305,11 +337,14 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4GH-lg-tuj"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8s-vP-Gcl">
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8s-vP-Gcl">
                                                 <rect key="frame" x="450" y="0.0" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="OK0-Az-jFO"/>
@@ -325,11 +360,14 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2cG-UN-lQx"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ur9-Bh-XLJ">
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ur9-Bh-XLJ">
                                                 <rect key="frame" x="495" y="0.0" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="Pyl-ND-8UN"/>
@@ -345,11 +383,14 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="evD-H7-zI4"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5a-YZ-iWW">
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5a-YZ-iWW">
                                                 <rect key="frame" x="540" y="0.0" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="MVa-1m-pbd"/>
@@ -365,11 +406,14 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mxL-Qb-hgU"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHe-jM-HH1">
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHe-jM-HH1">
                                                 <rect key="frame" x="585" y="0.0" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="b6O-ae-mUu"/>
@@ -385,11 +429,14 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="M2H-y1-GEI"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BP2-Ha-Esr">
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BP2-Ha-Esr">
                                                 <rect key="frame" x="630" y="0.0" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="NNl-Nw-nN1"/>
@@ -405,11 +452,14 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CSN-Zx-RtI"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFu-Ri-j9g">
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFu-Ri-j9g">
                                                 <rect key="frame" x="675" y="0.0" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="5JX-sz-S9W"/>
@@ -425,11 +475,14 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dbV-2f-bhx"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4GM-L7-Pl7">
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4GM-L7-Pl7">
                                                 <rect key="frame" x="720" y="0.0" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="A2B-EI-nkE"/>
@@ -445,11 +498,14 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SGM-5M-fkA"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rG5-XW-Lja">
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rG5-XW-Lja">
                                                 <rect key="frame" x="765" y="0.0" width="45" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="LjC-kd-Hl9"/>
@@ -465,9 +521,12 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="22"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="holeButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BEL-Yd-KLj"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -483,7 +542,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="bQW-Sz-lJg"/>
                             </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8Wt-p1-Xzt">
-                                <rect key="frame" x="0.0" y="305" width="414" height="360"/>
+                                <rect key="frame" x="0.0" y="325" width="414" height="360"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFE-4r-0VQ">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
@@ -855,49 +914,74 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(hole number)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gz9-0n-Pwx">
-                                <rect key="frame" x="29" y="268" width="108" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hole #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gz9-0n-Pwx">
+                                <rect key="frame" x="12" y="277" width="56" height="21.5"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPt-d1-Wqt">
+                                <rect key="frame" x="107" y="762" width="200" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="PAX-ZE-ASY"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save hole info">
+                                    <color key="baseBackgroundColor" red="0.0" green="0.4582666755" blue="0.2403146327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="SaveHoleInfoButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cW1-1I-7Gv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(#)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8M-aT-mzE">
+                                <rect key="frame" x="70" y="277" width="22.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMa-G0-kkn">
-                                <rect key="frame" x="314" y="685" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="ZL7-P0-Ys2"/>
-                                    <constraint firstAttribute="height" constant="60" id="tHz-e8-aDN"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Chevron-right"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwY-0a-OnM">
-                                <rect key="frame" x="40" y="685" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="ECr-v9-nxK"/>
-                                    <constraint firstAttribute="width" constant="60" id="gBU-io-6C9"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Chevron-left"/>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Par:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHV-cJ-iXN">
+                                <rect key="frame" x="122.5" y="277" width="34.5" height="21.5"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZDF-uH-CNE">
+                                <rect key="frame" x="159" y="273" width="225" height="32"/>
+                                <segments>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                </segments>
+                                <connections>
+                                    <action selector="parSelectionSegmentedControl:" destination="Y6W-OH-hqX" eventType="valueChanged" id="Gsm-M2-X2y"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="RHV-cJ-iXN" firstAttribute="leading" secondItem="c8M-aT-mzE" secondAttribute="trailing" constant="30" id="2fm-bT-6eU"/>
                             <constraint firstItem="4nh-jG-plV" firstAttribute="top" secondItem="hvm-xp-AJb" secondAttribute="bottom" constant="20" id="8fM-JW-ndh"/>
                             <constraint firstItem="8Wt-p1-Xzt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="CWC-Or-9dM"/>
                             <constraint firstItem="4nh-jG-plV" firstAttribute="trailing" secondItem="hvm-xp-AJb" secondAttribute="trailing" id="DJ0-4i-gg8"/>
-                            <constraint firstItem="uwY-0a-OnM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="LL6-3P-mvW"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eMa-G0-kkn" secondAttribute="trailing" constant="40" id="P4D-OR-tw9"/>
+                            <constraint firstItem="c8M-aT-mzE" firstAttribute="leading" secondItem="gz9-0n-Pwx" secondAttribute="trailing" constant="2" id="LVA-Pa-W7z"/>
+                            <constraint firstItem="ZDF-uH-CNE" firstAttribute="leading" secondItem="RHV-cJ-iXN" secondAttribute="trailing" constant="2" id="RLd-j0-hlz"/>
+                            <constraint firstItem="ZDF-uH-CNE" firstAttribute="top" secondItem="4nh-jG-plV" secondAttribute="bottom" constant="8" id="TGd-WZ-wTl"/>
                             <constraint firstItem="hvm-xp-AJb" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="XWI-vX-6GQ"/>
-                            <constraint firstItem="uwY-0a-OnM" firstAttribute="top" secondItem="8Wt-p1-Xzt" secondAttribute="bottom" constant="20" id="bsT-Ri-djg"/>
+                            <constraint firstItem="oPt-d1-Wqt" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="YSe-kH-Q6W"/>
+                            <constraint firstItem="c8M-aT-mzE" firstAttribute="top" secondItem="4nh-jG-plV" secondAttribute="bottom" constant="12" id="aWp-6n-Y2r"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZDF-uH-CNE" secondAttribute="trailing" constant="30" id="brR-QC-P6B"/>
                             <constraint firstAttribute="trailing" secondItem="hvm-xp-AJb" secondAttribute="trailing" id="dwD-8i-wbq"/>
-                            <constraint firstItem="eMa-G0-kkn" firstAttribute="top" secondItem="8Wt-p1-Xzt" secondAttribute="bottom" constant="20" id="gVD-CG-xr5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="oPt-d1-Wqt" secondAttribute="bottom" constant="20" id="gA2-Ia-3Cv"/>
+                            <constraint firstItem="RHV-cJ-iXN" firstAttribute="top" secondItem="4nh-jG-plV" secondAttribute="bottom" constant="12" id="ion-Ws-OL1"/>
                             <constraint firstItem="4nh-jG-plV" firstAttribute="leading" secondItem="hvm-xp-AJb" secondAttribute="leading" id="jYf-1a-3k2"/>
                             <constraint firstItem="8Wt-p1-Xzt" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="jsq-ly-gu1"/>
+                            <constraint firstItem="gz9-0n-Pwx" firstAttribute="top" secondItem="4nh-jG-plV" secondAttribute="bottom" constant="12" id="mB2-eL-sPb"/>
                             <constraint firstItem="hvm-xp-AJb" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="sq2-L4-0bA"/>
-                            <constraint firstItem="8Wt-p1-Xzt" firstAttribute="top" secondItem="4nh-jG-plV" secondAttribute="bottom" constant="40" id="vix-qo-qho"/>
+                            <constraint firstItem="8Wt-p1-Xzt" firstAttribute="top" secondItem="4nh-jG-plV" secondAttribute="bottom" constant="60" id="vix-qo-qho"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8Wt-p1-Xzt" secondAttribute="trailing" id="xLo-e1-WMS"/>
+                            <constraint firstItem="gz9-0n-Pwx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="z4g-wz-6ED"/>
+                            <constraint firstItem="RHV-cJ-iXN" firstAttribute="centerY" secondItem="c8M-aT-mzE" secondAttribute="centerY" id="zBF-Mw-8Rw"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Play" image="Play-selected" id="AiQ-cF-5da">
@@ -917,6 +1001,26 @@
                         <outlet property="fourthGolferPuttsTextField" destination="EEU-aW-phM" id="HJe-Lz-U1T"/>
                         <outlet property="fourthGolferStrokesTextField" destination="cKg-NG-GCd" id="bg8-Jg-h6Z"/>
                         <outlet property="fourthGolferView" destination="qKa-om-jOR" id="Lfu-YG-k3V"/>
+                        <outlet property="holeEightButton" destination="FXL-Mc-FYR" id="Ry8-aV-78a"/>
+                        <outlet property="holeEighteenButton" destination="rG5-XW-Lja" id="JGH-gD-xJO"/>
+                        <outlet property="holeElevenButton" destination="g8s-vP-Gcl" id="yQ1-vD-uFd"/>
+                        <outlet property="holeFifteenButton" destination="BP2-Ha-Esr" id="2KS-oB-4Mr"/>
+                        <outlet property="holeFiveButton" destination="e8c-rA-8lc" id="UkP-3v-Q88"/>
+                        <outlet property="holeFourButton" destination="VeO-57-uTd" id="EsU-Ed-iYn"/>
+                        <outlet property="holeFourteenButton" destination="xHe-jM-HH1" id="yPC-P6-fl3"/>
+                        <outlet property="holeNineButton" destination="ADX-Gr-lHk" id="qi6-2x-sNk"/>
+                        <outlet property="holeNumberLabel" destination="c8M-aT-mzE" id="Yr2-8C-tH8"/>
+                        <outlet property="holeOneButton" destination="9tc-T4-2Hm" id="Vgw-32-gmY"/>
+                        <outlet property="holeSevenButton" destination="jkg-PQ-zRD" id="Syn-EB-RKD"/>
+                        <outlet property="holeSeventeenButton" destination="4GM-L7-Pl7" id="ppA-gS-vqE"/>
+                        <outlet property="holeSixButton" destination="gvD-kX-77J" id="N9C-6v-5Sq"/>
+                        <outlet property="holeSixteenButton" destination="aFu-Ri-j9g" id="J2Y-uS-A3p"/>
+                        <outlet property="holeTenButton" destination="ZFC-nw-pIX" id="pkI-s1-eez"/>
+                        <outlet property="holeThirteenButton" destination="g5a-YZ-iWW" id="bEF-WO-vgV"/>
+                        <outlet property="holeThreeButton" destination="CES-zc-hFP" id="QoP-1E-eOF"/>
+                        <outlet property="holeTwelveButton" destination="ur9-Bh-XLJ" id="L5J-hU-I9N"/>
+                        <outlet property="holeTwoButton" destination="p1Q-Ge-MYc" id="end-Zw-uEB"/>
+                        <outlet property="parSelectionSegmentedControl" destination="ZDF-uH-CNE" id="jwu-tM-oPu"/>
                         <outlet property="secondGolferCurrentScoreLabel" destination="OKy-JT-Fmg" id="nzM-Te-Zdn"/>
                         <outlet property="secondGolferHoleDataStackView" destination="hpw-Kp-stK" id="MCw-cY-4Oa"/>
                         <outlet property="secondGolferNameLabel" destination="gHf-cD-G1o" id="ux5-aE-BH3"/>
@@ -937,8 +1041,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Chevron-left" width="32" height="32"/>
-        <image name="Chevron-right" width="32" height="32"/>
         <image name="Menu" width="32" height="32"/>
         <image name="Play-selected" width="32" height="32"/>
         <image name="chevron.down.square.fill" catalog="system" width="128" height="114"/>
