@@ -32,7 +32,7 @@
                                             <action selector="closedOutBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BPp-GJ-Jkd"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="xMI-rS-sNz">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="xMI-rS-sNz">
                                         <rect key="frame" x="20" y="84" width="244" height="109"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoU-St-fxd">
