@@ -8,6 +8,9 @@
 import UIKit
 
 class PlayRoundViewController: UIViewController {
+    
+    @IBOutlet weak var courseNameLabel: UILabel!
+    
     @IBOutlet weak var holeNumberLabel: UILabel!
     @IBOutlet weak var parSelectionSegmentedControl: UISegmentedControl!
     
@@ -70,8 +73,15 @@ class PlayRoundViewController: UIViewController {
 //    var currentSelectedHoleIndex: Int = 0
     var currentHole = 0
     var par: Int = 0
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.fetchCurrentRound()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         golferViews = [firstGolferView, secondGolferView, thirdGolferView, fourthGolferView]
         golferNameLabels = [firstGolferNameLabel, secondGolferNameLabel, thirdGolferNameLabel, fourthGolferNameLabel]
@@ -81,8 +91,6 @@ class PlayRoundViewController: UIViewController {
         
 //        holeOneButton.setTitleColor(.white, for: .selected)
 //        holeNumberLabel.text = "\(currentSelectedHoleIndex)"
-        
-        // fix how we are initializeg the view model
         
         self.viewModel = PlayRoundViewModel(delegate: self)
         
@@ -125,12 +133,12 @@ class PlayRoundViewController: UIViewController {
         fourthGolferCurrentScoreLabel.layer.borderColor = UIColor.black.cgColor
         
     }
-    
     // logic should not be done on the viewController
     private func populateGolferData() {
         
         var golferIndex = 0
         // fix force unwrap
+        courseNameLabel.text = viewModel.round?.courseName
         holeNumberLabel.text = "\(currentHole + 1)"
         parSelectionSegmentedControl.selectedSegmentIndex = viewModel.round!.golfers[0].holes[currentHole].par - 3
         for golfer in viewModel.round!.golfers {
@@ -198,7 +206,8 @@ class PlayRoundViewController: UIViewController {
     
     @IBAction func holeButtonTapped(_ sender: UIButton) {
         currentHole = sender.tag
-        sender.backgroundColor = .red
+        sender.isHighlighted = true
+        sender.backgroundColor = .yellow
         self.populateGolferData()
         
     }

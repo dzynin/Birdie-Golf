@@ -49,38 +49,20 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4i-xe-Bd7">
                                         <rect key="frame" x="8" y="128" width="398" height="60"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="Kru-2d-DQg">
-                                                <rect key="frame" x="8" y="18" width="114.5" height="20.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8s-v2-U1W">
-                                                        <rect key="frame" x="0.0" y="0.0" width="22" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(golfer)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGh-tc-iuo">
-                                                        <rect key="frame" x="58" y="0.0" width="56.5" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(score)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBy-0F-hUB">
-                                                <rect key="frame" x="335.5" y="18" width="54.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(golfer)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGh-tc-iuo">
+                                                <rect key="frame" x="2" y="2" width="394" height="56"/>
+                                                <fontDescription key="fontDescription" name="Merriweather-Regular" family="Merriweather" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="SBy-0F-hUB" secondAttribute="trailing" constant="8" id="5jF-Sc-8aS"/>
-                                            <constraint firstItem="Kru-2d-DQg" firstAttribute="leading" secondItem="d4i-xe-Bd7" secondAttribute="leading" constant="8" id="DqZ-ev-DXg"/>
-                                            <constraint firstItem="SBy-0F-hUB" firstAttribute="centerY" secondItem="Kru-2d-DQg" secondAttribute="centerY" id="EH3-V2-erz"/>
-                                            <constraint firstItem="SBy-0F-hUB" firstAttribute="top" secondItem="d4i-xe-Bd7" secondAttribute="top" constant="18" id="Jck-LJ-lTJ"/>
+                                            <constraint firstItem="IGh-tc-iuo" firstAttribute="leading" secondItem="d4i-xe-Bd7" secondAttribute="leading" constant="2" id="CWI-Uo-luf"/>
                                             <constraint firstAttribute="height" constant="60" id="bcn-55-Yix"/>
-                                            <constraint firstItem="SBy-0F-hUB" firstAttribute="top" secondItem="Kru-2d-DQg" secondAttribute="top" id="vR3-1B-NtI"/>
+                                            <constraint firstAttribute="trailing" secondItem="IGh-tc-iuo" secondAttribute="trailing" constant="2" id="kZ2-aN-JXK"/>
+                                            <constraint firstItem="IGh-tc-iuo" firstAttribute="top" secondItem="d4i-xe-Bd7" secondAttribute="top" constant="2" id="sYV-rn-vev"/>
+                                            <constraint firstAttribute="bottom" secondItem="IGh-tc-iuo" secondAttribute="bottom" constant="2" id="yZd-ib-C0F"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -112,9 +94,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fin-eO-z69">
                                         <rect key="frame" x="0.0" y="0.0" width="810" height="45"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tc-T4-2Hm">
+                                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tc-T4-2Hm">
                                                 <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                <color key="backgroundColor" red="0.0" green="0.4582666755" blue="0.2403146327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="7qb-jZ-BeF"/>
                                                     <constraint firstAttribute="width" constant="45" id="Lmt-4A-l7X"/>
@@ -123,6 +104,9 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="circle" catalog="system"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="1">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" red="0.0" green="0.4582666755" blue="0.2403146327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </backgroundConfiguration>
                                                     <color key="baseForegroundColor" red="0.0" green="0.4582666755" blue="0.2403146327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <userDefinedRuntimeAttributes>
@@ -989,6 +973,7 @@
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="courseNameLabel" destination="IGh-tc-iuo" id="5cB-xd-ugb"/>
                         <outlet property="firstGolferCurrentScoreLabel" destination="wEB-Yk-Sx6" id="dQH-xt-XvQ"/>
                         <outlet property="firstGolferHoleDataStackView" destination="zhF-Od-bsl" id="iDN-OW-d4y"/>
                         <outlet property="firstGolferNameLabel" destination="od5-Be-c56" id="yem-Q0-Xkx"/>

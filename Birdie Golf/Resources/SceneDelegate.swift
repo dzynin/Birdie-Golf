@@ -18,17 +18,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
-        if UserDefaults.standard.string(forKey: "email") != nil {
-           let storyboard = UIStoryboard(name: "Pre-game", bundle: nil)
-           let preGameViewController =
-                storyboard.instantiateViewController(withIdentifier: "PregameView")
-            window?.rootViewController = preGameViewController
-        } else {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let signInViewController =
-                    storyboard.instantiateViewController(withIdentifier: "CreateAcctID")
-            window?.rootViewController = signInViewController
-        }
+        if (UserDefaults.standard.string(forKey: "activeRoundId") != nil) {
+            let storyboard = UIStoryboard(name: "TabBarController", bundle: nil)
+            let playViewController = storyboard.instantiateViewController(withIdentifier: "TabBarMain")
+            window?.rootViewController = playViewController
+        } else if UserDefaults.standard.string(forKey: "email") != nil {
+       let storyboard = UIStoryboard(name: "Pre-game", bundle: nil)
+       let preGameViewController =
+            storyboard.instantiateViewController(withIdentifier: "PregameView")
+        window?.rootViewController = preGameViewController
+    } else {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let signInViewController =
+                storyboard.instantiateViewController(withIdentifier: "CreateAcctID")
+        window?.rootViewController = signInViewController
+    }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
