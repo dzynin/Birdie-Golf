@@ -9,7 +9,7 @@
         <!--Play-->
         <scene sceneID="efY-fe-XAU">
             <objects>
-                <viewControllerPlaceholder storyboardName="Play" id="cEi-08-Xc7" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Play" storyboardName="Play" id="cEi-08-Xc7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="gG0-ex-0H4"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OV3-HL-wnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

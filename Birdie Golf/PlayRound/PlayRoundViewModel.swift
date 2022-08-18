@@ -27,6 +27,7 @@ class PlayRoundViewModel {
         service.fetchRound { result in
             switch result {
             case .failure(let error):
+                // TODO: - add a delgate function for the failure case so that the view can show an alert
                 print(error)
             case.success(let round):
                 self.round = round
@@ -59,5 +60,9 @@ class PlayRoundViewModel {
     
     func fetchHole(with hole: Hole) {
         
+    }
+    
+    func numberOfHoles() -> Int {
+        round?.numberOfHoles ?? 9
     }
 } // end of class

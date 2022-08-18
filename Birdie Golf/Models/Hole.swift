@@ -23,6 +23,11 @@ struct Hole: Codable {
     var strokes: Int
     var putts: Int
     
+    var hasBeenPlayed: Bool {
+        par != 0 &&
+        strokes != 0 
+    }
+    
     var holeData: [String:Any] {
         [HoleKey.holeNumber : self.holeNumber,
          HoleKey.par : self.par,
