@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONZ-m4-jYB">
-                                <rect key="frame" x="65" y="279" width="284" height="233"/>
+                                <rect key="frame" x="65" y="279" width="284" height="237"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQv-3T-Arc">
                                         <rect key="frame" x="20" y="24" width="244" height="27.5"/>
@@ -25,7 +25,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anh-Cc-0cp">
-                                        <rect key="frame" x="235.5" y="8" width="40.5" height="28"/>
+                                        <rect key="frame" x="235.5" y="8" width="40.5" height="32"/>
                                         <color key="tintColor" red="0.00020880332159999999" green="0.45717734100000001" blue="0.24039614200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <buttonConfiguration key="configuration" style="plain" image="xmark.app" catalog="system"/>
                                         <connections>
@@ -33,7 +33,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="xMI-rS-sNz">
-                                        <rect key="frame" x="20" y="84" width="244" height="109"/>
+                                        <rect key="frame" x="20" y="88" width="244" height="109"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoU-St-fxd">
                                                 <rect key="frame" x="0.0" y="0.0" width="244" height="44"/>
@@ -94,8 +94,8 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ONZ-m4-jYB" secondAttribute="bottom" constant="350" id="4aE-S2-vpO"/>
-                            <constraint firstItem="ONZ-m4-jYB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="235" id="D8e-OZ-wQN"/>
+                            <constraint firstItem="ONZ-m4-jYB" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.264509" id="2sT-eB-80m"/>
+                            <constraint firstItem="ONZ-m4-jYB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="235" id="4Kr-0e-ANC"/>
                             <constraint firstItem="ONZ-m4-jYB" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="VrM-Ww-QOe"/>
                             <constraint firstItem="ONZ-m4-jYB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="65" id="hhg-Eh-WNL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ONZ-m4-jYB" secondAttribute="trailing" constant="65" id="iCJ-c6-QvD"/>

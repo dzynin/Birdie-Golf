@@ -30,13 +30,9 @@ protocol FirebaseSyncable {
 
 struct FirebaseService: FirebaseSyncable {
         
-    
-    
-    
     let storage = Storage.storage().reference()
     let reference = Firebase.Database.database().reference()
     var currentUser: User?
-    
     
 func logoutUser() {
     let firebaseAuth = Auth.auth()
@@ -123,7 +119,6 @@ func logoutUser() {
     func deleteRound(round: Round) {
         reference.child("rounds").child(round.uuid).removeValue()
     }
-    
     
     func fetchRound(completion: @escaping (Result<Round, FirebaseError>) -> Void) {
         let currentRoundId = UserDefaults.standard.string(forKey: "activeRoundId")

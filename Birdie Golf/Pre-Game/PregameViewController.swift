@@ -18,6 +18,14 @@ class PregameViewController: UIViewController {
         
     }
     
+    @IBAction func settingsButtonTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Settings", bundle: nil)
+        let myAlert = storyboard.instantiateViewController(withIdentifier: "SettingsView")
+        myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(myAlert, animated: true, completion: nil)
+    }
+    
     @IBAction func startRoundButtonTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "HoleSelectionAlertViewController", bundle: nil)
         let myAlert = storyboard.instantiateViewController(withIdentifier: "holeAlert")

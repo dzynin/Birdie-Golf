@@ -170,8 +170,10 @@ class PlayRoundViewController: UIViewController {
     }
     
     @IBAction func parSelectionSegmentedControl(_ sender: Any) {
-        
+        parSelectionSegmentedControl.selectedSegmentTintColor = UIColor(named: "AccentColor")
+        parSelectionSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.selected)
     }
+    
     @IBAction func firstGolferHoleDataInputButtonTapped(_ sender: Any) {
         firstGolferHoleDataStackView.isHidden.toggle()
     }
@@ -251,6 +253,11 @@ class PlayRoundViewController: UIViewController {
     }
     
     @IBAction func settingsButtonTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Settings", bundle: nil)
+        let myAlert = storyboard.instantiateViewController(withIdentifier: "SettingsView")
+        myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        self.present(myAlert, animated: true, completion: nil)
     }
     
 }
