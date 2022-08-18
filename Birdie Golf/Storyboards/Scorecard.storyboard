@@ -28,20 +28,30 @@
                                 <rect key="frame" x="0.0" y="-32" width="375" height="135"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Z5E-DL-Iro">
-                                        <rect key="frame" x="8" y="75" width="359" height="39"/>
+                                        <rect key="frame" x="8" y="75" width="359" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Scorecard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubv-b8-wZo">
-                                                <rect key="frame" x="0.0" y="0.0" width="185" height="39"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="214" height="45"/>
                                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="31"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJ2-nF-33e">
-                                                <rect key="frame" x="285" y="0.0" width="74" height="39"/>
+                                                <rect key="frame" x="314" y="0.0" width="45" height="45"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="EVN-4L-TVz"/>
+                                                    <constraint firstAttribute="width" constant="45" id="T2Z-r2-aqF"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="ellipsis.circle.fill" catalog="system">
+                                                <buttonConfiguration key="configuration" style="plain" image="Menu">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="23"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                         <userDefinedRuntimeAttributes>
@@ -185,8 +195,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Menu" width="32" height="32"/>
         <image name="Scorecard" width="33" height="32"/>
-        <image name="ellipsis.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

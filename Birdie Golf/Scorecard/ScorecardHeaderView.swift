@@ -49,6 +49,7 @@ class ScorecardHeaderView: UIView {
         parLabel.backgroundColor = .systemGray
         parLabel.textColor = .white
         parLabel.cornerRadius = 4
+        parLabel.textAlignment = .center
         
         golfer1Label.textAlignment = .center
         golfer2Label.textAlignment = .center
