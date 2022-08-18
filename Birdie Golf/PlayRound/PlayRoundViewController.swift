@@ -170,8 +170,10 @@ class PlayRoundViewController: UIViewController {
     }
     
     @IBAction func parSelectionSegmentedControl(_ sender: Any) {
-        
+        parSelectionSegmentedControl.selectedSegmentTintColor = UIColor(named: "AccentColor")
+        parSelectionSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.selected)
     }
+    
     @IBAction func firstGolferHoleDataInputButtonTapped(_ sender: Any) {
         firstGolferHoleDataStackView.isHidden.toggle()
     }
