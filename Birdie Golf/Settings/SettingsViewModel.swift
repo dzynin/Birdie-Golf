@@ -12,13 +12,11 @@ protocol SettingsViewModelDelegate: SettingsViewController {
 
 class SettingsViewModel {
     private var service: FirebaseSyncable
-    private var round: Round?
     private weak var delegate: SettingsViewModelDelegate?
     
     
-    init(service: FirebaseSyncable = FirebaseService(), round: Round, delegate: SettingsViewModelDelegate) {
+    init(service: FirebaseSyncable = FirebaseService(), delegate: SettingsViewModelDelegate) {
         self.service = service
-        self.round = round
         self.delegate = delegate
     }
     

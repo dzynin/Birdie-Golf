@@ -22,6 +22,9 @@
 		9D4F1CE628A1DD86008F36EB /* UserScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F1CE528A1DD86008F36EB /* UserScore.swift */; };
 		9D76E8DE28984323001D03F1 /* Tourney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D76E8DD28984323001D03F1 /* Tourney.storyboard */; };
 		9DA3CA3028A0683D00AD880D /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3CA2F28A0683D00AD880D /* CreateAccountViewModel.swift */; };
+		9DAD23ED28AD59C400EBB986 /* ScorecardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD23EC28AD59C400EBB986 /* ScorecardViewModel.swift */; };
+		9DAD23EF28AD59D600EBB986 /* ScorecardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD23EE28AD59D600EBB986 /* ScorecardTableViewCell.swift */; };
+		9DAD23F128ADFA2500EBB986 /* ScorecardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD23F028ADFA2500EBB986 /* ScorecardHeaderView.swift */; };
 		9DC4C13428A0ECB3000F5E67 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4C13328A0ECB3000F5E67 /* CreateAccountViewController.swift */; };
 		9DDD044D28A443CF00628D26 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD044C28A443CF00628D26 /* LeaderboardViewController.swift */; };
 		9DDD045528A465CC00628D26 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDD045428A465CC00628D26 /* Settings.storyboard */; };
@@ -82,6 +85,9 @@
 		9D4F1CE528A1DD86008F36EB /* UserScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScore.swift; sourceTree = "<group>"; };
 		9D76E8DD28984323001D03F1 /* Tourney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tourney.storyboard; sourceTree = "<group>"; };
 		9DA3CA2F28A0683D00AD880D /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
+		9DAD23EC28AD59C400EBB986 /* ScorecardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardViewModel.swift; sourceTree = "<group>"; };
+		9DAD23EE28AD59D600EBB986 /* ScorecardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardTableViewCell.swift; sourceTree = "<group>"; };
+		9DAD23F028ADFA2500EBB986 /* ScorecardHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardHeaderView.swift; sourceTree = "<group>"; };
 		9DC4C13328A0ECB3000F5E67 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		9DDD044C28A443CF00628D26 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		9DDD045428A465CC00628D26 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
@@ -241,6 +247,9 @@
 			isa = PBXGroup;
 			children = (
 				ED8D008F289844B900075CB4 /* ScorecardViewController.swift */,
+				9DAD23EC28AD59C400EBB986 /* ScorecardViewModel.swift */,
+				9DAD23EE28AD59D600EBB986 /* ScorecardTableViewCell.swift */,
+				9DAD23F028ADFA2500EBB986 /* ScorecardHeaderView.swift */,
 			);
 			path = Scorecard;
 			sourceTree = "<group>";
@@ -457,7 +466,9 @@
 				ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */,
 				9D4F1CE628A1DD86008F36EB /* UserScore.swift in Sources */,
 				9DF13325289DC022006049DE /* SignInViewModel.swift in Sources */,
+				9DAD23F128ADFA2500EBB986 /* ScorecardHeaderView.swift in Sources */,
 				9DDD044D28A443CF00628D26 /* LeaderboardViewController.swift in Sources */,
+				9DAD23ED28AD59C400EBB986 /* ScorecardViewModel.swift in Sources */,
 				EDF7072728A1C88100E488F4 /* HoleSelectionAlertViewController.swift in Sources */,
 				EDF7071F28A17B5700E488F4 /* PregameViewModel.swift in Sources */,
 				9DDD045928A46BA100628D26 /* SettingsViewModel.swift in Sources */,
@@ -467,6 +478,7 @@
 				EDB82BB528A4518700CF974C /* AddUserViewController.swift in Sources */,
 				9DA3CA3028A0683D00AD880D /* CreateAccountViewModel.swift in Sources */,
 				EDB82BB928A4889E00CF974C /* Golfer.swift in Sources */,
+				9DAD23EF28AD59D600EBB986 /* ScorecardTableViewCell.swift in Sources */,
 				9D1BB7D7289354D20079419A /* SignInViewController.swift in Sources */,
 				EDB82B8628A33AB000CF974C /* PlayRoundViewController.swift in Sources */,
 				EDB82B8428A33AA000CF974C /* PlayRoundViewModel.swift in Sources */,

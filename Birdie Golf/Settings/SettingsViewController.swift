@@ -14,7 +14,7 @@ class SettingsViewController: UIViewController {
      
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+    viewModel = SettingsViewModel(delegate: self)
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(closeView)))
     }
     
