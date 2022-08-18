@@ -38,7 +38,7 @@ class SettingsViewController: UIViewController {
     }
     
     func presentFinishedRoundConfirmationAlert() {
-        let alertFinishedRound = UIAlertController(title: "Finished with your Rounds?", message: "Do you want to save this Round?", preferredStyle: .alert)
+        let alertFinishedRound = UIAlertController(title: "Finished with your Round?", message: "Do you want to save this Round?", preferredStyle: .alert)
         alertFinishedRound.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (_) in
             
         }))
@@ -53,15 +53,6 @@ class SettingsViewController: UIViewController {
     
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

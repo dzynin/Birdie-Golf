@@ -25,6 +25,7 @@ class SettingsViewModel {
     func logOut() {
         service.logoutUser()
         UserDefaults.standard.removeObject(forKey: "email")
+        UserDefaults.standard.removeObject(forKey: "activeRoundId")
     }
     
     

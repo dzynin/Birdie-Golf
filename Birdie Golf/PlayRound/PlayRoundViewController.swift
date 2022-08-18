@@ -61,6 +61,7 @@ class PlayRoundViewController: UIViewController {
     @IBOutlet weak var holeSeventeenButton: UIButton!
     @IBOutlet weak var holeEighteenButton: UIButton!
     
+    @IBOutlet weak var holesStackView: UIStackView!
     
     var viewModel: PlayRoundViewModel!
     
@@ -69,32 +70,36 @@ class PlayRoundViewController: UIViewController {
     private var puttTextFields: [UITextField] = []
     private var strokeTextFields: [UITextField] = []
     private var currentScoreLabels: [UILabel] = []
+    private var holeButtonsArray: [UIButton] = []
+    //    private var currentSelectedHoleTag: Int = 0
     
-//    var currentSelectedHoleIndex: Int = 0
-    var currentHole = 0
+    var currentHoleNumber = 1
     var par: Int = 0
     
     override func viewWillAppear(_ animated: Bool) {
-        viewModel.fetchCurrentRound()
+        //     viewModel.fetchCurrentRound()
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.viewModel = PlayRoundViewModel(delegate: self)
+        viewModel.fetchCurrentRound()
+        
+    }
+    
+    private func setUpView() {
+        showCurrentNumberOfHoles()
+        courseNameLabel.text = viewModel.round?.courseName
+        holeNumberLabel.text = "\(currentHoleNumber)"
         
         golferViews = [firstGolferView, secondGolferView, thirdGolferView, fourthGolferView]
         golferNameLabels = [firstGolferNameLabel, secondGolferNameLabel, thirdGolferNameLabel, fourthGolferNameLabel]
         currentScoreLabels = [firstGolferCurrentScoreLabel, secondGolferCurrentScoreLabel, thirdGolferCurrentScoreLabel, fourthGolferCurrentScoreLabel]
         puttTextFields = [firstGolferPuttsTextField, secondGolferPuttsTextField, thirdGolferPuttsTextField, fourthGolferPuttsTextField]
         strokeTextFields = [firstGolferStrokesTextField, secondGolferStrokesTextField, thirdGolferStrokesTextField, fourthGolferStrokesTextField]
-        
-//        holeOneButton.setTitleColor(.white, for: .selected)
-//        holeNumberLabel.text = "\(currentSelectedHoleIndex)"
-        
-        self.viewModel = PlayRoundViewModel(delegate: self)
-        
-        viewModel.fetchCurrentRound()
+        holeButtonsArray = [holeOneButton, holeTwoButton, holeThreeButton, holeFourButton, holeFiveButton, holeSixButton, holeSevenButton, holeEightButton, holeNineButton, holeTenButton, holeElevenButton, holeTwelveButton, holeThirteenButton, holeFourteenButton, holeFifteenButton, holeSixteenButton, holeSeventeenButton, holeEighteenButton]
         
         firstGolferView.isHidden = true
         firstGolferNameLabel.layer.borderWidth = 2.0
@@ -131,30 +136,41 @@ class PlayRoundViewController: UIViewController {
         fourthGolferCurrentScoreLabel.layer.borderWidth = 2.0
         fourthGolferCurrentScoreLabel.layer.cornerRadius = 8
         fourthGolferCurrentScoreLabel.layer.borderColor = UIColor.black.cgColor
-        
     }
-    // logic should not be done on the viewController
+    
+    private func showCurrentNumberOfHoles() {
+        if viewModel.numberOfHoles() == 9 {
+            holeTenButton.isHidden = true
+            holeElevenButton.isHidden = true
+            holeTwelveButton.isHidden = true
+            holeThirteenButton.isHidden = true
+            holeFourteenButton.isHidden = true
+            holeFifteenButton.isHidden = true
+            holeSixteenButton.isHidden = true
+            holeSeventeenButton.isHidden = true
+            holeEighteenButton.isHidden = true
+        }
+    }
+    
     private func populateGolferData() {
-        
         var golferIndex = 0
         // fix force unwrap
-        courseNameLabel.text = viewModel.round?.courseName
-        holeNumberLabel.text = "\(currentHole + 1)"
-        parSelectionSegmentedControl.selectedSegmentIndex = viewModel.round!.golfers[0].holes[currentHole].par - 3
+        
+        parSelectionSegmentedControl.selectedSegmentIndex = viewModel.round!.golfers[0].holes[currentHoleNumber - 1].par - 3
         for golfer in viewModel.round!.golfers {
             //unhide the view of the golfer that it is tied to
             golferViews[golferIndex].isHidden = false
             // populate the labels.
             golferNameLabels[golferIndex].text = golfer.golferName
             currentScoreLabels[golferIndex].text = "\(golfer.currentScore)"
-            puttTextFields[golferIndex].text = "\(golfer.holes[currentHole].putts)"
-            strokeTextFields[golferIndex].text = "\(golfer.holes[currentHole].strokes)"
+            puttTextFields[golferIndex].text = "\(golfer.holes[currentHoleNumber - 1].putts)"
+            strokeTextFields[golferIndex].text = "\(golfer.holes[currentHoleNumber - 1].strokes)"
             golferIndex += 1
         }
     }
     
     @IBAction func parSelectionSegmentedControl(_ sender: Any) {
-       
+        
     }
     @IBAction func firstGolferHoleDataInputButtonTapped(_ sender: Any) {
         firstGolferHoleDataStackView.isHidden.toggle()
@@ -172,6 +188,13 @@ class PlayRoundViewController: UIViewController {
     
     @IBAction func SaveHoleInfoButtonTapped(_ sender: Any) {
         // Update the current Hole...
+        if parSelectionSegmentedControl.selectedSegmentIndex != 0 && parSelectionSegmentedControl.selectedSegmentIndex != 1 && parSelectionSegmentedControl.selectedSegmentIndex != 2 {
+            let alertController = UIAlertController(title: "Missing par value!", message: "Please selct a par for the current hole.", preferredStyle: .alert)
+            let confirmAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alertController.addAction(confirmAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
         var golfersPutts: [String] = []
         var golfersStrokes: [String] = []
         var currentGolferScores: [Int] = []
@@ -201,20 +224,40 @@ class PlayRoundViewController: UIViewController {
             currentGolferScores.append(golferFourStrokeInt - par)
             
         }
-        viewModel.updateRound(currentHole: currentHole, golfersPutts: golfersPutts, golfersStrokes: golfersStrokes, currentGolferScores: currentGolferScores, par: par)
+        viewModel.updateRound(currentHole: currentHoleNumber, golfersPutts: golfersPutts, golfersStrokes: golfersStrokes, currentGolferScores: currentGolferScores, par: par)
+    }
+    
+    private func setHoleButtonColors() {
+        for index in 0...viewModel.numberOfHoles() - 1 {
+            let hole = viewModel.round?.golfers.first?.holes[index]
+            let button = holeButtonsArray[index]
+            
+            guard hole?.holeNumber != currentHoleNumber else {
+                button.backgroundColor = UIColor(named: "AccentColor")
+                button.tintColor = .white
+                continue
+            }
+            
+            button.backgroundColor = hole?.hasBeenPlayed == true ? .yellow : .white
+            button.tintColor = UIColor(named: "AccentColor")
+        }
     }
     
     @IBAction func holeButtonTapped(_ sender: UIButton) {
-        currentHole = sender.tag
-        sender.isHighlighted = true
-        sender.backgroundColor = .yellow
-        self.populateGolferData()
-        
+        currentHoleNumber = sender.tag
+        holeNumberLabel.text = "\(currentHoleNumber)"
+        setHoleButtonColors()
+        populateGolferData()
+    }
+    
+    @IBAction func settingsButtonTapped(_ sender: Any) {
     }
     
 }
 extension PlayRoundViewController: PlayRoundViewModelDelegate {
     func updateViews() {
+        setUpView()
         populateGolferData()
+        setHoleButtonColors()
     }
 }
