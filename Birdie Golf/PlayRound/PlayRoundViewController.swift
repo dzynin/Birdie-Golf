@@ -224,7 +224,7 @@ class PlayRoundViewController: UIViewController {
             currentGolferScores.append(golferFourStrokeInt - par)
             
         }
-        viewModel.updateRound(currentHole: currentHoleNumber, golfersPutts: golfersPutts, golfersStrokes: golfersStrokes, currentGolferScores: currentGolferScores, par: par)
+        viewModel.updateRound(currentHole: currentHoleNumber - 1, golfersPutts: golfersPutts, golfersStrokes: golfersStrokes, currentGolferScores: currentGolferScores, par: par)
     }
     
     private func setHoleButtonColors() {
