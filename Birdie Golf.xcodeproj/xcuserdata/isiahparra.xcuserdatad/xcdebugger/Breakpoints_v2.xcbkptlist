@@ -286,8 +286,8 @@
             filePath = "Birdie Golf/Scorecard/ScorecardHeaderView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "init(golfers:)"
             landmarkType = "7">
          </BreakpointContent>

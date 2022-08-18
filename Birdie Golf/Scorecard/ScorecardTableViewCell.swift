@@ -28,10 +28,10 @@ class ScorecardTableViewCell: UITableViewCell {
             if index < rowData.golferScores.count {
                 let golferScore = rowData.golferScores[index]
                 scoreLabel?.text = golferScore
-                print("😂 \(golferScore)")
+                print(" \(golferScore)")
             } else {
                 scoreLabel?.text = "-"
-                print("😂-")
+                print("-")
             }
         }
 //        for index in 0..<rowData.golferScores.count {
