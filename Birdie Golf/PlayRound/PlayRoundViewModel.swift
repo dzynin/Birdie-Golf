@@ -13,12 +13,11 @@ protocol PlayRoundViewModelDelegate: AnyObject {
 class PlayRoundViewModel {
     
     var round: Round?
-
     
     private let service: FirebaseSyncable
     private weak var delegate: PlayRoundViewModelDelegate?
     
-    init(service: FirebaseSyncable = FirebaseService(), delegate: PlayRoundViewModelDelegate){
+    init(service: FirebaseSyncable = FirebaseService(), delegate: PlayRoundViewModelDelegate) {
         self.delegate = delegate
         self.service = service
     }

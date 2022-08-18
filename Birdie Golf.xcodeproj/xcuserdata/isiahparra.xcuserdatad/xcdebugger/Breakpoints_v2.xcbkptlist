@@ -55,22 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "561858D1-1D7E-4648-B08F-F1DE3DC42136"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Birdie Golf/SignInScreenView/SignInViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "submitButtonTapped(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "31467691-69C2-41A1-9EC0-CB22F870B5D9"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -103,38 +87,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "50D1B68E-FA4E-45B1-9946-3E23C39AE589"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Birdie Golf/SignInScreenView/SignInViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "signIn(with:password:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E9108C31-A1E2-447B-81A2-91A59EEE4D30"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Birdie Golf/SignInScreenView/SignInViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "signIn(with:password:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "2A0CC8F3-3B05-47EB-B460-ADBC49E7DF7E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -144,7 +96,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "97"
             endingLineNumber = "97"
-            landmarkName = "populateGolferNameLabels()"
+            landmarkName = "setUpView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -159,9 +111,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "startRound(with:numberOfHoles:golfers:)"
-            landmarkType = "7">
+            endingLineNumber = "56">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -174,10 +124,10 @@
             filePath = "Birdie Golf/PlayRound/PlayRoundViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "fetchCurrentRound(completion:)"
-            landmarkType = "7">
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "PlayRoundViewModel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -223,9 +173,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "startRound(with:numberOfHoles:golfers:)"
-            landmarkType = "7">
+            endingLineNumber = "57">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -321,6 +269,22 @@
             startingLineNumber = "48"
             endingLineNumber = "48"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A849CC3-7459-43B2-8AC1-020ADBE7478A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Birdie Golf/Scorecard/ScorecardHeaderView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "init(golfers:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
