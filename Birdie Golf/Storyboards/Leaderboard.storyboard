@@ -22,23 +22,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUK-GJ-Xx5">
-                                <rect key="frame" x="0.0" y="-50" width="375" height="144"/>
+                                <rect key="frame" x="0.0" y="-50" width="375" height="135"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leaderboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIP-PZ-VHK">
-                                        <rect key="frame" x="8" y="79" width="189.5" height="38"/>
+                                        <rect key="frame" x="8" y="85" width="189.5" height="38"/>
                                         <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xi8-J6-ekS">
-                                        <rect key="frame" x="291" y="76" width="101" height="44"/>
+                                        <rect key="frame" x="322" y="76" width="45" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="jmF-ig-kFl"/>
-                                            <constraint firstAttribute="width" constant="101" id="zSa-cj-HJF"/>
+                                            <constraint firstAttribute="height" constant="45" id="jmF-ig-kFl"/>
+                                            <constraint firstAttribute="width" constant="45" id="zSa-cj-HJF"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="ellipsis.circle.fill" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Menu"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="23"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="optionsBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DSF-1f-rN4"/>
                                         </connections>
@@ -47,10 +53,11 @@
                                 <color key="backgroundColor" red="0.00020880332159999999" green="0.45717734100000001" blue="0.24039614200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Xi8-J6-ekS" firstAttribute="top" secondItem="NUK-GJ-Xx5" secondAttribute="top" constant="76" id="EXV-l0-qW2"/>
-                                    <constraint firstAttribute="bottom" secondItem="nIP-PZ-VHK" secondAttribute="bottom" constant="27" id="WvF-fU-fBG"/>
-                                    <constraint firstItem="Xi8-J6-ekS" firstAttribute="centerY" secondItem="nIP-PZ-VHK" secondAttribute="centerY" id="fsT-Op-TlB"/>
+                                    <constraint firstAttribute="height" constant="135" id="HnO-fT-NxA"/>
+                                    <constraint firstAttribute="bottom" secondItem="nIP-PZ-VHK" secondAttribute="bottom" constant="12" id="WvF-fU-fBG"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xi8-J6-ekS" secondAttribute="bottom" constant="12" id="h25-ge-H8a"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xi8-J6-ekS" secondAttribute="trailing" constant="8" id="hZp-BD-in7"/>
                                     <constraint firstItem="nIP-PZ-VHK" firstAttribute="leading" secondItem="NUK-GJ-Xx5" secondAttribute="leading" constant="8" id="lER-JL-8Aa"/>
-                                    <constraint firstAttribute="trailing" secondItem="Xi8-J6-ekS" secondAttribute="trailing" constant="-17" id="uN4-MK-m6A"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -59,7 +66,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9g2-iv-Lld">
-                                <rect key="frame" x="16" y="102" width="343" height="557"/>
+                                <rect key="frame" x="16" y="93" width="343" height="566"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LeaderboardCell" rowHeight="56" id="tpV-xc-aNv" customClass="LeaderboardTableViewCell" customModule="Birdie_Golf" customModuleProvider="target">
@@ -139,7 +146,7 @@
     </scenes>
     <resources>
         <image name="Leaderboard" width="33" height="32"/>
-        <image name="ellipsis.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="Menu" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

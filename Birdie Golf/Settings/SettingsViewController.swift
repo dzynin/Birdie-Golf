@@ -21,7 +21,7 @@ class SettingsViewController: UIViewController {
     @IBAction func signOutButtonTapped(_ sender: Any) {
         viewModel.logOut()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainView")
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: "CreateAcctID")
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(viewController: mainViewController)
         }
     
@@ -34,23 +34,29 @@ class SettingsViewController: UIViewController {
     
     @IBAction func endRoundBtnTapped(_ sender: Any) {
         presentFinishedRoundConfirmationAlert()
-        saveRoundToPreGame()
+        
     }
     
     func presentFinishedRoundConfirmationAlert() {
         let alertFinishedRound = UIAlertController(title: "Finished with your Round?", message: "Do you want to save this Round?", preferredStyle: .alert)
         alertFinishedRound.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (_) in
-            
+            UserDefaults.standard.removeObject(forKey: "activeRoundId")
+            let storyboard = UIStoryboard(name: "Pre-game", bundle: nil)
+            let preGameViewController =
+            storyboard.instantiateViewController(withIdentifier: "PregameView")
+            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(viewController: preGameViewController )
         }))
         alertFinishedRound.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
-            
+            self.viewModel.completeRound { result in
+                switch result {
+                case .success(let success):
+                    print(success)
+                case .failure(let failure):
+                    print(failure)
+                }
+            }
         }))
         self.present(alertFinishedRound, animated: true, completion: nil)
-    }
-    
-    func saveRoundToPreGame() {
-       
-    
     }
     
 

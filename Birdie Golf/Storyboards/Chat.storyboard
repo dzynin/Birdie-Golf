@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -23,23 +23,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dCA-uj-jbO">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="269" translatesAutoresizingMaskIntoConstraints="NO" id="BEy-rR-cCi">
-                                        <rect key="frame" x="8" y="52" width="398" height="39"/>
+                                        <rect key="frame" x="8" y="78" width="398" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkG-wd-wVv">
-                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="39"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="84" height="45"/>
                                                 <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="31"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccm-oi-Sm1">
-                                                <rect key="frame" x="340.5" y="0.0" width="57.5" height="39"/>
+                                                <rect key="frame" x="353" y="0.0" width="45" height="45"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="Mvd-Rb-MQV"/>
+                                                    <constraint firstAttribute="height" constant="45" id="hmt-tc-dYd"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="ellipsis.circle.fill" catalog="system">
+                                                <buttonConfiguration key="configuration" style="plain" image="Menu">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="23"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                         <userDefinedRuntimeAttributes>
@@ -51,10 +61,9 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.45994293689999999" blue="0.23727780579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="ADh-Mu-c7x"/>
+                                    <constraint firstAttribute="height" constant="135" id="ADh-Mu-c7x"/>
                                     <constraint firstItem="BEy-rR-cCi" firstAttribute="leading" secondItem="dCA-uj-jbO" secondAttribute="leading" constant="8" id="Q9a-ee-XPa"/>
-                                    <constraint firstAttribute="top" secondItem="BEy-rR-cCi" secondAttribute="top" constant="-52" id="WHv-XK-bzg"/>
-                                    <constraint firstAttribute="bottom" secondItem="BEy-rR-cCi" secondAttribute="bottom" constant="29" id="als-kg-8tB"/>
+                                    <constraint firstAttribute="bottom" secondItem="BEy-rR-cCi" secondAttribute="bottom" constant="12" id="als-kg-8tB"/>
                                     <constraint firstAttribute="trailing" secondItem="BEy-rR-cCi" secondAttribute="trailing" constant="8" id="hhe-Dl-tHh"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -84,7 +93,7 @@
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8di-B2-qI5">
-                                <rect key="frame" x="0.0" y="122" width="414" height="638"/>
+                                <rect key="frame" x="0.0" y="137" width="414" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4UQ-s1-Ze2">
                                     <size key="itemSize" width="128" height="128"/>
@@ -131,8 +140,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Menu" width="32" height="32"/>
         <image name="Textsms" width="33" height="32"/>
-        <image name="ellipsis.circle.fill" catalog="system" width="128" height="121"/>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
