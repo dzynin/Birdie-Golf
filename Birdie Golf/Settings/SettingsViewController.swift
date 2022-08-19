@@ -39,7 +39,7 @@ class SettingsViewController: UIViewController {
     
     func presentFinishedRoundConfirmationAlert() {
         let alertFinishedRound = UIAlertController(title: "Finished with your Round?", message: "Do you want to save this Round?", preferredStyle: .alert)
-        alertFinishedRound.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (_) in
+        alertFinishedRound.addAction(UIAlertAction(title: "No", style: .default, handler: { (_) in
             UserDefaults.standard.removeObject(forKey: "activeRoundId")
             let storyboard = UIStoryboard(name: "Pre-game", bundle: nil)
             let preGameViewController =
@@ -56,18 +56,23 @@ class SettingsViewController: UIViewController {
                 }
             }
         }))
+        alertFinishedRound.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(alertFinishedRound, animated: true, completion: nil)
     }
     @IBAction func deleteAccountButtonTapped(_ sender: Any) {
-//        let alertController = UIAlertController(title: "Delete account?", message: "Are you sure that you want to proceed?", preferredStyle: .alert)
-//        let declineAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
-//        
-//        let confirmAction = UIAlertAction(title: "Delete", style: .default, handler: nil)
-//        alertController.addAction(confirmAction)
-//        present(alertController, animated: true)
-//        viewModel.deleteAccount()
+        let alertController = UIAlertController(title: "Delete account?", message: "Are you sure that you want to proceed?", preferredStyle: .alert)
+        let declineAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
+        
+        let confirmAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
+            self.viewModel.deleteAccount()
+            }
+        alertController.addAction(confirmAction)
+        alertController.addAction(declineAction)
+        present(alertController, animated: true)
+        
+        }
     }
-}
+
 
 extension SettingsViewController: SettingsViewModelDelegate {
     func roundSavedSuccessfully() {
