@@ -29,6 +29,7 @@ protocol FirebaseSyncable {
     func saveUserToFirebase(with user: User, completion: @escaping (Result<Bool, FirebaseError>) -> Void)
     func updateUser(with user: User, completion: @escaping (Result<Bool, FirebaseError>) -> Void)
     func fetchUser(completion: @escaping (Result<User, FirebaseError>) -> Void)
+    func deleteUserFromFirebase(with userID: String)
 }
 
 struct FirebaseService: FirebaseSyncable {
@@ -148,6 +149,10 @@ struct FirebaseService: FirebaseSyncable {
     
     func deleteRound(round: Round) {
         reference.child("rounds").child(round.uuid).removeValue()
+    }
+    
+    func deleteUserFromFirebase(with userID: String) {
+        reference.child("users").child(userID).removeValue()
     }
     
     func fetchUser(completion: @escaping (Result<User, FirebaseError>) -> Void) {

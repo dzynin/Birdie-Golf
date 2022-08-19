@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreText
 protocol SettingsViewModelDelegate: SettingsViewController {
     func roundSavedSuccessfully()
 }
@@ -55,7 +56,9 @@ class SettingsViewModel {
 }
 
     func deleteAccount() {
-        UserDefaults.standard.removeObject(forKey: "userIdD")
+        guard let userID = UserDefaults.standard.string(forKey: "userID") else { return }
+        service.deleteUserFromFirebase(with: userID)
+        UserDefaults.standard.removeObject(forKey: "userID")
     }
 
 
