@@ -54,6 +54,9 @@ class SettingsViewModel {
     // inform the viewController to send them back to the pregame screen
 }
 
+    func deleteAccount() {
+        UserDefaults.standard.removeObject(forKey: "userIdD")
+    }
 
 
 }

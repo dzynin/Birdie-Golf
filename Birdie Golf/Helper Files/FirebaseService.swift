@@ -24,6 +24,7 @@ protocol FirebaseSyncable {
     func loadRounds(completion: @escaping (Result<[Round], FirebaseError>) -> Void)
     func deleteRound(round: Round)
     func logoutUser()
+    func deleteUser(user: User)
     func fetchRound(completion: @escaping (Result<Round, FirebaseError>) -> Void)
     func saveUserToFirebase(with user: User, completion: @escaping (Result<Bool, FirebaseError>) -> Void)
     func updateUser(with user: User, completion: @escaping (Result<Bool, FirebaseError>) -> Void)
@@ -166,8 +167,12 @@ struct FirebaseService: FirebaseSyncable {
                 return
             }
             completion(.success(currentUser))
-            
         }
+    }
+    
+    func deleteUser(user: User) {
+        reference.child("users").child(user.email).removeValue()
+        reference.child("users").child(user.userID).removeValue()
     }
     
     func fetchRound(completion: @escaping (Result<Round, FirebaseError>) -> Void) {
