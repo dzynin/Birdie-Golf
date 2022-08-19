@@ -71,17 +71,29 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbP-m0-WIw">
+                                        <rect key="frame" x="80.5" y="204" width="123" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Delete Account">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="deleteAccountButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iEQ-qo-fsZ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.69411766529999996" green="0.84705877299999999" blue="0.6784313917" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="xMI-rS-sNz" firstAttribute="top" secondItem="anh-Cc-0cp" secondAttribute="bottom" constant="48" id="2Yo-sq-VkC"/>
                                     <constraint firstItem="yQv-3T-Arc" firstAttribute="leading" secondItem="ONZ-m4-jYB" secondAttribute="leading" constant="20" id="3mV-6d-8z8"/>
+                                    <constraint firstAttribute="bottom" secondItem="QbP-m0-WIw" secondAttribute="bottom" constant="2" id="EzK-un-Sfl"/>
                                     <constraint firstAttribute="bottom" secondItem="xMI-rS-sNz" secondAttribute="bottom" constant="40" id="HKy-lu-uEi"/>
                                     <constraint firstItem="anh-Cc-0cp" firstAttribute="top" secondItem="ONZ-m4-jYB" secondAttribute="top" constant="8" id="KKU-oB-3av"/>
                                     <constraint firstAttribute="trailing" secondItem="anh-Cc-0cp" secondAttribute="trailing" constant="8" id="Q1G-d8-rfN"/>
                                     <constraint firstItem="yQv-3T-Arc" firstAttribute="top" secondItem="ONZ-m4-jYB" secondAttribute="top" constant="24" id="akR-eg-KNS"/>
                                     <constraint firstAttribute="trailing" secondItem="yQv-3T-Arc" secondAttribute="trailing" constant="20" id="cyT-XZ-nZo"/>
                                     <constraint firstItem="xMI-rS-sNz" firstAttribute="leading" secondItem="ONZ-m4-jYB" secondAttribute="leading" constant="20" id="hPJ-2r-AEm"/>
+                                    <constraint firstItem="QbP-m0-WIw" firstAttribute="centerX" secondItem="ONZ-m4-jYB" secondAttribute="centerX" id="wwF-3h-MDe"/>
                                     <constraint firstAttribute="trailing" secondItem="xMI-rS-sNz" secondAttribute="trailing" constant="20" id="z6J-uT-FRJ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
