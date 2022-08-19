@@ -12,34 +12,27 @@ class User: Codable {
 
         static let userID = "userID"
         static var email = "email"
-        static var password = "password"
         static let historicalRounds = "historicalRounds"
-        static let currentRound = "currentRound"
         static let collectionType = "users"
     }
     
     let userID: String
     var email: String
-    var password: String
-    let currentRound: Round?
-    let historicalRounds: [Round]?
+    var historicalRounds: [Round]
     let collectionType: String
     
     // Dictionary representation
     var userData: [String : Any] {
         [Key.userID : self.userID,
          Key.email : self.email,
-         Key.password : self.password,
-         Key.currentRound : self.currentRound,
-         Key.historicalRounds : self.historicalRounds]
+         Key.collectionType : self.collectionType,
+         Key.historicalRounds : self.historicalRounds.map {$0.roundData}]
     }
     
-    init(userID: String, email: String, password: String, currentRound: Round?, historicalRounds: [Round]?, collectionType: String = "users" ) {
+    init(userID: String, email: String, historicalRounds: [Round], collectionType: String = "users" ) {
         
         self.userID = userID
         self.email = email
-        self.password = password
-        self.currentRound = currentRound
         self.historicalRounds = historicalRounds
         self.collectionType = collectionType
     }
@@ -47,11 +40,10 @@ class User: Codable {
             guard let userID = dictionary[Key.userID] as? String,
                   let collectionType = dictionary[Key.collectionType] as? String,
                   let email = dictionary[Key.email] as? String,
-                  let password = dictionary[Key.password] as? String,
-                  let currentRound = dictionary[Key.currentRound] as? Round,
-                  let historicalRounds = dictionary[Key.historicalRounds] as? [Round]
+                  let roundsArray = dictionary[Key.historicalRounds] as? [[String : Any]]
             else { return nil }
-        self.init(userID: userID, email: email, password: password, currentRound: currentRound, historicalRounds: historicalRounds, collectionType: collectionType)
+        let historicalRounds = roundsArray.compactMap({Round(fromDictionary: $0)})
+        self.init(userID: userID, email: email, historicalRounds: historicalRounds, collectionType: collectionType)
         }
 }
 

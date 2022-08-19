@@ -25,27 +25,53 @@ protocol FirebaseSyncable {
     func deleteRound(round: Round)
     func logoutUser()
     func fetchRound(completion: @escaping (Result<Round, FirebaseError>) -> Void)
-    
+    func saveUserToFirebase(with user: User, completion: @escaping (Result<Bool, FirebaseError>) -> Void)
+    func updateUser(with user: User, completion: @escaping (Result<Bool, FirebaseError>) -> Void)
+    func fetchUser(completion: @escaping (Result<User, FirebaseError>) -> Void)
 }
 
 struct FirebaseService: FirebaseSyncable {
-        
+    
+    
     let storage = Storage.storage().reference()
     let reference = Firebase.Database.database().reference()
     var currentUser: User?
     
-func logoutUser() {
-    let firebaseAuth = Auth.auth()
-    do {
-        try firebaseAuth.signOut()
-    } catch let signOutError as NSError {
-        print("Error signing out", signOutError)
+    func updateUser(with user: User, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
+        reference.child("users").child(user.userID).updateChildValues(user.userData) { error, data in
+            if let error = error {
+                print(error)
+                completion(.failure(.firebaseError(error)))
+            }
+        }
     }
-}
+    func saveUserToFirebase(with user: User, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
+        reference.child("users").child(user.userID).updateChildValues(user.userData) { error, data in
+            if let error = error {
+                print(error)
+                completion(.failure(.firebaseError(error)))
+            }
+            completion(.success(true))
+        }
+        
+    }
+    
+    func logoutUser() {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print("Error signing out", signOutError)
+        }
+    }
     
     func signInWithApple(token: String, nonce: String) {
         let credentials = OAuthProvider.credential(withProviderID: "apple.com", idToken: token, rawNonce: nonce)
         Auth.auth().signIn(with: credentials) { authResult, error in
+            let ID = authResult?.user.uid
+            let email = authResult?.user.email
+            UserDefaults.standard.set(ID, forKey: "userID")
+            UserDefaults.standard.set(email, forKey: "email")
             if let error = error {
                 print(error.localizedDescription)
                 return
@@ -57,8 +83,10 @@ func logoutUser() {
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             switch authResult {
             case .some(let result):
-                // not using this result properly
-                UserDefaults.standard.set(result.user.uid, forKey: "userID")
+                let id = result.user.uid
+                let email = result.user.email
+                UserDefaults.standard.set(id, forKey: "userID")
+                UserDefaults.standard.set(email, forKey: "email")
                 completion(.success(true))
             case .none:
                 if let error = error {
@@ -72,11 +100,12 @@ func logoutUser() {
         Auth.auth().signIn(withEmail: email, password: password) { signInResult, error in
             switch signInResult {
             case .some(let result):
-                completion(.success(true))
-                guard let result = signInResult else { return }
+                
                 let id = result.user.uid
-                let currentUser = User(userID: id, email: email, password: password, currentRound: nil, historicalRounds: [])
- //               self.currentUser = currentUser
+                let email = result.user.email
+                UserDefaults.standard.set(id, forKey: "userID")
+                UserDefaults.standard.set(email, forKey: "email")
+                completion(.success(true))
             case .none:
                 if let error = error {
                     completion(.failure(.firebaseError(error)))
@@ -120,6 +149,27 @@ func logoutUser() {
         reference.child("rounds").child(round.uuid).removeValue()
     }
     
+    func fetchUser(completion: @escaping (Result<User, FirebaseError>) -> Void) {
+        let currentUser = UserDefaults.standard.string(forKey: "userID")
+        reference.child("users").child(currentUser!).getData { error, snapshot in
+            if let error = error {
+                completion(.failure(.firebaseError(error)))
+                return
+            }
+            guard let data = snapshot?.value as? [String : Any]
+            else {
+                completion(.failure(.noDataFound))
+                return
+            }
+            guard let currentUser = User(from: data) else {
+                completion(.failure(.noDataFound))
+                return
+            }
+            completion(.success(currentUser))
+            
+        }
+    }
+    
     func fetchRound(completion: @escaping (Result<Round, FirebaseError>) -> Void) {
         let currentRoundId = UserDefaults.standard.string(forKey: "activeRoundId")
         reference.child("rounds").child(currentRoundId!).getData { error, snapshot in
@@ -140,23 +190,5 @@ func logoutUser() {
         }
         
     }
-//    func saveCurrentRound() {
-//        let currentRoundID = UserDefaults.standard.value(forKey: "activeRoundID")
-//        reference.child("rounds").child(currentRoundId!).getData { error, snapshot in
-//            if let error = error {
-//                completion(.failure(.firebaseError(error)))
-//                return
-//            }
-//            guard let data = snapshot?.value as? [String : Any]
-//            else {
-//                completion(.failure(.noDataFound))
-//                return
-//            }
-//            guard let round = Round(fromDictionary: data) else {
-//                completion(.failure(.noDataFound))
-//                return
-//            }
-//            completion(.success(round))
-//        }
-//    }
+    
 }

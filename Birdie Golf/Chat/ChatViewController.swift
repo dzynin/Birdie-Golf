@@ -15,30 +15,18 @@ class ChatViewController: UIViewController {
       
         // Do any additional setup after loading the view.
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+                let alertController = UIAlertController(title: "Chat feature coming soon!", message: "Click ok and get back to enjoying your golf round.", preferredStyle: .alert)
+                let confirmAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+                alertController.addAction(confirmAction)
+                self.present(alertController, animated: true, completion: nil)
+                return
+    //        let storyboard = UIStoryboard(name: "TabBarController", bundle: nil)
+    //        let playViewController = storyboard.instantiateViewController(withIdentifier: "TabBarMain")
+            }
 
 }
 
-// This extension gives radius functionality on the attributes inspector for the storyboard.
-@IBDesignable extension UIView {
-    @IBInspectable var cornerRadius: CGFloat {
-        get { return layer.cornerRadius }
-        set {
-              layer.cornerRadius = newValue
 
-              // If masksToBounds is true, subviews will be
-              // clipped to the rounded corners.
-              layer.masksToBounds = (newValue > 0)
-        }
-    }
-}
+
