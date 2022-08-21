@@ -179,6 +179,7 @@
 		9D1BB7D5289354990079419A /* SignInScreenView */ = {
 			isa = PBXGroup;
 			children = (
+				9D1BB7D3289336F10079419A /* SignIn.storyboard */,
 				9D1BB7D6289354D20079419A /* SignInViewController.swift */,
 				9DF13324289DC022006049DE /* SignInViewModel.swift */,
 			);
@@ -188,6 +189,7 @@
 		9DA3CA2C28A067CF00AD880D /* CreateAccountView */ = {
 			isa = PBXGroup;
 			children = (
+				EDB236F52892E16000D0E96B /* Main.storyboard */,
 				9DC4C13328A0ECB3000F5E67 /* CreateAccountViewController.swift */,
 				9DA3CA2F28A0683D00AD880D /* CreateAccountViewModel.swift */,
 			);
@@ -197,6 +199,7 @@
 		9DDD045A28A46BAC00628D26 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				9DDD045428A465CC00628D26 /* Settings.storyboard */,
 				9DDD045628A46A6D00628D26 /* SettingsViewController.swift */,
 				9DDD045828A46BA100628D26 /* SettingsViewModel.swift */,
 			);
@@ -206,6 +209,7 @@
 		9DE7F38228A184270078E256 /* LeaderboardView */ = {
 			isa = PBXGroup;
 			children = (
+				EDB236EF2892D96E00D0E96B /* Leaderboard.storyboard */,
 				9DE7F38528A184670078E256 /* LeaderboardViewModel.swift */,
 				9DE7F38728A1A6A30078E256 /* LeaderboardTableViewCell.swift */,
 				9DDD044C28A443CF00628D26 /* LeaderboardViewController.swift */,
@@ -236,6 +240,7 @@
 		ED8D00862898385500075CB4 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				EDB236F12892D97900D0E96B /* Chat.storyboard */,
 				ED8D0089289838D600075CB4 /* ChatViewController.swift */,
 			);
 			path = Chat;
@@ -244,6 +249,7 @@
 		ED8D008E289844A100075CB4 /* Scorecard */ = {
 			isa = PBXGroup;
 			children = (
+				EDB236F32892D98C00D0E96B /* Scorecard.storyboard */,
 				ED8D008F289844B900075CB4 /* ScorecardViewController.swift */,
 				9DAD23EC28AD59C400EBB986 /* ScorecardViewModel.swift */,
 				9DAD23EE28AD59D600EBB986 /* ScorecardTableViewCell.swift */,
@@ -271,13 +277,13 @@
 		EDA928482891AABA0038BC34 /* Birdie Golf */ = {
 			isa = PBXGroup;
 			children = (
-				9DE7F38228A184270078E256 /* LeaderboardView */,
 				9DE7F38128A159570078E256 /* Birdie Golf.entitlements */,
 				9DF13318289C3FD1006049DE /* Helper Files */,
 				9DF3D5B82899F61C00A64583 /* Models */,
 				9D2471002899B27A0004EFAF /* GoogleService-Info.plist */,
 				ED8D008E289844A100075CB4 /* Scorecard */,
 				ED8D00862898385500075CB4 /* Chat */,
+				9DE7F38228A184270078E256 /* LeaderboardView */,
 				EDB82B8228A3355700CF974C /* PlayRound */,
 				EDF7071D28A17B3500E488F4 /* Pre-Game */,
 				9DDD045A28A46BAC00628D26 /* Settings */,
@@ -306,17 +312,8 @@
 		EDAB2E0D2892D51B00E58DA3 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				EDB236F52892E16000D0E96B /* Main.storyboard */,
 				EDB236E72892D85100D0E96B /* TabBarController.storyboard */,
-				9D1BB7D3289336F10079419A /* SignIn.storyboard */,
-				ED8D00932899D2F700075CB4 /* Pre-game.storyboard */,
-				EDB236ED2892D96100D0E96B /* Play.storyboard */,
-				EDF7072428A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard */,
-				EDB236F32892D98C00D0E96B /* Scorecard.storyboard */,
-				EDB236F12892D97900D0E96B /* Chat.storyboard */,
-				EDB236EF2892D96E00D0E96B /* Leaderboard.storyboard */,
 				9D76E8DD28984323001D03F1 /* Tourney.storyboard */,
-				9DDD045428A465CC00628D26 /* Settings.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -333,6 +330,7 @@
 		EDB82B8228A3355700CF974C /* PlayRound */ = {
 			isa = PBXGroup;
 			children = (
+				EDB236ED2892D96100D0E96B /* Play.storyboard */,
 				EDB82B8328A33AA000CF974C /* PlayRoundViewModel.swift */,
 				EDB82B8528A33AB000CF974C /* PlayRoundViewController.swift */,
 				EDB82BB428A4518700CF974C /* AddUserViewController.swift */,
@@ -344,8 +342,10 @@
 		EDF7071D28A17B3500E488F4 /* Pre-Game */ = {
 			isa = PBXGroup;
 			children = (
+				ED8D00932899D2F700075CB4 /* Pre-game.storyboard */,
 				EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */,
 				EDF7072028A17D6300E488F4 /* PregameViewController.swift */,
+				EDF7072428A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard */,
 				EDF7072628A1C88100E488F4 /* HoleSelectionAlertViewController.swift */,
 				EDB6E02228A3095E00782091 /* RoundStartViewModel.swift */,
 			);
