@@ -10,12 +10,15 @@ import UIKit
 class PregameViewController: UIViewController {
     
     
+    @IBOutlet weak var tableView: UITableView!
     
     var viewModel: PregameViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        viewModel = PregameViewModel(delegate: self)
+        tableView.dataSource = self
+        viewModel.loadRounds()
     }
     
     @IBAction func settingsButtonTapped(_ sender: Any) {
@@ -56,3 +59,12 @@ extension PregameViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
+extension PregameViewController: PregameViewModelDelegate {
+    func roundsLoadedSuccessfully() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    
+}
