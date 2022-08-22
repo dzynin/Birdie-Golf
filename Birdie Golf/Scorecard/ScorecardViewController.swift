@@ -19,9 +19,17 @@ class ScorecardViewController: UIViewController {
     
     var viewModel: ScorecardViewModel?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        
+//        viewModel = ScorecardViewModel(delegate: self)
+//        
+//        tableView.dataSource = self
+//        tableView.delegate = self
+//        
+//        initialViewSetUp()
+//    }
+    override func viewWillAppear(_ animated: Bool) {
         viewModel = ScorecardViewModel(delegate: self)
         
         tableView.dataSource = self

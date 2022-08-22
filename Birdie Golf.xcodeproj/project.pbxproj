@@ -59,8 +59,6 @@
 		EDB6E02328A3095E00782091 /* RoundStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB6E02228A3095E00782091 /* RoundStartViewModel.swift */; };
 		EDB82B8428A33AA000CF974C /* PlayRoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB82B8328A33AA000CF974C /* PlayRoundViewModel.swift */; };
 		EDB82B8628A33AB000CF974C /* PlayRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB82B8528A33AB000CF974C /* PlayRoundViewController.swift */; };
-		EDB82BB528A4518700CF974C /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB82BB428A4518700CF974C /* AddUserViewController.swift */; };
-		EDB82BB728A452AE00CF974C /* AddUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB82BB628A452AE00CF974C /* AddUserViewModel.swift */; };
 		EDB82BB928A4889E00CF974C /* Golfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB82BB828A4889E00CF974C /* Golfer.swift */; };
 		EDF7071F28A17B5700E488F4 /* PregameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */; };
 		EDF7072128A17D6300E488F4 /* PregameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7072028A17D6300E488F4 /* PregameViewController.swift */; };
@@ -120,8 +118,6 @@
 		EDB6E02228A3095E00782091 /* RoundStartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStartViewModel.swift; sourceTree = "<group>"; };
 		EDB82B8328A33AA000CF974C /* PlayRoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRoundViewModel.swift; sourceTree = "<group>"; };
 		EDB82B8528A33AB000CF974C /* PlayRoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRoundViewController.swift; sourceTree = "<group>"; };
-		EDB82BB428A4518700CF974C /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
-		EDB82BB628A452AE00CF974C /* AddUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
 		EDB82BB828A4889E00CF974C /* Golfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Golfer.swift; sourceTree = "<group>"; };
 		EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregameViewModel.swift; sourceTree = "<group>"; };
 		EDF7072028A17D6300E488F4 /* PregameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregameViewController.swift; sourceTree = "<group>"; };
@@ -333,8 +329,6 @@
 				EDB236ED2892D96100D0E96B /* Play.storyboard */,
 				EDB82B8328A33AA000CF974C /* PlayRoundViewModel.swift */,
 				EDB82B8528A33AB000CF974C /* PlayRoundViewController.swift */,
-				EDB82BB428A4518700CF974C /* AddUserViewController.swift */,
-				EDB82BB628A452AE00CF974C /* AddUserViewModel.swift */,
 			);
 			path = PlayRound;
 			sourceTree = "<group>";
@@ -457,7 +451,6 @@
 				9DC4C13428A0ECB3000F5E67 /* CreateAccountViewController.swift in Sources */,
 				EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */,
 				EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */,
-				EDB82BB728A452AE00CF974C /* AddUserViewModel.swift in Sources */,
 				9DF3D5BA2899F63800A64583 /* User.swift in Sources */,
 				ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */,
 				9D4F1CE628A1DD86008F36EB /* UserScore.swift in Sources */,
@@ -471,7 +464,6 @@
 				9DE7F38828A1A6A30078E256 /* LeaderboardTableViewCell.swift in Sources */,
 				9DF1331A289C3FEF006049DE /* FirebaseService.swift in Sources */,
 				EDF7072128A17D6300E488F4 /* PregameViewController.swift in Sources */,
-				EDB82BB528A4518700CF974C /* AddUserViewController.swift in Sources */,
 				9DA3CA3028A0683D00AD880D /* CreateAccountViewModel.swift in Sources */,
 				EDB82BB928A4889E00CF974C /* Golfer.swift in Sources */,
 				9DAD23EF28AD59D600EBB986 /* ScorecardTableViewCell.swift in Sources */,
