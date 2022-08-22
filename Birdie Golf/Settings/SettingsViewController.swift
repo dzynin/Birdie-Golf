@@ -54,6 +54,10 @@ class SettingsViewController: UIViewController {
                 case .failure(let failure):
                     print(failure)
                 }
+                let storyboard = UIStoryboard(name: "Pre-game", bundle: nil)
+                let preGameViewController =
+                storyboard.instantiateViewController(withIdentifier: "PregameView")
+                (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(viewController: preGameViewController )
             }
         }))
         alertFinishedRound.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
