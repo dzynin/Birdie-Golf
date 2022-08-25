@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Merriweather-Bold.otf">
+            <string>Merriweather-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Hole Selection Alert View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="holeAlert" id="Y6W-OH-hqX" customClass="HoleSelectionAlertViewController" customModule="Birdie_Golf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jvu-6i-o3n" customClass="NumberOfHolesNib" customModule="Birdie_Golf" customModuleProvider="target">
+                                <rect key="frame" x="82" y="160.5" width="250" height="475"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gY7-xm-kXb">
+                                        <rect key="frame" x="50" y="8" width="150" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1IU-78-hSQ">
+                                        <rect key="frame" x="200" y="2" width="46" height="31"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.001134904684" green="0.37271827460000001" blue="0.19108915330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="xmark.app" catalog="system"/>
+                                        <connections>
+                                            <action selector="cancelButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eqJ-2I-X5s"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="course name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dTs-kX-Dib">
+                                        <rect key="frame" x="20" y="45" width="210" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many holes?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bP-RP-G4l">
+                                        <rect key="frame" x="20" y="99" width="210" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByR-cK-v7V">
+                                        <rect key="frame" x="20" y="432" width="210" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Enter Round">
+                                            <color key="baseBackgroundColor" red="0.0025140692009999999" green="0.610170722" blue="0.31615209579999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="enterRoundButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eIS-Uq-dgY"/>
+                                        </connections>
+                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="q7E-VF-b2O">
+                                        <rect key="frame" x="31.5" y="145.5" width="187.5" height="32"/>
+                                        <color key="backgroundColor" red="0.26882451769999999" green="0.60278803110000001" blue="0.34897208210000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <segments>
+                                            <segment title="9 Holes"/>
+                                            <segment title="18 Holes"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who is playing?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eua-0e-dmn">
+                                        <rect key="frame" x="12" y="196.5" width="226" height="26"/>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Golfer #1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5AO-X9-CVg">
+                                        <rect key="frame" x="12" y="242.5" width="226" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Golfer #2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gk6-QV-yNa">
+                                        <rect key="frame" x="12" y="288.5" width="226" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Golfer #3" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ph-8F-Kep">
+                                        <rect key="frame" x="12" y="334.5" width="226" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Golfer #4" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a3v-Bb-yQj">
+                                        <rect key="frame" x="12" y="380.5" width="226" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Eua-0e-dmn" firstAttribute="top" secondItem="q7E-VF-b2O" secondAttribute="bottom" constant="20" id="1qr-47-m3R"/>
+                                    <constraint firstAttribute="trailing" secondItem="6bP-RP-G4l" secondAttribute="trailing" constant="20" id="3wN-k7-W6z"/>
+                                    <constraint firstAttribute="trailing" secondItem="1IU-78-hSQ" secondAttribute="trailing" constant="4" id="4Qf-pk-eZY"/>
+                                    <constraint firstItem="gk6-QV-yNa" firstAttribute="leading" secondItem="jvu-6i-o3n" secondAttribute="leading" constant="12" id="5kT-gj-zc8"/>
+                                    <constraint firstItem="ByR-cK-v7V" firstAttribute="leading" secondItem="jvu-6i-o3n" secondAttribute="leading" constant="20" id="7IT-Hg-uF4"/>
+                                    <constraint firstAttribute="trailing" secondItem="5AO-X9-CVg" secondAttribute="trailing" constant="12" id="9Cf-uw-ezf"/>
+                                    <constraint firstItem="6bP-RP-G4l" firstAttribute="leading" secondItem="jvu-6i-o3n" secondAttribute="leading" constant="20" id="9HC-o8-ejH"/>
+                                    <constraint firstItem="dTs-kX-Dib" firstAttribute="top" secondItem="1IU-78-hSQ" secondAttribute="bottom" constant="12" id="Aay-Qu-6WO"/>
+                                    <constraint firstAttribute="trailing" secondItem="Eua-0e-dmn" secondAttribute="trailing" constant="12" id="CTV-vf-5nY"/>
+                                    <constraint firstItem="1ph-8F-Kep" firstAttribute="top" secondItem="gk6-QV-yNa" secondAttribute="bottom" constant="12" id="Dd8-5Q-HcE"/>
+                                    <constraint firstItem="q7E-VF-b2O" firstAttribute="centerX" secondItem="6bP-RP-G4l" secondAttribute="centerX" id="FzZ-W8-xUe"/>
+                                    <constraint firstAttribute="height" constant="475" id="Lvf-aa-XH9"/>
+                                    <constraint firstItem="gY7-xm-kXb" firstAttribute="leading" secondItem="jvu-6i-o3n" secondAttribute="leading" constant="50" id="MmU-Yu-Za0"/>
+                                    <constraint firstItem="1IU-78-hSQ" firstAttribute="top" secondItem="jvu-6i-o3n" secondAttribute="top" constant="2" id="OAA-a5-9qv"/>
+                                    <constraint firstAttribute="width" constant="250" id="Ohl-xC-2zM"/>
+                                    <constraint firstAttribute="trailing" secondItem="1ph-8F-Kep" secondAttribute="trailing" constant="12" id="Q4b-Zq-VGd"/>
+                                    <constraint firstItem="1ph-8F-Kep" firstAttribute="leading" secondItem="jvu-6i-o3n" secondAttribute="leading" constant="12" id="QCN-TJ-FcP"/>
+                                    <constraint firstItem="Eua-0e-dmn" firstAttribute="leading" secondItem="jvu-6i-o3n" secondAttribute="leading" constant="12" id="QDs-tD-1Wf"/>
+                                    <constraint firstAttribute="bottom" secondItem="ByR-cK-v7V" secondAttribute="bottom" constant="12" id="Snh-QH-WRJ"/>
+                                    <constraint firstItem="6bP-RP-G4l" firstAttribute="top" secondItem="dTs-kX-Dib" secondAttribute="bottom" constant="20" id="VVn-Tq-6UC"/>
+                                    <constraint firstItem="5AO-X9-CVg" firstAttribute="top" secondItem="Eua-0e-dmn" secondAttribute="bottom" constant="20" id="a6u-q8-cVk"/>
+                                    <constraint firstItem="a3v-Bb-yQj" firstAttribute="leading" secondItem="jvu-6i-o3n" secondAttribute="leading" constant="12" id="aWY-HK-hub"/>
+                                    <constraint firstItem="gk6-QV-yNa" firstAttribute="top" secondItem="5AO-X9-CVg" secondAttribute="bottom" constant="12" id="dSg-sW-kq1"/>
+                                    <constraint firstItem="dTs-kX-Dib" firstAttribute="leading" secondItem="jvu-6i-o3n" secondAttribute="leading" constant="20" id="fxX-59-0ZW"/>
+                                    <constraint firstAttribute="trailing" secondItem="ByR-cK-v7V" secondAttribute="trailing" constant="20" id="gnj-9j-M5s"/>
+                                    <constraint firstItem="q7E-VF-b2O" firstAttribute="top" secondItem="6bP-RP-G4l" secondAttribute="bottom" constant="21" id="is0-9A-YBG"/>
+                                    <constraint firstItem="gY7-xm-kXb" firstAttribute="top" secondItem="jvu-6i-o3n" secondAttribute="top" constant="8" id="ko6-tq-f2b"/>
+                                    <constraint firstItem="q7E-VF-b2O" firstAttribute="width" secondItem="jvu-6i-o3n" secondAttribute="width" multiplier="0.75" id="l3e-1B-EOG"/>
+                                    <constraint firstAttribute="trailing" secondItem="gY7-xm-kXb" secondAttribute="trailing" constant="50" id="nkN-Gd-ngj"/>
+                                    <constraint firstAttribute="trailing" secondItem="a3v-Bb-yQj" secondAttribute="trailing" constant="12" id="pHo-ha-PLl"/>
+                                    <constraint firstAttribute="trailing" secondItem="dTs-kX-Dib" secondAttribute="trailing" constant="20" id="xko-mq-7sC"/>
+                                    <constraint firstAttribute="trailing" secondItem="gk6-QV-yNa" secondAttribute="trailing" constant="12" id="xq1-0j-VEV"/>
+                                    <constraint firstItem="a3v-Bb-yQj" firstAttribute="top" secondItem="1ph-8F-Kep" secondAttribute="bottom" constant="12" id="ybF-dD-EQs"/>
+                                    <constraint firstItem="5AO-X9-CVg" firstAttribute="leading" secondItem="jvu-6i-o3n" secondAttribute="leading" constant="12" id="znk-TC-p1A"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.34849714421901568" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jvu-6i-o3n" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="1Db-3T-yIh"/>
+                            <constraint firstItem="jvu-6i-o3n" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-50" id="aEn-3T-PL5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="courseNameTextField" destination="dTs-kX-Dib" id="jLh-64-IN8"/>
+                        <outlet property="firstGolferTextField" destination="5AO-X9-CVg" id="tN0-Lc-dfc"/>
+                        <outlet property="fourthGolferTextField" destination="a3v-Bb-yQj" id="gOV-SB-ZJQ"/>
+                        <outlet property="secondGolferTextField" destination="gk6-QV-yNa" id="zzh-2F-T9c"/>
+                        <outlet property="segmentedControl" destination="q7E-VF-b2O" id="789-CG-WyE"/>
+                        <outlet property="thirdGolferTextField" destination="1ph-8F-Kep" id="f5d-qe-Mob"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="91.741071428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xmark.app" catalog="system" width="128" height="114"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

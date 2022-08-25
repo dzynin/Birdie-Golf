@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Merriweather-Bold.otf">
+            <string>Merriweather-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Pregame View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PregameView" id="Y6W-OH-hqX" customClass="PregameViewController" customModule="Birdie_Golf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="33W-gV-Edt">
+                                <rect key="frame" x="0.0" y="-20" width="414" height="188"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="SRm-E4-RS6">
+                                        <rect key="frame" x="30" y="80" width="63" height="36"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dz1-5c-cUE">
+                                        <rect key="frame" x="12" y="132" width="390" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="MA8-Ke-pRJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Start a Round">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="startRoundButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="291-KD-0PK"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Birdie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QA3-Dc-ovh">
+                                        <rect key="frame" x="105" y="80" width="207" height="44"/>
+                                        <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRl-fj-McM">
+                                        <rect key="frame" x="357" y="80" width="45" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="HK9-tS-rAO"/>
+                                            <constraint firstAttribute="height" constant="45" id="oOj-Ml-5Vg"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Menu">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="22"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="settingsButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="AJh-0L-zCO"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82e-Pj-oqI">
+                                        <rect key="frame" x="12" y="189" width="390" height="40"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Join a Round">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" red="0.001134904684" green="0.37271827460000001" blue="0.19108915330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="joinRoundButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZWF-nX-UWg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.45994293689999999" blue="0.23727780579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dz1-5c-cUE" secondAttribute="trailing" constant="12" id="0eP-dH-7pT"/>
+                                    <constraint firstItem="QA3-Dc-ovh" firstAttribute="leading" secondItem="SRm-E4-RS6" secondAttribute="trailing" constant="12" id="9gW-Uk-QIW"/>
+                                    <constraint firstItem="lRl-fj-McM" firstAttribute="top" secondItem="33W-gV-Edt" secondAttribute="top" constant="80" id="HlS-Ex-rYn"/>
+                                    <constraint firstItem="QA3-Dc-ovh" firstAttribute="top" secondItem="33W-gV-Edt" secondAttribute="top" constant="80" id="Sd8-hb-1iW"/>
+                                    <constraint firstItem="dz1-5c-cUE" firstAttribute="leading" secondItem="33W-gV-Edt" secondAttribute="leading" constant="12" id="Yfb-48-Qij"/>
+                                    <constraint firstItem="82e-Pj-oqI" firstAttribute="top" secondItem="dz1-5c-cUE" secondAttribute="bottom" constant="20" id="aAt-Zw-8uv"/>
+                                    <constraint firstItem="82e-Pj-oqI" firstAttribute="leading" secondItem="33W-gV-Edt" secondAttribute="leading" constant="12" id="ccS-16-MiK"/>
+                                    <constraint firstItem="dz1-5c-cUE" firstAttribute="top" secondItem="SRm-E4-RS6" secondAttribute="bottom" constant="20" id="d1o-7n-q9r"/>
+                                    <constraint firstAttribute="trailing" secondItem="lRl-fj-McM" secondAttribute="trailing" constant="12" id="jiA-Ak-5Sf"/>
+                                    <constraint firstItem="dz1-5c-cUE" firstAttribute="trailing" secondItem="82e-Pj-oqI" secondAttribute="trailing" id="lEW-RP-917"/>
+                                    <constraint firstItem="SRm-E4-RS6" firstAttribute="top" secondItem="33W-gV-Edt" secondAttribute="top" constant="80" id="pyh-Xs-uA1"/>
+                                    <constraint firstAttribute="bottom" secondItem="dz1-5c-cUE" secondAttribute="bottom" constant="12" id="w5A-BY-6Cw"/>
+                                    <constraint firstItem="SRm-E4-RS6" firstAttribute="leading" secondItem="33W-gV-Edt" secondAttribute="leading" constant="30" id="xgL-od-CID"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="S5Z-TQ-cIF">
+                                <rect key="frame" x="20" y="281.5" width="374" height="594.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="roundCell" textLabel="ppN-UM-vWR" detailTextLabel="fjb-P3-Ap1" style="IBUITableViewCellStyleValue1" id="KBF-Nq-1Cb">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KBF-Nq-1Cb" id="1ZW-5J-zt1">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ppN-UM-vWR">
+                                                    <rect key="frame" x="20" y="15" width="25" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fjb-P3-Ap1">
+                                                    <rect key="frame" x="321" y="15" width="33" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Rounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzx-TM-ufi">
+                                <rect key="frame" x="20" y="248" width="169" height="25.5"/>
+                                <fontDescription key="fontDescription" name="Merriweather-Bold" family="Merriweather" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="33W-gV-Edt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7NU-hs-Yi1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="S5Z-TQ-cIF" secondAttribute="trailing" constant="20" id="E55-bK-zI4"/>
+                            <constraint firstItem="33W-gV-Edt" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="FRL-Am-j2g"/>
+                            <constraint firstItem="rzx-TM-ufi" firstAttribute="top" secondItem="33W-gV-Edt" secondAttribute="bottom" constant="80" id="SY5-A6-A4v"/>
+                            <constraint firstItem="S5Z-TQ-cIF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Vsj-nv-1jf"/>
+                            <constraint firstAttribute="bottom" secondItem="S5Z-TQ-cIF" secondAttribute="bottom" constant="20" id="ZYW-We-iRq"/>
+                            <constraint firstItem="rzx-TM-ufi" firstAttribute="leading" secondItem="S5Z-TQ-cIF" secondAttribute="leading" id="lBm-QG-JZd"/>
+                            <constraint firstItem="S5Z-TQ-cIF" firstAttribute="top" secondItem="rzx-TM-ufi" secondAttribute="bottom" constant="8" id="tml-zw-50s"/>
+                            <constraint firstItem="33W-gV-Edt" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="-20" id="yf7-Ff-AKy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="33W-gV-Edt" secondAttribute="trailing" id="zSL-bV-JKX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="S5Z-TQ-cIF" id="cWd-Ec-TDa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="106.47321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Menu" width="32" height="32"/>
+        <image name="logo-placeholder" width="63" height="36"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

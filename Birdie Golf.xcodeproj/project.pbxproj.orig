@@ -18,32 +18,6 @@
 		41BE2E7328931DDB00A214EF /* Merriweather-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 41BE2E6B28931DDB00A214EF /* Merriweather-Light.otf */; };
 		9D1BB7D4289336F10079419A /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1BB7D3289336F10079419A /* SignIn.storyboard */; };
 		9D1BB7D7289354D20079419A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BB7D6289354D20079419A /* SignInViewController.swift */; };
-		9D2471012899B27A0004EFAF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D2471002899B27A0004EFAF /* GoogleService-Info.plist */; };
-		9D4F1CE628A1DD86008F36EB /* UserScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4F1CE528A1DD86008F36EB /* UserScore.swift */; };
-		9D76E8DE28984323001D03F1 /* Tourney.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D76E8DD28984323001D03F1 /* Tourney.storyboard */; };
-		9DA3CA3028A0683D00AD880D /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3CA2F28A0683D00AD880D /* CreateAccountViewModel.swift */; };
-		9DAD23ED28AD59C400EBB986 /* ScorecardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD23EC28AD59C400EBB986 /* ScorecardViewModel.swift */; };
-		9DAD23EF28AD59D600EBB986 /* ScorecardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD23EE28AD59D600EBB986 /* ScorecardTableViewCell.swift */; };
-		9DAD23F128ADFA2500EBB986 /* ScorecardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAD23F028ADFA2500EBB986 /* ScorecardHeaderView.swift */; };
-		9DC4C13428A0ECB3000F5E67 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC4C13328A0ECB3000F5E67 /* CreateAccountViewController.swift */; };
-		9DDD044D28A443CF00628D26 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD044C28A443CF00628D26 /* LeaderboardViewController.swift */; };
-		9DDD045528A465CC00628D26 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DDD045428A465CC00628D26 /* Settings.storyboard */; };
-		9DDD045728A46A6D00628D26 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD045628A46A6D00628D26 /* SettingsViewController.swift */; };
-		9DDD045928A46BA100628D26 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD045828A46BA100628D26 /* SettingsViewModel.swift */; };
-		9DE7F38628A184670078E256 /* LeaderboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7F38528A184670078E256 /* LeaderboardViewModel.swift */; };
-		9DE7F38828A1A6A30078E256 /* LeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7F38728A1A6A30078E256 /* LeaderboardTableViewCell.swift */; };
-		9DF1331A289C3FEF006049DE /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF13319289C3FEF006049DE /* FirebaseService.swift */; };
-		9DF1331D289C4409006049DE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9DF1331C289C4409006049DE /* FirebaseAuth */; };
-		9DF1331F289C4409006049DE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9DF1331E289C4409006049DE /* FirebaseDatabase */; };
-		9DF13321289C4409006049DE /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 9DF13320289C4409006049DE /* FirebaseMessaging */; };
-		9DF13323289C4409006049DE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9DF13322289C4409006049DE /* FirebaseStorage */; };
-		9DF13325289DC022006049DE /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF13324289DC022006049DE /* SignInViewModel.swift */; };
-		9DF3D5BA2899F63800A64583 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF3D5B92899F63800A64583 /* User.swift */; };
-		ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D0089289838D600075CB4 /* ChatViewController.swift */; };
-		ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D008F289844B900075CB4 /* ScorecardViewController.swift */; };
-		ED8D00942899D2F700075CB4 /* Pre-game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8D00932899D2F700075CB4 /* Pre-game.storyboard */; };
-		ED8D0096289C232100075CB4 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D0095289C232100075CB4 /* Round.swift */; };
-		ED8D0098289C24B700075CB4 /* Hole.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D0097289C24B700075CB4 /* Hole.swift */; };
 		EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA928492891AABA0038BC34 /* AppDelegate.swift */; };
 		EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */; };
 		EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDA928522891AABB0038BC34 /* Assets.xcassets */; };
@@ -56,14 +30,6 @@
 		EDB236F62892E16000D0E96B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDB236F52892E16000D0E96B /* Main.storyboard */; };
 		EDB2370A289376E000D0E96B /* NumberOfHolesAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB23708289376E000D0E96B /* NumberOfHolesAlertView.xib */; };
 		EDB2370B289376E000D0E96B /* AlertPinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDB23709289376E000D0E96B /* AlertPinView.xib */; };
-		EDB6E02328A3095E00782091 /* RoundStartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB6E02228A3095E00782091 /* RoundStartViewModel.swift */; };
-		EDB82B8428A33AA000CF974C /* PlayRoundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB82B8328A33AA000CF974C /* PlayRoundViewModel.swift */; };
-		EDB82B8628A33AB000CF974C /* PlayRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB82B8528A33AB000CF974C /* PlayRoundViewController.swift */; };
-		EDB82BB928A4889E00CF974C /* Golfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB82BB828A4889E00CF974C /* Golfer.swift */; };
-		EDF7071F28A17B5700E488F4 /* PregameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */; };
-		EDF7072128A17D6300E488F4 /* PregameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7072028A17D6300E488F4 /* PregameViewController.swift */; };
-		EDF7072528A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDF7072428A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard */; };
-		EDF7072728A1C88100E488F4 /* HoleSelectionAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7072628A1C88100E488F4 /* HoleSelectionAlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,29 +44,6 @@
 		41BE2E6B28931DDB00A214EF /* Merriweather-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Light.otf"; sourceTree = "<group>"; };
 		9D1BB7D3289336F10079419A /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		9D1BB7D6289354D20079419A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		9D2471002899B27A0004EFAF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		9D4F1CE528A1DD86008F36EB /* UserScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScore.swift; sourceTree = "<group>"; };
-		9D76E8DD28984323001D03F1 /* Tourney.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tourney.storyboard; sourceTree = "<group>"; };
-		9DA3CA2F28A0683D00AD880D /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
-		9DAD23EC28AD59C400EBB986 /* ScorecardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardViewModel.swift; sourceTree = "<group>"; };
-		9DAD23EE28AD59D600EBB986 /* ScorecardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardTableViewCell.swift; sourceTree = "<group>"; };
-		9DAD23F028ADFA2500EBB986 /* ScorecardHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardHeaderView.swift; sourceTree = "<group>"; };
-		9DC4C13328A0ECB3000F5E67 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
-		9DDD044C28A443CF00628D26 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
-		9DDD045428A465CC00628D26 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
-		9DDD045628A46A6D00628D26 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		9DDD045828A46BA100628D26 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		9DE7F38128A159570078E256 /* Birdie Golf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Birdie Golf.entitlements"; sourceTree = "<group>"; };
-		9DE7F38528A184670078E256 /* LeaderboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewModel.swift; sourceTree = "<group>"; };
-		9DE7F38728A1A6A30078E256 /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
-		9DF13319289C3FEF006049DE /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
-		9DF13324289DC022006049DE /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
-		9DF3D5B92899F63800A64583 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		ED8D0089289838D600075CB4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		ED8D008F289844B900075CB4 /* ScorecardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardViewController.swift; sourceTree = "<group>"; };
-		ED8D00932899D2F700075CB4 /* Pre-game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Pre-game.storyboard"; sourceTree = "<group>"; };
-		ED8D0095289C232100075CB4 /* Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
-		ED8D0097289C24B700075CB4 /* Hole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hole.swift; sourceTree = "<group>"; };
 		EDA928462891AABA0038BC34 /* Birdie Golf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Birdie Golf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA928492891AABA0038BC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDA9284B2891AABA0038BC34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,14 +58,6 @@
 		EDB236F52892E16000D0E96B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EDB23708289376E000D0E96B /* NumberOfHolesAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberOfHolesAlertView.xib; sourceTree = "<group>"; };
 		EDB23709289376E000D0E96B /* AlertPinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertPinView.xib; sourceTree = "<group>"; };
-		EDB6E02228A3095E00782091 /* RoundStartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundStartViewModel.swift; sourceTree = "<group>"; };
-		EDB82B8328A33AA000CF974C /* PlayRoundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRoundViewModel.swift; sourceTree = "<group>"; };
-		EDB82B8528A33AB000CF974C /* PlayRoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayRoundViewController.swift; sourceTree = "<group>"; };
-		EDB82BB828A4889E00CF974C /* Golfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Golfer.swift; sourceTree = "<group>"; };
-		EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregameViewModel.swift; sourceTree = "<group>"; };
-		EDF7072028A17D6300E488F4 /* PregameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregameViewController.swift; sourceTree = "<group>"; };
-		EDF7072428A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HoleSelectionAlertViewController.storyboard; sourceTree = "<group>"; };
-		EDF7072628A1C88100E488F4 /* HoleSelectionAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleSelectionAlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,10 +65,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DF13321289C4409006049DE /* FirebaseMessaging in Frameworks */,
-				9DF13323289C4409006049DE /* FirebaseStorage in Frameworks */,
-				9DF1331F289C4409006049DE /* FirebaseDatabase in Frameworks */,
-				9DF1331D289C4409006049DE /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,83 +106,9 @@
 		9D1BB7D5289354990079419A /* SignInScreenView */ = {
 			isa = PBXGroup;
 			children = (
-				9D1BB7D3289336F10079419A /* SignIn.storyboard */,
 				9D1BB7D6289354D20079419A /* SignInViewController.swift */,
-				9DF13324289DC022006049DE /* SignInViewModel.swift */,
 			);
 			path = SignInScreenView;
-			sourceTree = "<group>";
-		};
-		9DA3CA2C28A067CF00AD880D /* CreateAccountView */ = {
-			isa = PBXGroup;
-			children = (
-				EDB236F52892E16000D0E96B /* Main.storyboard */,
-				9DC4C13328A0ECB3000F5E67 /* CreateAccountViewController.swift */,
-				9DA3CA2F28A0683D00AD880D /* CreateAccountViewModel.swift */,
-			);
-			path = CreateAccountView;
-			sourceTree = "<group>";
-		};
-		9DDD045A28A46BAC00628D26 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				9DDD045428A465CC00628D26 /* Settings.storyboard */,
-				9DDD045628A46A6D00628D26 /* SettingsViewController.swift */,
-				9DDD045828A46BA100628D26 /* SettingsViewModel.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		9DE7F38228A184270078E256 /* LeaderboardView */ = {
-			isa = PBXGroup;
-			children = (
-				EDB236EF2892D96E00D0E96B /* Leaderboard.storyboard */,
-				9DE7F38528A184670078E256 /* LeaderboardViewModel.swift */,
-				9DE7F38728A1A6A30078E256 /* LeaderboardTableViewCell.swift */,
-				9DDD044C28A443CF00628D26 /* LeaderboardViewController.swift */,
-			);
-			path = LeaderboardView;
-			sourceTree = "<group>";
-		};
-		9DF13318289C3FD1006049DE /* Helper Files */ = {
-			isa = PBXGroup;
-			children = (
-				9DF13319289C3FEF006049DE /* FirebaseService.swift */,
-			);
-			path = "Helper Files";
-			sourceTree = "<group>";
-		};
-		9DF3D5B82899F61C00A64583 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				9D4F1CE528A1DD86008F36EB /* UserScore.swift */,
-				9DF3D5B92899F63800A64583 /* User.swift */,
-				ED8D0095289C232100075CB4 /* Round.swift */,
-				EDB82BB828A4889E00CF974C /* Golfer.swift */,
-				ED8D0097289C24B700075CB4 /* Hole.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		ED8D00862898385500075CB4 /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-				EDB236F12892D97900D0E96B /* Chat.storyboard */,
-				ED8D0089289838D600075CB4 /* ChatViewController.swift */,
-			);
-			path = Chat;
-			sourceTree = "<group>";
-		};
-		ED8D008E289844A100075CB4 /* Scorecard */ = {
-			isa = PBXGroup;
-			children = (
-				EDB236F32892D98C00D0E96B /* Scorecard.storyboard */,
-				ED8D008F289844B900075CB4 /* ScorecardViewController.swift */,
-				9DAD23EC28AD59C400EBB986 /* ScorecardViewModel.swift */,
-				9DAD23EE28AD59D600EBB986 /* ScorecardTableViewCell.swift */,
-				9DAD23F028ADFA2500EBB986 /* ScorecardHeaderView.swift */,
-			);
-			path = Scorecard;
 			sourceTree = "<group>";
 		};
 		EDA9283D2891AABA0038BC34 = {
@@ -273,19 +130,11 @@
 		EDA928482891AABA0038BC34 /* Birdie Golf */ = {
 			isa = PBXGroup;
 			children = (
-				9DE7F38128A159570078E256 /* Birdie Golf.entitlements */,
-				9DF13318289C3FD1006049DE /* Helper Files */,
-				9DF3D5B82899F61C00A64583 /* Models */,
-				9D2471002899B27A0004EFAF /* GoogleService-Info.plist */,
-				ED8D008E289844A100075CB4 /* Scorecard */,
-				ED8D00862898385500075CB4 /* Chat */,
-				9DE7F38228A184270078E256 /* LeaderboardView */,
-				EDB82B8228A3355700CF974C /* PlayRound */,
-				EDF7071D28A17B3500E488F4 /* Pre-Game */,
-				9DDD045A28A46BAC00628D26 /* Settings */,
-				9DA3CA2C28A067CF00AD880D /* CreateAccountView */,
+<<<<<<< .merge_file_U2q0Zn
 				9D1BB7D5289354990079419A /* SignInScreenView */,
+=======
 				EDB2370C289376E700D0E96B /* Alert Nibs */,
+>>>>>>> .merge_file_QHKMOJ
 				41BE2E5C2893197B00A214EF /* Fonts */,
 				EDAB2E0D2892D51B00E58DA3 /* Storyboards */,
 				EDAB2E072892D27500E58DA3 /* Resources */,
@@ -308,8 +157,13 @@
 		EDAB2E0D2892D51B00E58DA3 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				EDB236F52892E16000D0E96B /* Main.storyboard */,
 				EDB236E72892D85100D0E96B /* TabBarController.storyboard */,
-				9D76E8DD28984323001D03F1 /* Tourney.storyboard */,
+				EDB236ED2892D96100D0E96B /* Play.storyboard */,
+				EDB236EF2892D96E00D0E96B /* Leaderboard.storyboard */,
+				EDB236F12892D97900D0E96B /* Chat.storyboard */,
+				EDB236F32892D98C00D0E96B /* Scorecard.storyboard */,
+				9D1BB7D3289336F10079419A /* SignIn.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -321,29 +175,6 @@
 				EDB23708289376E000D0E96B /* NumberOfHolesAlertView.xib */,
 			);
 			path = "Alert Nibs";
-			sourceTree = "<group>";
-		};
-		EDB82B8228A3355700CF974C /* PlayRound */ = {
-			isa = PBXGroup;
-			children = (
-				EDB236ED2892D96100D0E96B /* Play.storyboard */,
-				EDB82B8328A33AA000CF974C /* PlayRoundViewModel.swift */,
-				EDB82B8528A33AB000CF974C /* PlayRoundViewController.swift */,
-			);
-			path = PlayRound;
-			sourceTree = "<group>";
-		};
-		EDF7071D28A17B3500E488F4 /* Pre-Game */ = {
-			isa = PBXGroup;
-			children = (
-				ED8D00932899D2F700075CB4 /* Pre-game.storyboard */,
-				EDF7071E28A17B5700E488F4 /* PregameViewModel.swift */,
-				EDF7072028A17D6300E488F4 /* PregameViewController.swift */,
-				EDF7072428A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard */,
-				EDF7072628A1C88100E488F4 /* HoleSelectionAlertViewController.swift */,
-				EDB6E02228A3095E00782091 /* RoundStartViewModel.swift */,
-			);
-			path = "Pre-Game";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,12 +193,6 @@
 			dependencies = (
 			);
 			name = "Birdie Golf";
-			packageProductDependencies = (
-				9DF1331C289C4409006049DE /* FirebaseAuth */,
-				9DF1331E289C4409006049DE /* FirebaseDatabase */,
-				9DF13320289C4409006049DE /* FirebaseMessaging */,
-				9DF13322289C4409006049DE /* FirebaseStorage */,
-			);
 			productName = "Birdie Golf";
 			productReference = EDA928462891AABA0038BC34 /* Birdie Golf.app */;
 			productType = "com.apple.product-type.application";
@@ -396,9 +221,6 @@
 				Base,
 			);
 			mainGroup = EDA9283D2891AABA0038BC34;
-			packageReferences = (
-				9DF1331B289C4409006049DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
 			productRefGroup = EDA928472891AABA0038BC34 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -419,12 +241,9 @@
 				EDB236F62892E16000D0E96B /* Main.storyboard in Resources */,
 				9D1BB7D4289336F10079419A /* SignIn.storyboard in Resources */,
 				41BE2E7028931DDB00A214EF /* Merriweather-Black.otf in Resources */,
-				9D76E8DE28984323001D03F1 /* Tourney.storyboard in Resources */,
 				41BE2E7228931DDB00A214EF /* Merriweather-BoldItalic.otf in Resources */,
 				EDB2370B289376E000D0E96B /* AlertPinView.xib in Resources */,
 				41BE2E7328931DDB00A214EF /* Merriweather-Light.otf in Resources */,
-				9DDD045528A465CC00628D26 /* Settings.storyboard in Resources */,
-				ED8D00942899D2F700075CB4 /* Pre-game.storyboard in Resources */,
 				EDA928562891AABB0038BC34 /* LaunchScreen.storyboard in Resources */,
 				EDA928532891AABB0038BC34 /* Assets.xcassets in Resources */,
 				EDB2370A289376E000D0E96B /* NumberOfHolesAlertView.xib in Resources */,
@@ -435,9 +254,7 @@
 				41BE2E6C28931DDB00A214EF /* Merriweather-Italic.otf in Resources */,
 				41BE2E7128931DDB00A214EF /* Merriweather-Bold.otf in Resources */,
 				41BE2E6F28931DDB00A214EF /* Merriweather-BlackItalic.otf in Resources */,
-				9D2471012899B27A0004EFAF /* GoogleService-Info.plist in Resources */,
 				EDB236EE2892D96100D0E96B /* Play.storyboard in Resources */,
-				EDF7072528A1C72600E488F4 /* HoleSelectionAlertViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,34 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DC4C13428A0ECB3000F5E67 /* CreateAccountViewController.swift in Sources */,
 				EDA9284A2891AABA0038BC34 /* AppDelegate.swift in Sources */,
 				EDA9284C2891AABA0038BC34 /* SceneDelegate.swift in Sources */,
-				9DF3D5BA2899F63800A64583 /* User.swift in Sources */,
-				ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */,
-				9D4F1CE628A1DD86008F36EB /* UserScore.swift in Sources */,
-				9DF13325289DC022006049DE /* SignInViewModel.swift in Sources */,
-				9DAD23F128ADFA2500EBB986 /* ScorecardHeaderView.swift in Sources */,
-				9DDD044D28A443CF00628D26 /* LeaderboardViewController.swift in Sources */,
-				9DAD23ED28AD59C400EBB986 /* ScorecardViewModel.swift in Sources */,
-				EDF7072728A1C88100E488F4 /* HoleSelectionAlertViewController.swift in Sources */,
-				EDF7071F28A17B5700E488F4 /* PregameViewModel.swift in Sources */,
-				9DDD045928A46BA100628D26 /* SettingsViewModel.swift in Sources */,
-				9DE7F38828A1A6A30078E256 /* LeaderboardTableViewCell.swift in Sources */,
-				9DF1331A289C3FEF006049DE /* FirebaseService.swift in Sources */,
-				EDF7072128A17D6300E488F4 /* PregameViewController.swift in Sources */,
-				9DA3CA3028A0683D00AD880D /* CreateAccountViewModel.swift in Sources */,
-				EDB82BB928A4889E00CF974C /* Golfer.swift in Sources */,
-				9DAD23EF28AD59D600EBB986 /* ScorecardTableViewCell.swift in Sources */,
 				9D1BB7D7289354D20079419A /* SignInViewController.swift in Sources */,
-				EDB82B8628A33AB000CF974C /* PlayRoundViewController.swift in Sources */,
-				EDB82B8428A33AA000CF974C /* PlayRoundViewModel.swift in Sources */,
-				9DE7F38628A184670078E256 /* LeaderboardViewModel.swift in Sources */,
-				ED8D0098289C24B700075CB4 /* Hole.swift in Sources */,
-				EDB6E02328A3095E00782091 /* RoundStartViewModel.swift in Sources */,
-				ED8D0096289C232100075CB4 /* Round.swift in Sources */,
-				ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */,
-				9DDD045728A46A6D00628D26 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,10 +404,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Birdie Golf/Birdie Golf.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Birdie Golf/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -642,10 +432,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Birdie Golf/Birdie Golf.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Birdie Golf/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -689,40 +477,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		9DF1331B289C4409006049DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		9DF1331C289C4409006049DE /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9DF1331B289C4409006049DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		9DF1331E289C4409006049DE /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9DF1331B289C4409006049DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		9DF13320289C4409006049DE /* FirebaseMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9DF1331B289C4409006049DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseMessaging;
-		};
-		9DF13322289C4409006049DE /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9DF1331B289C4409006049DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EDA9283E2891AABA0038BC34 /* Project object */;
 }

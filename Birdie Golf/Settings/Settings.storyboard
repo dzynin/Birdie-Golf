@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SettingsView" id="Y6W-OH-hqX" customClass="SettingsViewController" customModule="Birdie_Golf" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONZ-m4-jYB">
+                                <rect key="frame" x="65" y="279" width="284" height="237"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQv-3T-Arc">
+                                        <rect key="frame" x="20" y="24" width="244" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anh-Cc-0cp">
+                                        <rect key="frame" x="235.5" y="8" width="40.5" height="32"/>
+                                        <color key="tintColor" red="0.00020880332159999999" green="0.45717734100000001" blue="0.24039614200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="xmark.app" catalog="system"/>
+                                        <connections>
+                                            <action selector="closedOutBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="BPp-GJ-Jkd"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="xMI-rS-sNz">
+                                        <rect key="frame" x="20" y="88" width="244" height="109"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NoU-St-fxd">
+                                                <rect key="frame" x="0.0" y="0.0" width="244" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="ucQ-4F-Y1N"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.00020880332159999999" green="0.45717734100000001" blue="0.24039614200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Logout"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signOutButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="s5u-Eg-KvA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rzt-je-VN7">
+                                                <rect key="frame" x="0.0" y="65" width="244" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="qjF-tU-mbN"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.00020880332159999999" green="0.45717734100000001" blue="0.24039614200000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="End Round"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="endRoundBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="W00-Go-GKM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbP-m0-WIw">
+                                        <rect key="frame" x="80.5" y="204" width="123" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Delete Account">
+                                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="deleteAccountButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iEQ-qo-fsZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.69411766529999996" green="0.84705877299999999" blue="0.6784313917" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="xMI-rS-sNz" firstAttribute="top" secondItem="anh-Cc-0cp" secondAttribute="bottom" constant="48" id="2Yo-sq-VkC"/>
+                                    <constraint firstItem="yQv-3T-Arc" firstAttribute="leading" secondItem="ONZ-m4-jYB" secondAttribute="leading" constant="20" id="3mV-6d-8z8"/>
+                                    <constraint firstAttribute="bottom" secondItem="QbP-m0-WIw" secondAttribute="bottom" constant="2" id="EzK-un-Sfl"/>
+                                    <constraint firstAttribute="bottom" secondItem="xMI-rS-sNz" secondAttribute="bottom" constant="40" id="HKy-lu-uEi"/>
+                                    <constraint firstItem="anh-Cc-0cp" firstAttribute="top" secondItem="ONZ-m4-jYB" secondAttribute="top" constant="8" id="KKU-oB-3av"/>
+                                    <constraint firstAttribute="trailing" secondItem="anh-Cc-0cp" secondAttribute="trailing" constant="8" id="Q1G-d8-rfN"/>
+                                    <constraint firstItem="yQv-3T-Arc" firstAttribute="top" secondItem="ONZ-m4-jYB" secondAttribute="top" constant="24" id="akR-eg-KNS"/>
+                                    <constraint firstAttribute="trailing" secondItem="yQv-3T-Arc" secondAttribute="trailing" constant="20" id="cyT-XZ-nZo"/>
+                                    <constraint firstItem="xMI-rS-sNz" firstAttribute="leading" secondItem="ONZ-m4-jYB" secondAttribute="leading" constant="20" id="hPJ-2r-AEm"/>
+                                    <constraint firstItem="QbP-m0-WIw" firstAttribute="centerX" secondItem="ONZ-m4-jYB" secondAttribute="centerX" id="wwF-3h-MDe"/>
+                                    <constraint firstAttribute="trailing" secondItem="xMI-rS-sNz" secondAttribute="trailing" constant="20" id="z6J-uT-FRJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ONZ-m4-jYB" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.264509" id="2sT-eB-80m"/>
+                            <constraint firstItem="ONZ-m4-jYB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="235" id="4Kr-0e-ANC"/>
+                            <constraint firstItem="ONZ-m4-jYB" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="VrM-Ww-QOe"/>
+                            <constraint firstItem="ONZ-m4-jYB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="65" id="hhg-Eh-WNL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ONZ-m4-jYB" secondAttribute="trailing" constant="65" id="iCJ-c6-QvD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4.3478260869565224" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xmark.app" catalog="system" width="128" height="114"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
