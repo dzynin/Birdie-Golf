@@ -30,6 +30,8 @@ protocol FirebaseSyncable {
     func updateUser(with user: User, completion: @escaping (Result<Bool, FirebaseError>) -> Void)
     func fetchUser(completion: @escaping (Result<User, FirebaseError>) -> Void)
     func deleteUserFromFirebase(with userID: String)
+    func saveHistoricalRound(_ user: User, _ round: Round, completion: @escaping (Result<User, FirebaseError>) -> Void)
+    func addRoundToUser(_ round: Round)
 }
 
 struct FirebaseService: FirebaseSyncable {
@@ -38,6 +40,11 @@ struct FirebaseService: FirebaseSyncable {
     let storage = Storage.storage().reference()
     let reference = Firebase.Database.database().reference()
     var currentUser: User?
+    
+    //MARK: Need to remove the hardcoding of this function
+    func addRoundToUser(_ round: Round) {
+        reference.child("users").child("tXYy9T22ZwQyA4VGojZC2vzYL9d2").child("historicalRounds").child(round.uuid).updateChildValues(round.roundData)
+    }
     
     func updateUser(with user: User, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
         reference.child("users").child(user.userID).updateChildValues(user.userData) { error, data in
@@ -128,6 +135,19 @@ struct FirebaseService: FirebaseSyncable {
             UserDefaults.standard.set(round.uuid, forKey: "activeRoundId")
             completion(.success(round))
         }
+    }
+    
+    func saveHistoricalRound(_ user: User, _ round: Round, completion: @escaping (Result<User, FirebaseError>) -> Void) {
+        reference.child("users").child(user.userID).child(round.uuid).updateChildValues(user.userData) { error,
+            reference in
+            if let error = error {
+                print(error)
+                completion(.failure(.firebaseError(error)))
+            }
+            UserDefaults.standard.set(user.userID, forKey: "historicalRounds")
+            completion(.success(user))
+        }
+        
     }
     
     func loadRounds(completion: @escaping (Result<[Round], FirebaseError>) -> Void) {
