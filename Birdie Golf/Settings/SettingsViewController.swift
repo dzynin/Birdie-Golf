@@ -63,6 +63,7 @@ class SettingsViewController: UIViewController {
         alertFinishedRound.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(alertFinishedRound, animated: true, completion: nil)
     }
+    
     @IBAction func deleteAccountButtonTapped(_ sender: Any) {
         let alertController = UIAlertController(title: "Delete account?", message: "Are you sure that you want to proceed?", preferredStyle: .alert)
         let declineAction = UIAlertAction(title: "No", style: .cancel, handler: nil)

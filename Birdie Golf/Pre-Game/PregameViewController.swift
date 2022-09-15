@@ -56,7 +56,6 @@ extension PregameViewController: UITableViewDelegate, UITableViewDataSource {
         //        cell.detailTextLabel?.text = String(round.date)
         return cell
     }
-    
 }
 
 extension PregameViewController: PregameViewModelDelegate {
@@ -65,6 +64,4 @@ extension PregameViewController: PregameViewModelDelegate {
             self.tableView.reloadData()
         }
     }
-    
-    
 }
