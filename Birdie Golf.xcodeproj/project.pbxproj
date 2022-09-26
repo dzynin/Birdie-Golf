@@ -39,6 +39,7 @@
 		9DF13323289C4409006049DE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9DF13322289C4409006049DE /* FirebaseStorage */; };
 		9DF13325289DC022006049DE /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF13324289DC022006049DE /* SignInViewModel.swift */; };
 		9DF3D5BA2899F63800A64583 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF3D5B92899F63800A64583 /* User.swift */; };
+		ED0685DA28E246B0001C9C9E /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ED0685D928E246B0001C9C9E /* IQKeyboardManagerSwift */; };
 		ED33572128CBFDEC0030C3A9 /* HoleNumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED33572028CBFDEC0030C3A9 /* HoleNumberCell.xib */; };
 		ED33572328CBFE280030C3A9 /* HoleNumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33572228CBFE280030C3A9 /* HoleNumberCell.swift */; };
 		ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D0089289838D600075CB4 /* ChatViewController.swift */; };
@@ -134,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED0685DA28E246B0001C9C9E /* IQKeyboardManagerSwift in Frameworks */,
 				9DF13321289C4409006049DE /* FirebaseMessaging in Frameworks */,
 				9DF13323289C4409006049DE /* FirebaseStorage in Frameworks */,
 				9DF1331F289C4409006049DE /* FirebaseDatabase in Frameworks */,
@@ -373,6 +375,7 @@
 				9DF1331E289C4409006049DE /* FirebaseDatabase */,
 				9DF13320289C4409006049DE /* FirebaseMessaging */,
 				9DF13322289C4409006049DE /* FirebaseStorage */,
+				ED0685D928E246B0001C9C9E /* IQKeyboardManagerSwift */,
 			);
 			productName = "Birdie Golf";
 			productReference = EDA928462891AABA0038BC34 /* Birdie Golf.app */;
@@ -404,6 +407,7 @@
 			mainGroup = EDA9283D2891AABA0038BC34;
 			packageReferences = (
 				9DF1331B289C4409006049DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				ED0685D828E246B0001C9C9E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = EDA928472891AABA0038BC34 /* Products */;
 			projectDirPath = "";
@@ -719,6 +723,14 @@
 				kind = branch;
 			};
 		};
+		ED0685D828E246B0001C9C9E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -741,6 +753,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9DF1331B289C4409006049DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		ED0685D928E246B0001C9C9E /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED0685D828E246B0001C9C9E /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
