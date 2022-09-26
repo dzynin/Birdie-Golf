@@ -36,16 +36,17 @@ class SettingsViewModel {
                 let roundArray = [round]
                guard let id = UserDefaults.standard.string(forKey: "userID"),
                         let email = UserDefaults.standard.string(forKey: "email") else { return }
-                let user = User(userID: id, email: email, historicalRounds: roundArray)
-                self.service.saveUserToFirebase(with: user) { result in
-                    switch result {
-                    case .success(let success):
+                self.service.addRoundToUser(round)
+//                let user = User(userID: id, email: email, historicalRounds: roundArray)
+//                self.service.saveUserToFirebase(with: user) { result in
+//                    switch result {
+//                    case .success(let success):
                         self.delegate?.roundSavedSuccessfully()
-                        completion(.success(success))
-                    case .failure(let failure):
-                        completion(.failure(failure))
-                    }
-                }
+                        completion(.success(true))
+//                    case .failure(let failure):
+//                        completion(.failure(failure))
+//                    }
+//                }
         case .failure(let error):
             completion(.failure(.firebaseError(error)))
         }

@@ -15,12 +15,17 @@ class LeaderboardViewController: UIViewController {
     
     var viewModel: LeaderboardViewModel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
         leaderboardTableView.dataSource = self
         viewModel = LeaderboardViewModel(delegate: self)
-        // Do any additional setup after loading the view.
     }
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        leaderboardTableView.dataSource = self
+//        viewModel = LeaderboardViewModel(delegate: self)
+//        // Do any additional setup after loading the view.
+//    }
     
     @IBAction func optionsBtnTapped(_ sender: Any) {
         
