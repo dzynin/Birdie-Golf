@@ -14,6 +14,7 @@ class PregameViewController: UIViewController {
     
     var viewModel: PregameViewModel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = PregameViewModel(delegate: self)
@@ -53,10 +54,13 @@ extension PregameViewController: UITableViewDelegate, UITableViewDataSource {
         
         let round = viewModel.rounds[indexPath.row]
         cell.textLabel?.text = round.courseName
-        //        cell.detailTextLabel?.text = String(round.date)
+        // TODO: - Need to add the date timestamp of the round creation
+        
         return cell
     }
 }
+
+// TODO: - Now that historical rounds are showing up. Need to allow user to tap on a round and load that data in the Play view
 
 extension PregameViewController: PregameViewModelDelegate {
     func roundsLoadedSuccessfully() {
