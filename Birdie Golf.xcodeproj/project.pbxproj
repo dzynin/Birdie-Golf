@@ -39,6 +39,8 @@
 		9DF13323289C4409006049DE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9DF13322289C4409006049DE /* FirebaseStorage */; };
 		9DF13325289DC022006049DE /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF13324289DC022006049DE /* SignInViewModel.swift */; };
 		9DF3D5BA2899F63800A64583 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF3D5B92899F63800A64583 /* User.swift */; };
+		ED33572128CBFDEC0030C3A9 /* HoleNumberCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED33572028CBFDEC0030C3A9 /* HoleNumberCell.xib */; };
+		ED33572328CBFE280030C3A9 /* HoleNumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED33572228CBFE280030C3A9 /* HoleNumberCell.swift */; };
 		ED8D008A289838D600075CB4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D0089289838D600075CB4 /* ChatViewController.swift */; };
 		ED8D0090289844B900075CB4 /* ScorecardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8D008F289844B900075CB4 /* ScorecardViewController.swift */; };
 		ED8D00942899D2F700075CB4 /* Pre-game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED8D00932899D2F700075CB4 /* Pre-game.storyboard */; };
@@ -96,6 +98,8 @@
 		9DF13319289C3FEF006049DE /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		9DF13324289DC022006049DE /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		9DF3D5B92899F63800A64583 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ED33572028CBFDEC0030C3A9 /* HoleNumberCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HoleNumberCell.xib; sourceTree = "<group>"; };
+		ED33572228CBFE280030C3A9 /* HoleNumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoleNumberCell.swift; sourceTree = "<group>"; };
 		ED8D0089289838D600075CB4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		ED8D008F289844B900075CB4 /* ScorecardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorecardViewController.swift; sourceTree = "<group>"; };
 		ED8D00932899D2F700075CB4 /* Pre-game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Pre-game.storyboard"; sourceTree = "<group>"; };
@@ -329,6 +333,8 @@
 				EDB236ED2892D96100D0E96B /* Play.storyboard */,
 				EDB82B8328A33AA000CF974C /* PlayRoundViewModel.swift */,
 				EDB82B8528A33AB000CF974C /* PlayRoundViewController.swift */,
+				ED33572028CBFDEC0030C3A9 /* HoleNumberCell.xib */,
+				ED33572228CBFE280030C3A9 /* HoleNumberCell.swift */,
 			);
 			path = PlayRound;
 			sourceTree = "<group>";
@@ -413,6 +419,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED33572128CBFDEC0030C3A9 /* HoleNumberCell.xib in Resources */,
 				EDB236F22892D97900D0E96B /* Chat.storyboard in Resources */,
 				EDB236F42892D98C00D0E96B /* Scorecard.storyboard in Resources */,
 				EDB236F02892D96E00D0E96B /* Leaderboard.storyboard in Resources */,
@@ -462,6 +469,7 @@
 				EDF7071F28A17B5700E488F4 /* PregameViewModel.swift in Sources */,
 				9DDD045928A46BA100628D26 /* SettingsViewModel.swift in Sources */,
 				9DE7F38828A1A6A30078E256 /* LeaderboardTableViewCell.swift in Sources */,
+				ED33572328CBFE280030C3A9 /* HoleNumberCell.swift in Sources */,
 				9DF1331A289C3FEF006049DE /* FirebaseService.swift in Sources */,
 				EDF7072128A17D6300E488F4 /* PregameViewController.swift in Sources */,
 				9DA3CA3028A0683D00AD880D /* CreateAccountViewModel.swift in Sources */,
@@ -543,6 +551,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -597,6 +608,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -616,10 +630,11 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RFDDACS7L9;
+				DEVELOPMENT_TEAM = W2576L6Y5L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Birdie Golf/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -630,7 +645,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Tr0picalpenguin.Birdie-Golf";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tr0picalpenguin.Good-Birdie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -648,10 +663,11 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RFDDACS7L9;
+				DEVELOPMENT_TEAM = W2576L6Y5L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Birdie Golf/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -662,7 +678,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Tr0picalpenguin.Birdie-Golf";
+				PRODUCT_BUNDLE_IDENTIFIER = "Tr0picalpenguin.Good-Birdie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

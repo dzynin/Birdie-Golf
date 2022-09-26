@@ -42,26 +42,7 @@ class PlayRoundViewController: UIViewController {
     @IBOutlet weak var fourthGolferStrokesTextField: UITextField!
     @IBOutlet weak var fourthGolferHoleDataStackView: UIStackView!
     
-    @IBOutlet weak var holeOneButton: UIButton!
-    @IBOutlet weak var holeTwoButton: UIButton!
-    @IBOutlet weak var holeThreeButton: UIButton!
-    @IBOutlet weak var holeFourButton: UIButton!
-    @IBOutlet weak var holeFiveButton: UIButton!
-    @IBOutlet weak var holeSixButton: UIButton!
-    @IBOutlet weak var holeSevenButton: UIButton!
-    @IBOutlet weak var holeEightButton: UIButton!
-    @IBOutlet weak var holeNineButton: UIButton!
-    @IBOutlet weak var holeTenButton: UIButton!
-    @IBOutlet weak var holeElevenButton: UIButton!
-    @IBOutlet weak var holeTwelveButton: UIButton!
-    @IBOutlet weak var holeThirteenButton: UIButton!
-    @IBOutlet weak var holeFourteenButton: UIButton!
-    @IBOutlet weak var holeFifteenButton: UIButton!
-    @IBOutlet weak var holeSixteenButton: UIButton!
-    @IBOutlet weak var holeSeventeenButton: UIButton!
-    @IBOutlet weak var holeEighteenButton: UIButton!
-    
-    @IBOutlet weak var holesStackView: UIStackView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var viewModel: PlayRoundViewModel!
     
@@ -86,7 +67,9 @@ class PlayRoundViewController: UIViewController {
         
         self.viewModel = PlayRoundViewModel(delegate: self)
         viewModel.fetchCurrentRound()
-        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(HoleNumberCell.nib, forCellWithReuseIdentifier: HoleNumberCell.reuseId)
     }
     
     private func setUpView() {
@@ -99,7 +82,7 @@ class PlayRoundViewController: UIViewController {
         currentScoreLabels = [firstGolferCurrentScoreLabel, secondGolferCurrentScoreLabel, thirdGolferCurrentScoreLabel, fourthGolferCurrentScoreLabel]
         puttTextFields = [firstGolferPuttsTextField, secondGolferPuttsTextField, thirdGolferPuttsTextField, fourthGolferPuttsTextField]
         strokeTextFields = [firstGolferStrokesTextField, secondGolferStrokesTextField, thirdGolferStrokesTextField, fourthGolferStrokesTextField]
-        holeButtonsArray = [holeOneButton, holeTwoButton, holeThreeButton, holeFourButton, holeFiveButton, holeSixButton, holeSevenButton, holeEightButton, holeNineButton, holeTenButton, holeElevenButton, holeTwelveButton, holeThirteenButton, holeFourteenButton, holeFifteenButton, holeSixteenButton, holeSeventeenButton, holeEighteenButton]
+        holeButtonsArray = []
         
         firstGolferView.isHidden = true
         firstGolferNameLabel.layer.borderWidth = 2.0
@@ -140,15 +123,6 @@ class PlayRoundViewController: UIViewController {
     
     private func showCurrentNumberOfHoles() {
         if viewModel.numberOfHoles() == 9 {
-            holeTenButton.isHidden = true
-            holeElevenButton.isHidden = true
-            holeTwelveButton.isHidden = true
-            holeThirteenButton.isHidden = true
-            holeFourteenButton.isHidden = true
-            holeFifteenButton.isHidden = true
-            holeSixteenButton.isHidden = true
-            holeSeventeenButton.isHidden = true
-            holeEighteenButton.isHidden = true
         }
     }
     
@@ -232,16 +206,16 @@ class PlayRoundViewController: UIViewController {
     private func setHoleButtonColors() {
         for index in 0...viewModel.numberOfHoles() - 1 {
             let hole = viewModel.round?.golfers.first?.holes[index]
-            let button = holeButtonsArray[index]
+//            let button = holeButtonsArray[index]
             
-            guard hole?.holeNumber != currentHoleNumber else {
-                button.backgroundColor = UIColor(named: "AccentColor")
-                button.tintColor = .white
-                continue
-            }
-            
-            button.backgroundColor = hole?.hasBeenPlayed == true ? .yellow : .white
-            button.tintColor = UIColor(named: "AccentColor")
+//            guard hole?.holeNumber != currentHoleNumber else {
+//                button.backgroundColor = UIColor(named: "AccentColor")
+//                button.tintColor = .white
+//                continue
+//            }
+//
+//            button.backgroundColor = hole?.hasBeenPlayed == true ? .yellow : .white
+//            button.tintColor = UIColor(named: "AccentColor")
         }
     }
     
@@ -266,5 +240,34 @@ extension PlayRoundViewController: PlayRoundViewModelDelegate {
         setUpView()
         populateGolferData()
         setHoleButtonColors()
+    }
+}
+
+extension PlayRoundViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.numberOfHoles()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HoleNumberCell.reuseId, for: indexPath) as? HoleNumberCell
+        let hole = viewModel.round?.golfers.first?.holes[indexPath.row]
+        cell?.setHole(hole, indexPath: indexPath, isCurrentHole: indexPath.row + 1 == currentHoleNumber)
+        
+        return cell ?? UICollectionViewCell()
+    }
+}
+
+extension PlayRoundViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        currentHoleNumber = indexPath.row + 1
+        holeNumberLabel.text = "\(currentHoleNumber)"
+//        setHoleButtonColors()
+//        populateGolferData()
+        collectionView.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 40, height: 40)
     }
 }

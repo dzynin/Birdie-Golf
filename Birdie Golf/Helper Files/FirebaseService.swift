@@ -36,14 +36,14 @@ protocol FirebaseSyncable {
 
 struct FirebaseService: FirebaseSyncable {
     
-    
     let storage = Storage.storage().reference()
     let reference = Firebase.Database.database().reference()
     var currentUser: User?
     
     //MARK: Need to remove the hardcoding of this function
     func addRoundToUser(_ round: Round) {
-        reference.child("users").child("tXYy9T22ZwQyA4VGojZC2vzYL9d2").child("historicalRounds").child(round.uuid).updateChildValues(round.roundData)
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        reference.child("users").child(userID).child("historicalRounds").child(round.uuid).updateChildValues(round.roundData)
     }
     
     func updateUser(with user: User, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
@@ -54,6 +54,7 @@ struct FirebaseService: FirebaseSyncable {
             }
         }
     }
+    
     func saveUserToFirebase(with user: User, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
         reference.child("users").child(user.userID).updateChildValues(user.userData) { error, data in
             if let error = error {
@@ -62,7 +63,6 @@ struct FirebaseService: FirebaseSyncable {
             }
             completion(.success(true))
         }
-        
     }
     
     func logoutUser() {
@@ -126,7 +126,6 @@ struct FirebaseService: FirebaseSyncable {
     // MARK: - Saving, Loading, and Deleting rounds
     func saveRound(_ round: Round, completion: @escaping (Result<Round, FirebaseError>) -> Void) {
         
-        // I have an issue with the view loading before the round is completely fetched. Race condition
         reference.child("rounds").child(round.uuid).updateChildValues(round.roundData) { error, reference in
             if let error = error {
                 print(error)
@@ -147,11 +146,12 @@ struct FirebaseService: FirebaseSyncable {
             UserDefaults.standard.set(user.userID, forKey: "historicalRounds")
             completion(.success(user))
         }
-        
     }
     
+    // should the round be loaded from the saved userDefaults?
     func loadRounds(completion: @escaping (Result<[Round], FirebaseError>) -> Void) {
-        reference.child("rounds").getData { error, snapshot in
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        reference.child("users").child(userID).child("historicalRounds").getData { error, snapshot in
             if let error = error {
                 completion(.failure(.firebaseError(error)))
                 return
@@ -176,8 +176,8 @@ struct FirebaseService: FirebaseSyncable {
     }
     
     func fetchUser(completion: @escaping (Result<User, FirebaseError>) -> Void) {
-        let currentUser = UserDefaults.standard.string(forKey: "userID")
-        reference.child("users").child(currentUser!).getData { error, snapshot in
+        guard let currentUser = UserDefaults.standard.string(forKey: "userID") else { return }
+        reference.child("users").child(currentUser).getData { error, snapshot in
             if let error = error {
                 completion(.failure(.firebaseError(error)))
                 return
@@ -201,8 +201,8 @@ struct FirebaseService: FirebaseSyncable {
     }
     
     func fetchRound(completion: @escaping (Result<Round, FirebaseError>) -> Void) {
-        let currentRoundId = UserDefaults.standard.string(forKey: "activeRoundId")
-        reference.child("rounds").child(currentRoundId!).getData { error, snapshot in
+        guard let currentRoundId = UserDefaults.standard.string(forKey: "activeRoundId") else { return }
+        reference.child("rounds").child(currentRoundId).getData { error, snapshot in
             if let error = error {
                 completion(.failure(.firebaseError(error)))
                 return
@@ -218,7 +218,5 @@ struct FirebaseService: FirebaseSyncable {
             }
             completion(.success(round))
         }
-        
     }
-    
 }
